@@ -1,4 +1,10 @@
 <?php
+// File Security Check
+if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename( $_SERVER['SCRIPT_FILENAME'] ) ) {
+    die ( 'You do not have sufficient permissions to access this page' );
+}
+?>
+<?php
 /*-----------------------------------------------------------------------------------*/
 /* Load the widgets, with support for overriding the widget via a child theme.
 /*-----------------------------------------------------------------------------------*/
@@ -9,7 +15,6 @@ $widgets = array(
 				'includes/widgets/widget-woo-embed.php', 
 				'includes/widgets/widget-woo-flickr.php', 
 				'includes/widgets/widget-woo-search.php', 
-				'includes/widgets/widget-woo-twitter.php', 
 				'includes/widgets/widget-woo-subscribe.php'
 				);
 
@@ -30,13 +35,5 @@ if (!function_exists( 'woo_deregister_widgets')) {
 }
 add_action( 'widgets_init', 'woo_deregister_widgets' );  
 
-/*---------------------------------------------------------------------------------*/
-/* Dequeue Dojo tabs styles (1.1+) */
-/*---------------------------------------------------------------------------------*/
-/*add_action( 'after_setup_theme', 'woo_dequeue_woodojo_tabs_styles' );
-
-function woo_dequeue_woodojo_tabs_styles () {
-	wp_dequeue_style( 'woodojo_tabs' );
-} */
 
 ?>

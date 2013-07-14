@@ -1,14 +1,20 @@
 <?php
+// File Security Check
+if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename( $_SERVER['SCRIPT_FILENAME'] ) ) {
+    die ( 'You do not have sufficient permissions to access this page!' );
+}
+?>
+<?php
 
 /*-----------------------------------------------------------------------------------*/
 /* Start WooThemes Functions - Please refrain from editing this section */
 /*-----------------------------------------------------------------------------------*/
 
 // Define the theme-specific key to be sent to PressTrends.
-define( 'WOO_PRESSTRENDS_THEMEKEY', '80cpmgmo9pspi70ck31cwaapn47s7f6dh' );
+define( 'WOO_PRESSTRENDS_THEMEKEY', 'zdmv5lp26tfbp7jcwiw51ix9sj389e712' );
 
 // WooFramework init
-require_once ( get_template_directory() . '/functions/admin-init.php' );
+require_once ( get_template_directory() . '/functions/admin-init.php' );	
 
 /*-----------------------------------------------------------------------------------*/
 /* Load the theme-specific files, with support for overriding via a child theme.
@@ -22,28 +28,23 @@ $includes = array(
 				'includes/theme-js.php', 				// Load JavaScript via wp_enqueue_script
 				'includes/sidebar-init.php', 			// Initialize widgetized areas
 				'includes/theme-widgets.php',			// Theme widgets
-				'includes/theme-install.php'			// Theme installation
+				'includes/theme-install.php',			// Theme installation
+				'includes/theme-woocommerce.php'		// WooCommerce options
 				);
 
 // Allow child themes/plugins to add widgets to be loaded.
 $includes = apply_filters( 'woo_includes', $includes );
-
+				
 foreach ( $includes as $i ) {
 	locate_template( $i, true );
-}
-
-if ( is_woocommerce_activated() ) {
-	locate_template( 'includes/theme-woocommerce.php', true );
 }
 
 /*-----------------------------------------------------------------------------------*/
 /* You can add custom functions below */
 /*-----------------------------------------------------------------------------------*/
-// Custom WordPress Login Logo
-function login_css() {
-	wp_enqueue_style( 'login_css', get_template_directory_uri() . '/login.css' );
-}
-add_action('login_head', 'login_css');
+
+
+
 
 
 

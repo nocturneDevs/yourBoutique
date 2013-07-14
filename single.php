@@ -1,4 +1,10 @@
 <?php
+// File Security Check
+if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename( $_SERVER['SCRIPT_FILENAME'] ) ) {
+    die ( 'You do not have sufficient permissions to access this page!' );
+}
+?>
+<?php
 /**
  * Single Post Template
  *
@@ -20,8 +26,8 @@
 	
 	$settings = array(
 					'thumb_single' => 'false', 
-					'single_w' => 450, 
-					'single_h' => 450, 
+					'single_w' => 787, 
+					'single_h' => 300, 
 					'thumb_single_align' => 'alignright'
 					);
 					
@@ -39,41 +45,36 @@
         		while ( have_posts() ) { the_post(); $count++;
         ?>
 			<article <?php post_class(); ?>>
+				<aside class="meta">
+					<a href="<?php echo get_author_posts_url(get_the_author_meta( 'ID' )); ?>">
+						<?php echo get_avatar( get_the_author_meta('email'), '128' ); ?>
+					</a>
+					<span class="month"><?php the_time( 'M' ); ?></span>
+					<span class="day"><?php the_time( 'd' ); ?></span>
+					<span class="year"><?php the_time( 'o' ); ?></span>
+				</aside>
+				
+				<section class="post-content">
 
-				<?php echo woo_embed( 'width=580' ); ?>
-                <?php if ( $settings['thumb_single'] == 'true' && ! woo_embed( '' ) ) { woo_image( 'width=' . $settings['single_w'] . '&height=' . $settings['single_h'] . '&class=thumbnail ' . $settings['thumb_single_align'] ); } ?>
-
-                <header>
-                
-	                <h1><?php the_title(); ?></h1>
+					<?php echo woo_embed( 'width=787' ); ?>
+	                <?php if ( $settings['thumb_single'] == 'true' && ! woo_embed( '' ) ) { woo_image( 'width=' . $settings['single_w'] . '&height=' . $settings['single_h'] . '&class=thumbnail ' . $settings['thumb_single_align'] ); } ?>
+	
+	                <header>
 	                
-                	<?php woo_post_meta(); ?>
-                	
-                </header>
-                
-                <section class="entry fix">
-                	<?php the_content(); ?>
-					<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'woothemes' ), 'after' => '</div>' ) ); ?>
+		                <h1><?php the_title(); ?></h1>
+		                
+	                	<?php woo_post_meta(); ?>
+	                	
+	                </header>
+	                
+	                <section class="entry fix">
+	                	<?php the_content(); ?>
+						<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'woothemes' ), 'after' => '</div>' ) ); ?>
+					</section>
+													
 				</section>
-									
-				<?php the_tags( '<p class="tags">'.__( 'Tags: ', 'woothemes' ), ', ', '</p>' ); ?>
                                 
             </article><!-- .post -->
-
-				<?php if ( isset( $woo_options['woo_post_author'] ) && $woo_options['woo_post_author'] == 'true' ) { ?>
-				<aside id="post-author" class="fix">
-					<div class="profile-image"><?php echo get_avatar( get_the_author_meta( 'ID' ), '132' ); ?></div>
-					<div class="profile-content">
-						<h3 class="title"><?php printf( esc_attr__( 'About %s', 'woothemes' ), get_the_author() ); ?></h3>
-						<p><?php the_author_meta( 'description' ); ?></p>
-						<div class="profile-link">
-							<a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>">
-								<?php printf( __( 'View all posts by %s <span class="meta-nav">&rarr;</span>', 'woothemes' ), get_the_author() ); ?>
-							</a>
-						</div><!-- #profile-link	-->
-					</div><!-- .post-entries -->
-				</aside><!-- .post-author-box -->
-				<?php } ?>
 
 				<?php woo_subscribe_connect(); ?>
 

@@ -1,4 +1,10 @@
 <?php
+// File Security Check
+if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename( $_SERVER['SCRIPT_FILENAME'] ) ) {
+    die ( 'You do not have sufficient permissions to access this page' );
+}
+?>
+<?php
 
 /*-----------------------------------------------------------------------------------
 
@@ -16,8 +22,10 @@ TABLE OF CONTENTS
 - Archive Description
 - WooPagination markup
 - Google maps (for contact template)
-- Twitter
+- Add custom CSS class to the <body> tag if the lightbox option is enabled.
+- Load PrettyPhoto JavaScript and CSS if the lightbox option is enabled.
 - Shortcodes
+- WooCommerce check
 
 -----------------------------------------------------------------------------------*/
 
@@ -97,16 +105,13 @@ add_action('woo_main_before','woo_display_breadcrumbs',10);
 if (!function_exists( 'woo_display_breadcrumbs')) {
 	function woo_display_breadcrumbs() {
 		global $woo_options;
-		if (!is_home()) {
-			if ( isset( $woo_options['woo_breadcrumbs_show'] ) && $woo_options['woo_breadcrumbs_show'] == 'true' ) {
-			echo '<section id="breadcrumbs">';
-				woo_breadcrumbs();
-			echo '</section><!--/#breadcrumbs -->';
-			}
+		if ( isset( $woo_options['woo_breadcrumbs_show'] ) && $woo_options['woo_breadcrumbs_show'] == 'true' && ! (is_home()) ) {
+		echo '<section id="breadcrumbs">';
+			woo_breadcrumbs();
+		echo '</section><!--/#breadcrumbs -->';
 		}
 	} // End woo_display_breadcrumbs()
 } // End IF Statement
-
 
 
 /*-----------------------------------------------------------------------------------*/
@@ -142,19 +147,18 @@ if (!function_exists( 'woo_pagenav')) {
 
 if (!function_exists( 'woo_post_meta')) {
 	function woo_post_meta( ) {
+		global $woo_options;
+	
 ?>
 <aside class="post-meta">
 	<ul>
-		<li class="post-date">
-			<span><?php the_time( get_option( 'date_format' ) ); ?></span>
-		</li>
-		<li class="post-author">
-			<?php the_author_posts_link(); ?>
-		</li>
 		<li class="post-category">
 			<?php the_category( ', ') ?>
 		</li>
-		<?php the_tags( '<li class="tags">', ', ', '</li>' ); ?></li>
+		<?php the_tags( '<li class="tags">', ', ', '</li>' ); ?>
+		<?php if ( isset( $woo_options['woo_post_content'] ) && $woo_options['woo_post_content'] == 'excerpt' ) { ?>
+			<li class="comments"><?php comments_popup_link( __( 'Leave a comment', 'woothemes' ), __( '1 Comment', 'woothemes' ), __( '% Comments', 'woothemes' ) ); ?></li>
+		<?php } ?>
 		<?php edit_post_link( __( 'Edit', 'woothemes' ), '<li class="edit">', '</li>' ); ?>
 	</ul>
 </aside>
@@ -172,11 +176,11 @@ if (!function_exists( 'woo_subscribe_connect')) {
 
 		//Setup default variables, overriding them if the "Theme Options" have been saved.
 		$settings = array(
-						'connect' => 'false',
-						'connect_title' => __('Subscribe' , 'woothemes'),
-						'connect_related' => 'true',
+						'connect' => 'false', 
+						'connect_title' => __('Subscribe' , 'woothemes'), 
+						'connect_related' => 'true', 
 						'connect_content' => __( 'Subscribe to our e-mail newsletter to receive updates.', 'woothemes' ),
-						'connect_newsletter_id' => '',
+						'connect_newsletter_id' => '', 
 						'connect_mailchimp_list_url' => '',
 						'feed_url' => '',
 						'connect_rss' => '',
@@ -355,18 +359,18 @@ if (!function_exists( 'woo_subscribe_connect')) {
 if ( ! function_exists( 'woo_archive_description' ) ) {
 	function woo_archive_description ( $echo = true ) {
 		do_action( 'woo_archive_description' );
-
+		
 		// Archive Description, if one is available.
 		$term_obj = get_queried_object();
 		$description = term_description( $term_obj->term_id, $term_obj->taxonomy );
-
+		
 		if ( $description != '' ) {
 			// Allow child themes/plugins to filter here ( 1: text in DIV and paragraph, 2: term object )
 			$description = apply_filters( 'woo_archive_description', '<div class="archive-description">' . $description . '</div><!--/.archive-description-->', $term_obj );
 		}
-
+		
 		if ( $echo != true ) { return $description; }
-
+		
 		echo $description;
 	} // End woo_archive_description()
 }
@@ -380,7 +384,7 @@ add_filter( 'woo_pagination_args', 'woo_pagination_html5_markup', 2 );
 function woo_pagination_html5_markup ( $args ) {
 	$args['before'] = '<nav class="pagination woo-pagination">';
 	$args['after'] = '</nav>';
-
+	
 	return $args;
 } // End woo_pagination_html5_markup()
 
@@ -392,48 +396,47 @@ function woo_pagination_html5_markup ( $args ) {
 function woo_maps_contact_output($args){
 
 	$key = get_option('woo_maps_apikey');
-
+	
 	// No More API Key needed
-
-	if ( !is_array($args) )
+	
+	if ( !is_array($args) ) 
 		parse_str( $args, $args );
-
-	extract($args);
+		
+	extract($args);	
 	$mode = '';
-	$streetview = 'off';
+	$streetview = 'off';	
 	$map_height = get_option('woo_maps_single_height');
 	$featured_w = get_option('woo_home_featured_w');
 	$featured_h = get_option('woo_home_featured_h');
 	$zoom = get_option('woo_maps_default_mapzoom');
 	$type = get_option('woo_maps_default_maptype');
 	$marker_title = get_option('woo_contact_title');
-	if ( $zoom == '' ) { $zoom = 6; }
+	if ( $zoom == '' ) { $zoom = 6; }   
 	$lang = get_option('woo_maps_directions_locale');
 	$locale = '';
 	if(!empty($lang)){
 		$locale = ',locale :"'.$lang.'"';
 	}
 	$extra_params = ',{travelMode:G_TRAVEL_MODE_WALKING,avoidHighways:true '.$locale.'}';
-
+	
 	if(empty($map_height)) { $map_height = 250;}
-
+	
 	if(is_home() && !empty($featured_h) && !empty($featured_w)){
 	?>
     <div id="single_map_canvas" style="width:<?php echo $featured_w; ?>px; height: <?php echo $featured_h; ?>px"></div>
-    <?php } else { ?>
+    <?php } else { ?> 
     <div id="single_map_canvas" style="width:100%; height: <?php echo $map_height; ?>px"></div>
     <?php } ?>
-    <script src="<?php bloginfo('template_url'); ?>/includes/js/markers.js" type="text/javascript"></script>
     <script type="text/javascript">
 		jQuery(document).ready(function(){
 			function initialize() {
-
-
+				
+				
 			<?php if($streetview == 'on'){ ?>
 
-
+				
 			<?php } else { ?>
-
+				
 			  	<?php switch ($type) {
 			  			case 'G_NORMAL_MAP':
 			  				$type = 'ROADMAP';
@@ -451,7 +454,7 @@ function woo_maps_contact_output($args){
 			  				$type = 'ROADMAP';
 			  				break;
 			  	} ?>
-
+			  	
 			  	var myLatlng = new google.maps.LatLng(<?php echo $geocoords; ?>);
 				var myOptions = {
 				  zoom: <?php echo $zoom; ?>,
@@ -462,26 +465,26 @@ function woo_maps_contact_output($args){
 				<?php if(get_option('woo_maps_scroll') == 'true'){ ?>
 			  	map.scrollwheel = false;
 			  	<?php } ?>
-
+			  	
 				<?php if($mode == 'directions'){ ?>
 			  	directionsPanel = document.getElementById("featured-route");
  				directions = new GDirections(map, directionsPanel);
   				directions.load("from: <?php echo $from; ?> to: <?php echo $to; ?>" <?php if($walking == 'on'){ echo $extra_params;} ?>);
 			  	<?php
 			 	} else { ?>
-
+			 
 			  		var point = new google.maps.LatLng(<?php echo $geocoords; ?>);
-	  				var root = "<?php bloginfo('template_url'); ?>";
+	  				var root = "<?php echo esc_url( get_template_directory_uri() ); ?>";
 	  				var callout = '<?php echo preg_replace("/[\n\r]/","<br/>",get_option('woo_maps_callout_text')); ?>';
 	  				var the_link = '<?php echo get_permalink(get_the_id()); ?>';
 	  				<?php $title = str_replace(array('&#8220;','&#8221;'),'"', $marker_title); ?>
 	  				<?php $title = str_replace('&#8211;','-',$title); ?>
 	  				<?php $title = str_replace('&#8217;',"`",$title); ?>
 	  				<?php $title = str_replace('&#038;','&',$title); ?>
-	  				var the_title = '<?php echo html_entity_decode($title) ?>';
-
-	  			<?php
-			 	if(is_page()){
+	  				var the_title = '<?php echo html_entity_decode($title) ?>'; 
+	  				
+	  			<?php		 	
+			 	if(is_page()){ 
 			 		$custom = get_option('woo_cat_custom_marker_pages');
 					if(!empty($custom)){
 						$color = $custom;
@@ -491,27 +494,27 @@ function woo_maps_contact_output($args){
 						if (empty($color)) {
 							$color = 'red';
 						}
-					}
+					}			 	
 			 	?>
 			 		var color = '<?php echo $color; ?>';
 			 		createMarker(map,point,root,the_link,the_title,color,callout);
 			 	<?php } else { ?>
 			 		var color = '<?php echo get_option('woo_cat_colors_pages'); ?>';
 	  				createMarker(map,point,root,the_link,the_title,color,callout);
-				<?php
+				<?php 
 				}
 					if(isset($_POST['woo_maps_directions_search'])){ ?>
-
+					
 					directionsPanel = document.getElementById("featured-route");
  					directions = new GDirections(map, directionsPanel);
   					directions.load("from: <?php echo htmlspecialchars($_POST['woo_maps_directions_search']); ?> to: <?php echo $address; ?>" <?php if($walking == 'on'){ echo $extra_params;} ?>);
-
-
-
+  					
+  					
+  					
 					directionsDisplay = new google.maps.DirectionsRenderer();
 					directionsDisplay.setMap(map);
     				directionsDisplay.setPanel(document.getElementById("featured-route"));
-
+					
 					<?php if($walking == 'on'){ ?>
 					var travelmodesetting = google.maps.DirectionsTravelMode.WALKING;
 					<?php } else { ?>
@@ -520,7 +523,7 @@ function woo_maps_contact_output($args){
 					var start = '<?php echo htmlspecialchars($_POST['woo_maps_directions_search']); ?>';
 					var end = '<?php echo $address; ?>';
 					var request = {
-       					origin:start,
+       					origin:start, 
         				destination:end,
         				travelMode: travelmodesetting
     				};
@@ -528,12 +531,12 @@ function woo_maps_contact_output($args){
       					if (status == google.maps.DirectionsStatus.OK) {
         					directionsDisplay.setDirections(response);
       					}
-      				});
-
-  					<?php } ?>
+      				});	
+      				
+  					<?php } ?>			
 				<?php } ?>
 			<?php } ?>
-
+			
 
 			  }
 			  function handleNoFlash(errorCode) {
@@ -543,19 +546,19 @@ function woo_maps_contact_output($args){
 				  }
 				 }
 
-
-
+			
+		
 		initialize();
-
+			
 		});
 	jQuery(window).load(function(){
-
+			
 		var newHeight = jQuery('#featured-content').height();
 		newHeight = newHeight - 5;
 		if(newHeight > 300){
 			jQuery('#single_map_canvas').height(newHeight);
 		}
-
+		
 	});
 
 	</script>
@@ -563,15 +566,49 @@ function woo_maps_contact_output($args){
 <?php
 }
 
-// Filter wp_nav_menu() to add additional links and other output
-function new_nav_menu_items($items, $args) {
-	$homelink = '';
-	if( $args->theme_location == 'primary-menu' )
-    $homelink = '<li class="home"><a href="' . home_url( '/' ) . '"><span>' . __('Home') . '</span></a></li>';
-    $items = $homelink . $items;
-    return $items;
-}
-add_filter( 'wp_nav_menu_items', 'new_nav_menu_items', 10, 2 );
+/*-----------------------------------------------------------------------------------*/
+/* Add custom CSS class to the <body> tag if the lightbox option is enabled. */
+/*-----------------------------------------------------------------------------------*/
+
+add_filter( 'body_class', 'woo_add_lightbox_body_class', 10 );
+
+function woo_add_lightbox_body_class ( $classes ) {
+	global $woo_options;
+	
+	if ( isset( $woo_options['woo_enable_lightbox'] ) && $woo_options['woo_enable_lightbox'] == 'true' ) {
+		$classes[] = 'has-lightbox';
+	}
+	
+	return $classes;
+} // End woo_add_lightbox_body_class()
+
+/*-----------------------------------------------------------------------------------*/
+/* Load PrettyPhoto JavaScript and CSS if the lightbox option is enabled. */
+/*-----------------------------------------------------------------------------------*/
+
+add_action( 'woothemes_add_javascript', 'woo_load_prettyphoto', 10 );
+add_action( 'woothemes_add_css', 'woo_load_prettyphoto', 10 );
+
+function woo_load_prettyphoto () {
+	global $woo_options;
+	
+	if ( ! isset( $woo_options['woo_enable_lightbox'] ) || $woo_options['woo_enable_lightbox'] == 'false' ) { return; }
+	
+	$filter = current_filter();
+	
+	switch ( $filter ) {
+		case 'woothemes_add_javascript':
+			wp_enqueue_script( 'enable-lightbox' );
+		break;
+		
+		case 'woothemes_add_css':
+			wp_enqueue_style( 'prettyPhoto' );
+		break;
+		
+		default:
+		break;
+	}
+} // End woo_load_prettyphoto()
 
 /*-------------------------------------------------------------------------------------------*/
 /* SHORTCODES */
@@ -582,7 +619,7 @@ function woo_shortcode_sticky( $atts, $content = null ) {
    extract( shortcode_atts( array(
       'class' => '',
       ), $atts ) );
-
+ 
    return '<div class="shortcode-sticky ' . esc_attr($class) . '">' . $content . '</div><!--/shortcode-sticky-->';
 }
 
@@ -597,29 +634,16 @@ function woo_shortcode_sale ( $atts, $content = null ) {
 
 add_shortcode( 'sale', 'woo_shortcode_sale' );
 
-// Mini features wrap
+// Mini features wrap 
 function woo_shortcode_mini_feature_wrap( $atts, $content = null ) {
    return '<ul class="mini-features">' . do_shortcode($content) . '</ul>';
 }
 
-add_shortcode( 'mini-feature-wrap', 'woo_shortcode_mini_feature_wrap' );
+/*-------------------------------------------------------------------------------------------*/
+/* WooCommerce Check */
+/*-------------------------------------------------------------------------------------------*/
 
-// Mini features shortcode
-function woo_shortcode_mini_feature( $atts, $content = null ) {
-   extract( shortcode_atts( array(
-      'icon' => '',
-      'title' => '',
-      ), $atts ) );
-
-   return '<li class="mini-feature"><img src="' . esc_attr($icon) . '" alt="' . esc_attr($title) . '" /><div class="feature-content"><h3>' . esc_attr($title) . '</h3>' . wpautop($content). '</div></li><!--/mini-feature-->';
-}
-
-add_shortcode( 'mini-feature', 'woo_shortcode_mini_feature' );
-
-/*-----------------------------------------------------------------------------------*/
-/* Check if WooCommerce is activated */
-/*-----------------------------------------------------------------------------------*/
-if ( ! function_exists( 'is_woocommerce_activated' ) ) {
+if (!function_exists('is_woocommerce_activated')) {
 	function is_woocommerce_activated() {
 		if ( class_exists( 'woocommerce' ) ) { return true; } else { return false; }
 	}

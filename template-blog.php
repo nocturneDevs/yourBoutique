@@ -1,4 +1,10 @@
 <?php
+// File Security Check
+if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename( $_SERVER['SCRIPT_FILENAME'] ) ) {
+    die ( 'You do not have sufficient permissions to access this page!' );
+}
+?>
+<?php
 /**
  * Template Name: Blog
  *
@@ -18,9 +24,9 @@
  */
 	
 	$settings = array(
-					'thumb_w' => 450, 
-					'thumb_h' => 450, 
-					'thumb_align' => 'alignright'
+					'thumb_w' => 787, 
+					'thumb_h' => 300, 
+					'thumb_align' => 'alignleft'
 					);
 					
 	$settings = woo_get_dynamic_values( $settings );
@@ -53,29 +59,7 @@
         		while ( have_posts() ) { the_post(); $count++;
         ?>                                                            
             <!-- Post Starts -->
-            <article <?php post_class(); ?>>
-
-                <?php if ( isset( $woo_options['woo_post_content'] ) && $woo_options['woo_post_content'] != 'content' ) { woo_image( 'width=' . $settings['thumb_w'] . '&height=' . $settings['thumb_h'] . '&class=thumbnail ' . $settings['thumb_align'] ); } ?>
-                
-                <header>
-                	<h1><a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
-                </header>
-                
-                <?php woo_post_meta(); ?>
-                
-                <section class="entry fix">
-					<?php global $more; $more = 0; ?>	                                        
-                    <?php if ( isset( $woo_options['woo_post_content'] ) && $woo_options['woo_post_content'] == 'content' ) { the_content(__( 'Read More...', 'woothemes' ) ); } else { the_excerpt(); } ?>
-                </section>
-    			
-                <footer class="post-more">      
-					<span class="comments"><?php comments_popup_link( __( 'Leave a comment', 'woothemes' ), __( '1 Comment', 'woothemes' ), __( '% Comments', 'woothemes' ) ); ?></span>
-                	<?php if ( isset( $woo_options['woo_post_content'] ) && $woo_options['woo_post_content'] == 'excerpt' ) { ?>
-                    <span class="read-more"><a href="<?php the_permalink(); ?>" title="<?php esc_attr_e( 'Continue Reading &rarr;', 'woothemes' ); ?>"><?php _e( 'Continue Reading &rarr;', 'woothemes' ); ?></a></span>
-                    <?php } ?>
-                </footer>   
-    
-            </article><!-- /.post -->
+            <?php get_template_part( 'content', get_post_format() ); ?>
                                                 
         <?php
         		} // End WHILE Loop

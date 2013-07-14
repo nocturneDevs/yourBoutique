@@ -1,35 +1,34 @@
 // VARIABLES
 // Colors
-@color_theme: #967381; // Main theme color
-@color_links: spin(@color_theme,60); // Links 
-@color_body: darken(desaturate(@bg_light,5%),50%); // Body Copy
+@color_links: #ff4800; // Links / Main theme colour 
+@color_alt: darken(desaturate(@color_links,100%),10%);
+@color_body: darken(desaturate(@color_links,94%),10%); // Body Copy
+@info: #4d65a4;
+@success: #84ac50;
+@error: #b85f56;
+@color_body_bg: desaturate(@bg_light + #050505 ,100%);
 // Borders
-@border_main: darken(@bg_light,10%); // The 1px grey rules used throughout the WF
+@border_main: lighten(desaturate(@color_links,90%),40%); // The 1px grey rules used throughout the WF
 // Backgrounds
-@bg_light: #E6E1DD;
-@bg_dark: #d3d3d3;
+@bg_light: lighten(desaturate(@color_links,100%),47%);
+@bg_dark: darken(desaturate(@color_links,20%),30%);
 // Fonts
 @sans: sans-serif;
 @serif: Georgia, serif; 
 // Google fonts - These are also defined in Theme Setup (theme-actions.php)
-@sans_google: "Karla", sans-serif;
-@serif_google: "Cutive", sans-serif;
+@sans_google: "Open Sans", sans-serif;
+@serif_google: "Bree Serif", sans-serif;
 @handwriting: 'Schoolbell', cursive;
-
-// Messages
-@error: #c67c77;
-@success: #a0bd72;
-@info: #6ea0b6;
-// Images
+// Image path
 @img_path: "images";
 @typeface_path: "typefaces";
-
 // FUNCTIONS
 .iconafter() {
 	font-family: 'WebSymbolsRegular';
 	display: inline-block;
 	font-size:.857em;
 	margin-left:.618em;
+	font-weight: normal;
 }
 
 .iconbefore() {
@@ -37,33 +36,7 @@
 	display: inline-block;
 	font-size:.857em;
 	margin-right:.618em;
-}
-
-.lifted() {
-	position: relative;
-	&:before, &:after {
-		content: "";
-		position: absolute;
-		z-index: -1;
-		-ms-transform: skew(-3deg,-2deg);
-		-webkit-transform: skew(-3deg,-2deg); /* Safari and Chrome */
-		-o-transform: skew(-3deg,-2deg); /* Opera */
-		-moz-transform: skew(-3deg,-2deg); /* Firefox */
-		bottom: 13px;
-		.box_shadow(0,10px,5px,0,rgba(0,0,0,0.3));
-		height: 50px;
-		left: 3px;
-		max-width: 50%;
-		width: 51%;
-	}
-	&:after {
-		-ms-transform: skew(3deg,2deg); /* IE 9 */
-		-webkit-transform: skew(3deg,2deg); /* Safari and Chrome */
-		-o-transform: skew(3deg,2deg); /* Opera */
-		-moz-transform: skew(3deg,2deg); /* Firefox */
-		left: auto;
-		right: 3px;
-	}
+	font-weight: normal;
 }
 
 // MIXINS
@@ -186,18 +159,4 @@
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
     -moz-box-sizing: border-box;    /* Firefox, other Gecko */
     box-sizing: border-box;         /* Opera/IE 8+ */
-}
-
-.horizontal_gradient (@startColor: #000, @endColor: #fff) {
-    background-color: @endColor;
-    background-repeat: repeat-x;
-    background-image: -khtml-gradient(linear, left top, right top, from(@startColor), to(@endColor)); /* Konqueror */
-    background-image: -moz-linear-gradient(left, @startColor, @endColor); /* FF 3.6+ */
-    background-image: -ms-linear-gradient(left, @startColor, @endColor); /* IE10 */
-    background-image: -webkit-gradient(linear, left top, right top, color-stop(0%, @startColor), color-stop(100%, @endColor)); /* Safari 4+, Chrome 2+ */
-    background-image: -webkit-linear-gradient(left, @startColor, @endColor); /* Safari 5.1+, Chrome 10+ */
-    background-image: -o-linear-gradient(left, @startColor, @endColor); /* Opera 11.10 */
-    filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=1)",@startColor,@endColor)); /* IE6 & IE7 */
-    -ms-filter: %("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=1)",@startColor,@endColor); /* IE8+ */
-    background-image: linear-gradient(left, @startColor, @endColor); /* the standard */
 }

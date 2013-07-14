@@ -1,4 +1,10 @@
 <?php
+// File Security Check
+if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename( $_SERVER['SCRIPT_FILENAME'] ) ) {
+    die ( 'You do not have sufficient permissions to access this page' );
+}
+?>
+<?php
 
 /*-----------------------------------------------------------------------------------
 
@@ -7,12 +13,13 @@ TABLE OF CONTENTS
 - Theme Setup
 - Load layout.css in the <head>
 - Load responsive <meta> tags in the <head>
-- Add Google Maps to HEAD
 - Add custom styling to HEAD
 - Add custom typograhpy to HEAD
 - Add layout to body_class output
 - woo_feedburner_link
 - Load responsive IE JS
+- Homepage hook
+- Customise the breadcrumb
 
 -----------------------------------------------------------------------------------*/
 
@@ -63,13 +70,6 @@ if ( ! function_exists( 'woothemes_setup' ) ) {
 		// Add default posts and comments RSS feed links to head
 		add_theme_support( 'automatic-feed-links' );
 
-		if ( is_child_theme() ) {
-			$theme_data = get_theme_data( get_stylesheet_directory() . '/style.css' );
-
-			define( 'CHILD_THEME_URL', $theme_data['URI'] );
-			define( 'CHILD_THEME_NAME', $theme_data['Name'] );
-		}
-
 	}
 }
 
@@ -80,7 +80,7 @@ if ( ! function_exists( 'woothemes_setup' ) ) {
  */
 
 global $default_google_fonts;
-$default_google_fonts = array( 'Cutive', 'Karla', 'Schoolbell' );
+$default_google_fonts = array( 'Bree Serif', 'Open Sans', 'Schoolbell' );
 
 
 /*-----------------------------------------------------------------------------------*/
@@ -112,27 +112,10 @@ if ( ! function_exists( 'woo_load_responsive_meta_tags' ) ) {
 
 		/* Remove this if not responsive design */
 		$html .= "\n" . '<!--  Mobile viewport scale | Disable user zooming as the layout is optimised -->' . "\n";
-		$html .= '<meta content="initial-scale=1.0; maximum-scale=1.0; user-scalable=no" name="viewport"/>' . "\n";
+		$html .= '<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">' . "\n";
 
 		echo $html;
 	} // End woo_load_responsive_meta_tags()
-}
-
-/*-----------------------------------------------------------------------------------*/
-/* Add Google Maps to HEAD */
-/*-----------------------------------------------------------------------------------*/
-
-add_action( 'woo_head', 'woo_google_maps', 10 ); // Add custom styling to HEAD
-
-if ( ! function_exists( 'woo_google_maps' ) ) {
-
-	function woo_google_maps() {
-		if ( is_page_template( 'template-contact.php' ) ) { ?>
-			<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-		<?php
-		}
-	}
-
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -154,30 +137,32 @@ if ( ! function_exists( 'woo_custom_styling' ) ) {
 						'body_attachment' => '',
 						'link_color' => '',
 						'link_hover_color' => '',
-						'button_color' => ''
+						'button_color' => '',
+						'homepage_banner_text_color' => ''
 						);
 		$settings = woo_get_dynamic_values( $settings );
 
 
 		// Add CSS to output
+
 		if ( $settings['body_color'] != '' ) {
-			$output .= 'body { background: ' . $settings['body_color'] . ' !important; }' . "\n";
+			$output .= 'html { background: ' . $settings['body_color'] . ' !important; }' . "\n";
 		}
 
 		if ( $settings['body_img'] != '' ) {
-			$output .= 'body { background-image: url( ' . $settings['body_img'] . ' ) !important; }' . "\n";
+			$output .= 'html { background-image: url( ' . $settings['body_img'] . ' ) !important; }' . "\n";
 		}
 
 		if ( ( $settings['body_img'] != '' ) && ( $settings['body_repeat'] != '' ) && ( $settings['body_pos'] != '' ) ) {
-			$output .= 'body { background-repeat: ' . $settings['body_repeat'] . ' !important; }' . "\n";
+			$output .= 'html { background-repeat: ' . $settings['body_repeat'] . ' !important; }' . "\n";
 		}
 
 		if ( ( $settings['body_img'] != '' ) && ( $settings['body_pos'] != '' ) ) {
-			$output .= 'body { background-position: ' . $settings['body_pos'] . ' !important; }' . "\n";
+			$output .= 'html { background-position: ' . $settings['body_pos'] . ' !important; }' . "\n";
 		}
 
 		if ( ( $settings['body_img'] != '' ) && ( $settings['body_attachment'] != '' ) ) {
-			$output .= 'body { background-attachment: ' . $settings['body_attachment'] . ' !important; }' . "\n";
+			$output .= 'html { background-attachment: ' . $settings['body_attachment'] . ' !important; }' . "\n";
 		}
 
 		if ( $settings['link_color'] != '' ) {
@@ -191,6 +176,10 @@ if ( ! function_exists( 'woo_custom_styling' ) ) {
 		if ( $settings['button_color'] != '' ) {
 			$output .= 'a.button, a.comment-reply-link, #commentform #submit, #contact-page .submit { background: ' . $settings['button_color'] . ' !important; border-color: ' . $settings['button_color'] . ' !important; }' . "\n";
 			$output .= 'a.button:hover, a.button.hover, a.button.active, a.comment-reply-link:hover, #commentform #submit:hover, #contact-page .submit:hover { background: ' . $settings['button_color'] . ' !important; opacity: 0.9; }' . "\n";
+		}
+
+		if ( $settings['homepage_banner_text_color'] != '' ) {
+			$output .= '.homepage-banner h1, .homepage-banner .description { color: ' . $settings['homepage_banner_text_color'] . ' !important; }' . "\n";
 		}
 
 		// Output styles
@@ -219,8 +208,6 @@ if ( ! function_exists( 'woo_custom_typography' ) ) {
 		$output = '';
 		$default_google_font = false;
 
-
-
 		if ( isset( $woo_options['woo_typography'] ) && $woo_options['woo_typography'] == 'true' ) {
 
 			if ( isset( $woo_options['woo_font_body'] ) && $woo_options['woo_font_body'] )
@@ -233,7 +220,7 @@ if ( ! function_exists( 'woo_custom_typography' ) ) {
 				$output .= '.page header h1 { '.woo_generate_font_css($woo_options[ 'woo_font_page_title' ]).' }' . "\n";
 
 			if ( isset( $woo_options['woo_font_post_title'] ) && $woo_options['woo_font_post_title'] )
-				$output .= '.post header h1 { '.woo_generate_font_css($woo_options[ 'woo_font_post_title' ]).' }' . "\n";
+				$output .= '.post header h1, .post header h1 a:link, .post header h1 a:visited { '.woo_generate_font_css($woo_options[ 'woo_font_post_title' ]).' }' . "\n";
 
 			if ( isset( $woo_options['woo_font_post_meta'] ) && $woo_options['woo_font_post_meta'] )
 				$output .= '.post-meta { '.woo_generate_font_css($woo_options[ 'woo_font_post_meta' ]).' }' . "\n";
@@ -384,17 +371,38 @@ function woo_feedburner_link ( $output, $feed = null ) {
 /* Load responsive IE scripts */
 /*-----------------------------------------------------------------------------------*/
 
-add_action( 'wp_footer', 'woo_load_responsive_IE_footer', 10 );
+add_action( 'wp_head', 'woo_load_responsive_IE_footer', 10 );
 
 if ( ! function_exists( 'woo_load_responsive_IE_footer' ) ) {
 	function woo_load_responsive_IE_footer () {
 		$html = '';
 		echo '<!--[if lt IE 9]>'. "\n";
-		echo '<script src="' . get_template_directory_uri() . '/includes/js/respond-IE.js"></script>'. "\n";
+		echo '<script src="' . esc_url( get_template_directory_uri() . '/includes/js/respond-IE.js' ) . '"></script>'. "\n";
 		echo '<![endif]-->'. "\n";
 
 		echo $html;
 	} // End ()
+}
+
+/*-----------------------------------------------------------------------------------*/
+/* Homepage hook */
+/*-----------------------------------------------------------------------------------*/
+
+function mystile_homepage_content() {
+    do_action('mystile_homepage_content');
+}
+
+/*-----------------------------------------------------------------------------------*/
+/* Customise the breadcrumb */
+/*-----------------------------------------------------------------------------------*/
+add_filter( 'woo_breadcrumbs_args', 'woo_custom_breadcrumbs_args', 10 );
+
+if (!function_exists('woo_custom_breadcrumbs_args')) {
+	function woo_custom_breadcrumbs_args ( $args ) {
+		$textdomain = 'woothemes';
+		$args = array('separator' => '/', 'before' => '', 'show_home' => __( 'Home', $textdomain ),);
+		return $args;
+	} // End woo_custom_breadcrumbs_args()
 }
 
 /*-----------------------------------------------------------------------------------*/

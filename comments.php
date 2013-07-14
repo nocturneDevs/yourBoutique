@@ -1,4 +1,10 @@
 <?php
+// File Security Check
+if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename( $_SERVER['SCRIPT_FILENAME'] ) ) {
+    die ( 'You do not have sufficient permissions to access this page!' );
+}
+?>
+<?php
 /**
  * Comments Template
  *
@@ -28,11 +34,11 @@ if ( post_password_required() ) { ?>
 <div id="comments">
 
 	<?php if ( ! empty( $comments_by_type['comment'] ) ) { ?>
-		<h3><?php comments_number( __( 'No Responses', 'woothemes' ), __( 'One Response', 'woothemes' ), __( '% Responses', 'woothemes' ) ); ?> <?php _e( 'to', 'woothemes' ); ?> &#8220;<?php the_title(); ?>&#8221;</h3>
+		<h2><?php comments_number( __( 'No Responses', 'woothemes' ), __( 'One Response', 'woothemes' ), __( '% Responses', 'woothemes' ) ); ?> <?php _e( 'to', 'woothemes' ); ?> &#8220;<?php the_title(); ?>&#8221;</h2>
 
 		<ol class="commentlist">
 	
-			<?php wp_list_comments( 'avatar_size=60&callback=custom_comment&type=comment' ); ?>
+			<?php wp_list_comments( 'avatar_size=40&callback=custom_comment&type=comment' ); ?>
 		
 		</ol>    
 
