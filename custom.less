@@ -1,0 +1,59 @@
+/* 
+WOO CUSTOM STYLESHEET
+---------------------
+
+Instructions:
+
+Add your custom styles in this file instead of style.css so it 
+is easier to update the theme. Simply copy an existing style 
+from style.css to this file, and modify it to your liking. */
+
+
+/* 
+GLOBAL STYLES
+----------------
+Add styles beneath this line that you want to be applied across your entire site */
+
+
+/* 
+	HEADER STYLES
+	----------------
+	Header-related styles go here. */
+@background1: #FF7777;
+@background2: #7777FF;
+@background3: #77FF77;
+@logowidth: 300px;
+
+#header {
+
+	background-color: @background1;
+
+	#logowrapper {
+		background-color:@background2;
+		margin-left: auto;
+		margin-right: auto;
+		width: @logowidth;
+	}
+
+	#logo { 
+		float: none;
+	}
+
+
+}
+
+	/* 
+	FOOTER STYLES
+	----------------
+	Footer-related styles go here. */
+
+
+
+/* 
+DESKTOP STYLES
+-----------------
+Add styles inside the media query below that you only want to be applied to the desktop layout of your site */
+
+@media only screen and (min-width: 768px) {
+	/* Desktop styles go here */
+}
