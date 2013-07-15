@@ -26,10 +26,11 @@ Add styles beneath this line that you want to be applied across your entire site
 
 #header {
 
-	background-color: @background1;
+	padding-top:0.5em;
+	padding-bottom:0.5em;
+	//margin-bottom:0;
 
 	#logowrapper {
-		background-color:@background2;
 		margin-left: auto;
 		margin-right: auto;
 		width: @logowidth;
@@ -39,7 +40,10 @@ Add styles beneath this line that you want to be applied across your entire site
 		float: none;
 	}
 
-
+	#navigation {
+		margin-bottom:0;
+		float:left;
+	}
 }
 
 	/* 
