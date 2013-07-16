@@ -1,95 +1,66 @@
 <?php
-// File Security Check
-if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename( $_SERVER['SCRIPT_FILENAME'] ) ) {
-    die ( 'You do not have sufficient permissions to access this page!' );
-}
-?><?php
 /**
- * Index Template
+ * The main template file.
  *
- * Here we setup all logic and XHTML that is required for the index template, used as both the homepage
- * and as a fallback template, if a more appropriate template file doesn't exist for a specific context.
+ * This is the most generic template file in a WordPress theme
+ * and one of the two required files for a theme (the other being style.css).
+ * It is used to display a page when nothing more specific matches a query.
+ * For example, it puts together the home page when no home.php file exists.
  *
- * @package WooFramework
- * @subpackage Template
+ * Learn more: http://codex.wordpress.org/Template_Hierarchy
+ *
+ * @package WordPress
+ * @subpackage Twenty_Twelve
+ * @since Twenty Twelve 1.0
  */
-	get_header();
-	global $woo_options;
-	
-?>
 
-    <?php if ( $woo_options[ 'woo_homepage_banner' ] == "true" ) { ?>
-    	
-    	<div class="homepage-banner">
-    		<?php
-				if ( $woo_options[ 'woo_homepage_banner' ] == "true" ) { $banner = $woo_options['woo_homepage_banner_path']; }
-				if ( $woo_options[ 'woo_homepage_banner' ] == "true" && is_ssl() ) { $banner = preg_replace("/^http:/", "https:", $woo_options['woo_homepage_banner_path']); }
-			?>
-			    <img src="<?php echo $banner; ?>" alt="" />
-    		<h1><span><?php echo $woo_options['woo_homepage_banner_headline']; ?></span></h1>
-    		<div class="description"><?php echo wpautop($woo_options['woo_homepage_banner_standfirst']); ?></div>
-    	</div>
-    	
-    <?php } ?>
-    
-    <div id="content" class="col-full <?php if ( $woo_options[ 'woo_homepage_banner' ] == "true" ) echo 'with-banner'; ?> <?php if ( $woo_options[ 'woo_homepage_sidebar' ] == "false" ) echo 'no-sidebar'; ?>">
-    
-    	<?php woo_main_before(); ?>
-    
-		<section id="main" class="col-left">  
-		
-		<?php mystile_homepage_content(); ?>		
-		
-		<?php woo_loop_before(); ?>
-		
-		<?php if ( $woo_options[ 'woo_homepage_blog' ] == "true" ) { 
-			$postsperpage = $woo_options['woo_homepage_blog_perpage'];
-		?>
-		
-		<?php
-			
-			$the_query = new WP_Query( array( 'posts_per_page' => $postsperpage ) );
-			
-        	if ( have_posts() ) : $count = 0;
-        ?>
-        
+get_header(); ?>
+
+	<div id="primary" class="site-content">
+		<div id="content" role="main">
+		<?php if ( have_posts() ) : ?>
+
 			<?php /* Start the Loop */ ?>
-			<?php while ( $the_query->have_posts() ) : $the_query->the_post(); $count++; ?>
+			<?php while ( have_posts() ) : the_post(); ?>
+				<?php get_template_part( 'content', get_post_format() ); ?>
+			<?php endwhile; ?>
 
-				<?php
-					/* Include the Post-Format-specific template for the content.
-					 * If you want to overload this in a child theme then include a file
-					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-					 */
-					get_template_part( 'content', get_post_format() );
-				?>
-
-			<?php 
-				endwhile; 
-				// Reset Post Data
-				wp_reset_postdata();
-			?>
-			
-			
+			<?php twentytwelve_content_nav( 'nav-below' ); ?>
 
 		<?php else : ?>
-        
-            <article <?php post_class(); ?>>
-                <p><?php _e( 'Sorry, no posts matched your criteria.', 'woothemes' ); ?></p>
-            </article><!-- /.post -->
-        
-        <?php endif; ?>
-        
-        <?php } // End query to see if the blog should be displayed ?>
-        
-        <?php woo_loop_after(); ?>
-		                
-		</section><!-- /#main -->
-		
-		<?php woo_main_after(); ?>
 
-        <?php if ( $woo_options[ 'woo_homepage_sidebar' ] == "true" ) get_sidebar(); ?>
+			<article id="post-0" class="post no-results not-found">
 
-    </div><!-- /#content -->
-		
+			<?php if ( current_user_can( 'edit_posts' ) ) :
+				// Show a different message to a logged-in user who can add posts.
+			?>
+				<header class="entry-header">
+					<h1 class="entry-title"><?php _e( 'No posts to display', 'twentytwelve' ); ?></h1>
+				</header>
+
+				<div class="entry-content">
+					<p><?php printf( __( 'Ready to publish your first post? <a href="%s">Get started here</a>.', 'twentytwelve' ), admin_url( 'post-new.php' ) ); ?></p>
+				</div><!-- .entry-content -->
+
+			<?php else :
+				// Show the default message to everyone else.
+			?>
+				<header class="entry-header">
+					<h1 class="entry-title"><?php _e( 'Nothing Found', 'twentytwelve' ); ?></h1>
+				</header>
+
+				<div class="entry-content">
+					<p><?php _e( 'Apologies, but no results were found. Perhaps searching will help find a related post.', 'twentytwelve' ); ?></p>
+					<?php get_search_form(); ?>
+				</div><!-- .entry-content -->
+			<?php endif; // end current_user_can() check ?>
+
+			</article><!-- #post-0 -->
+
+		<?php endif; // end have_posts() check ?>
+
+		</div><!-- #content -->
+	</div><!-- #primary -->
+
+<?php get_sidebar(); ?>
 <?php get_footer(); ?>

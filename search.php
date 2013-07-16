@@ -1,70 +1,49 @@
 <?php
-// File Security Check
-if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename( $_SERVER['SCRIPT_FILENAME'] ) ) {
-    die ( 'You do not have sufficient permissions to access this page!' );
-}
-?>
-<?php
 /**
- * Search Template
+ * The template for displaying Search Results pages.
  *
- * The search template is used to display search results from the native WordPress search.
- *
- * If no search results are found, the user is assisted in refining their search query in
- * an attempt to produce an appropriate search results set for the user's search query.
- *
- * @package WooFramework
- * @subpackage Template
+ * @package WordPress
+ * @subpackage Twenty_Twelve
+ * @since Twenty Twelve 1.0
  */
 
- get_header();
- global $woo_options;
-?>     
-    <div id="content" class="col-full">
-    
-    	<?php woo_main_before(); ?>
-    	
-		<section id="main" class="col-left">
-            	
-		<?php if ( have_posts() ) : $count = 0; ?>
-            
-            <header class="archive_header"><?php echo __( 'Search results:', 'woothemes' ) . ' '; the_search_query(); ?></header>
+get_header(); ?>
 
-			<div class="fix"></div>                
-			        
-			<?php woo_loop_before(); ?>
-			
+	<section id="primary" class="site-content">
+		<div id="content" role="main">
+
+		<?php if ( have_posts() ) : ?>
+
+			<header class="page-header">
+				<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'twentytwelve' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+			</header>
+
+			<?php twentytwelve_content_nav( 'nav-above' ); ?>
+
 			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); $count++; ?>
-
-				<?php
-					/* Include the Post-Format-specific template for the content.
-					 * If you want to overload this in a child theme then include a file
-					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-					 */
-					get_template_part( 'content', 'search' );
-				?>
-
+			<?php while ( have_posts() ) : the_post(); ?>
+				<?php get_template_part( 'content', get_post_format() ); ?>
 			<?php endwhile; ?>
 
-			<?php else : ?>
-	        
-	            <article <?php post_class(); ?>>
-	                <p><?php _e( 'Sorry, no posts matched your criteria.', 'woothemes' ); ?></p>
-	            </article><!-- /.post -->
-	        
-	        <?php endif; ?>
-	        
-	        <?php woo_loop_after(); ?>
+			<?php twentytwelve_content_nav( 'nav-below' ); ?>
 
-			<?php woo_pagenav(); ?>
-                
-        </section><!-- /#main -->
-        
-        <?php woo_main_after(); ?>
+		<?php else : ?>
 
-        <?php get_sidebar(); ?>
+			<article id="post-0" class="post no-results not-found">
+				<header class="entry-header">
+					<h1 class="entry-title"><?php _e( 'Nothing Found', 'twentytwelve' ); ?></h1>
+				</header>
 
-    </div><!-- /#content -->
-		
+				<div class="entry-content">
+					<p><?php _e( 'Sorry, but nothing matched your search criteria. Please try again with some different keywords.', 'twentytwelve' ); ?></p>
+					<?php get_search_form(); ?>
+				</div><!-- .entry-content -->
+			</article><!-- #post-0 -->
+
+		<?php endif; ?>
+
+		</div><!-- #content -->
+	</section><!-- #primary -->
+
+<?php get_sidebar(); ?>
 <?php get_footer(); ?>

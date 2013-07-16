@@ -1,33 +1,17 @@
 <?php
-// File Security Check
-if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename( $_SERVER['SCRIPT_FILENAME'] ) ) {
-    die ( 'You do not have sufficient permissions to access this page!' );
-}
-?>
-<?php 
 /**
- * Sidebar Template
+ * The sidebar containing the main widget area.
  *
- * If a `primary` widget area is active and has widgets, display the sidebar.
+ * If no active widgets in sidebar, let's hide it completely.
  *
- * @package WooFramework
- * @subpackage Template
+ * @package WordPress
+ * @subpackage Twenty_Twelve
+ * @since Twenty Twelve 1.0
  */
-	global $woo_options;
-	
-	if ( isset( $woo_options['woo_layout'] ) && ( $woo_options['woo_layout'] != 'layout-full' ) ) {
-?>	
-<aside id="sidebar" class="col-right">
+?>
 
-	<?php woo_sidebar_inside_before(); ?>
-
-	<?php if ( woo_active_sidebar( 'primary' ) ) { ?>
-    <div class="primary">
-		<?php woo_sidebar( 'primary' );  ?>
-	</div>        
-	<?php } // End IF Statement ?>   
-	
-	<?php woo_sidebar_inside_after(); ?> 
-	
-</aside><!-- /#sidebar -->
-<?php } // End IF Statement ?>
+	<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
+		<div id="secondary" class="widget-area" role="complementary">
+			<?php dynamic_sidebar( 'sidebar-1' ); ?>
+		</div><!-- #secondary -->
+	<?php endif; ?>

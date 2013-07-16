@@ -1,80 +1,60 @@
 <?php
-// File Security Check
-if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename( $_SERVER['SCRIPT_FILENAME'] ) ) {
-    die ( 'You do not have sufficient permissions to access this page!' );
-}
-?>
-<?php
 /**
- * Comments Template
+ * The template for displaying Comments.
  *
- * This template file handles the display of comments, pingbacks and trackbacks.
+ * The area of the page that contains both current comments
+ * and the comment form. The actual display of comments is
+ * handled by a callback to twentytwelve_comment() which is
+ * located in the functions.php file.
  *
- * External functions are used to display the various types of comments.
- *
- * @package WooFramework
- * @subpackage Template
+ * @package WordPress
+ * @subpackage Twenty_Twelve
+ * @since Twenty Twelve 1.0
  */
 
-// Do not delete these lines
-if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && 'comments.php' == basename( $_SERVER['SCRIPT_FILENAME'] ) ) {
-	die ( 'Please do not load this page directly. Thanks!' );
-}
+/*
+ * If the current post is protected by a password and
+ * the visitor has not yet entered the password we will
+ * return early without loading the comments.
+ */
+if ( post_password_required() )
+	return;
+?>
 
-if ( post_password_required() ) { ?>
-	<p class="nocomments"><?php _e( 'This post is password protected. Enter the password to view comments.', 'woothemes' ); ?></p>
-<?php return; } ?>
+<div id="comments" class="comments-area">
 
-<?php $comments_by_type = &separate_comments( $comments ); ?>    
+	<?php // You can start editing here -- including this comment! ?>
 
-<!-- You can start editing here. -->
-
-<?php if ( have_comments() ) { ?>
-
-<div id="comments">
-
-	<?php if ( ! empty( $comments_by_type['comment'] ) ) { ?>
-		<h2><?php comments_number( __( 'No Responses', 'woothemes' ), __( 'One Response', 'woothemes' ), __( '% Responses', 'woothemes' ) ); ?> <?php _e( 'to', 'woothemes' ); ?> &#8220;<?php the_title(); ?>&#8221;</h2>
+	<?php if ( have_comments() ) : ?>
+		<h2 class="comments-title">
+			<?php
+				printf( _n( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'twentytwelve' ),
+					number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' );
+			?>
+		</h2>
 
 		<ol class="commentlist">
-	
-			<?php wp_list_comments( 'avatar_size=40&callback=custom_comment&type=comment' ); ?>
-		
-		</ol>    
+			<?php wp_list_comments( array( 'callback' => 'twentytwelve_comment', 'style' => 'ol' ) ); ?>
+		</ol><!-- .commentlist -->
 
-		<nav class="navigation fix">
-			<div class="fl"><?php previous_comments_link(); ?></div>
-			<div class="fr"><?php next_comments_link(); ?></div>
-		</nav><!-- /.navigation -->
-	<?php } ?>
-		    
-	<?php if ( ! empty( $comments_by_type['pings'] ) ) { ?>
-    		
-        <h3 id="pings"><?php _e( 'Trackbacks/Pingbacks', 'woothemes' ); ?></h3>
-    
-        <ol class="pinglist">
-            <?php wp_list_comments( 'type=pings&callback=list_pings' ); ?>
-        </ol>
-    	
-	<?php }; ?>
-    	
-</div> <!-- /#comments_wrap -->
+		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
+		<nav id="comment-nav-below" class="navigation" role="navigation">
+			<h1 class="assistive-text section-heading"><?php _e( 'Comment navigation', 'twentytwelve' ); ?></h1>
+			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'twentytwelve' ) ); ?></div>
+			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'twentytwelve' ) ); ?></div>
+		</nav>
+		<?php endif; // check for comment navigation ?>
 
-<?php } else { // this is displayed if there are no comments so far ?>
+		<?php
+		/* If there are no comments and comments are closed, let's leave a note.
+		 * But we only want the note on posts and pages that had comments in the first place.
+		 */
+		if ( ! comments_open() && get_comments_number() ) : ?>
+		<p class="nocomments"><?php _e( 'Comments are closed.' , 'twentytwelve' ); ?></p>
+		<?php endif; ?>
 
+	<?php endif; // have_comments() ?>
 
-	<?php 
-		// If there are no comments and comments are closed, let's leave a little note, shall we?
-		if ( comments_open() && is_singular() ) { ?>
-			<div id="comments">
-				<h5 class="nocomments"><?php _e( 'No comments yet.', 'woothemes' ); ?></h5>
-			</div>
-		<?php } ?>
+	<?php comment_form(); ?>
 
-<?php
-	} // End IF Statement
-	
-	/* The Respond Form. Uses filters in the theme-functions.php file to customise the form HTML. */
-	if ( comments_open() )
-		comment_form();
-?>
+</div><!-- #comments .comments-area -->
