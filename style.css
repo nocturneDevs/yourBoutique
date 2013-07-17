@@ -1788,6 +1788,9 @@ div#top-right {
   margin-right: 48px;
   margin-right: 3.428571429rem;
 }
+header#masthead {
+  padding-top: 0;
+}
 div#header-image-wrapper {
   max-width: 400px;
   margin-left: auto;
@@ -1801,10 +1804,20 @@ img#header-image {
   box-shadow: none;
 }
 #site-navigation {
+  margin-top: 12px;
+  margin-top: 0.857142857rem;
   border-top: 1px solid #999;
   border-bottom: 1px solid #999;
 }
 #site-navigation div.nav-menu ul {
   box-shadow: none;
   border-style: none;
+}
+#site-navigation li a {
+  font-size: 14px;
+  font-size: 0.9999999998333333rem;
+  font-family: 'Lato', sans-serif;
+}
+#site-navigation li a:hover {
+  color: #ee118a;
 }
