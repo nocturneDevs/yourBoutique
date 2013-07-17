@@ -32,13 +32,26 @@
 </head>
 
 <body <?php body_class(); ?>>
+
+<div id="top">
+	<div id="top-left" class="top-content">
+		Rs. 599 off your first purchase
+	</div>
+
+	<div id="top-right" class="top-content">
+		Login | Sign up | Checkout
+	</div>
+
+</div>
+
 <div id="page" class="hfeed site">
 	<header id="masthead" class="site-header" role="banner">
-		
-		<?php $header_image = get_header_image();
-		if ( ! empty( $header_image ) ) : ?>
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo esc_url( $header_image ); ?>" class="header-image" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" /></a>
-		<?php endif; ?>
+		<div id="header-image-wrapper">
+			<?php $header_image = get_header_image();
+			if ( ! empty( $header_image ) ) : ?>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo esc_url( $header_image ); ?>" id="header-image" class="header-image" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="<?php bloginfo( 'name' ); ?>" /></a>
+			<?php endif; ?>
+		</div>
 
 		<hgroup>
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
