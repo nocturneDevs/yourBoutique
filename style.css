@@ -722,28 +722,6 @@ section[role="banner"] {
   /* define a width to avoid dropping a wider submit button */
 
 }
-/* Footer */
-footer[role="contentinfo"] {
-  border-top: 1px solid #ededed;
-  clear: both;
-  font-size: 12px;
-  font-size: 0.857142857rem;
-  line-height: 2;
-  max-width: 960px;
-  max-width: 68.571428571rem;
-  margin-top: 24px;
-  margin-top: 1.714285714rem;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 24px 0;
-  padding: 1.714285714rem 0;
-}
-footer[role="contentinfo"] a {
-  color: #686868;
-}
-footer[role="contentinfo"] a:hover {
-  color: #21759b;
-}
 /* =Main content and comment content
 -------------------------------------------------------------- */
 .entry-meta {
@@ -1764,6 +1742,7 @@ body {
   background-color: #ffffff;
   box-shadow: none;
   margin-top: 10px;
+  min-height: 90%;
 }
 div#top {
   width: 100%;
@@ -1821,6 +1800,24 @@ header#masthead #site-navigation li a {
 header#masthead #site-navigation li a:hover {
   color: #ee118a;
 }
+footer {
+  border-top: 1px solid #ededed;
+  clear: both;
+  font-size: 12px;
+  font-size: 0.857142857rem;
+  line-height: 2;
+  margin-top: 24px;
+  margin-top: 1.714285714rem;
+  margin-left: 0;
+  margin-right: 0;
+}
+footer#colophon {
+  background-color: #333333;
+  width: 100%;
+}
 footer#colophon .site-info a:hover {
   color: #ee118a;
+}
+@media screen and (min-width: 600px) {
+  
 }

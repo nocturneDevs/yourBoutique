@@ -1,0 +1,5 @@
+@looski - Sorry to impose on you :p Change of anything you don't like.
+
+1. camelCaseShallBeImplemented - no-more-hyphens_and_underscores
+2. Commenting shall be simple - "// CAPS" for headings and sections, "// gen text" for gen fundaes - no need to put those lines since you can make sublime do that for you (use colour schemes \m/)
+3. White space encouraged in the code. Anyway it'll be minified so no need to worry about saving space. So n white space :)
