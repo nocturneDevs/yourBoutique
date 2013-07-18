@@ -1821,3 +1821,6 @@ header#masthead #site-navigation li a {
 header#masthead #site-navigation li a:hover {
   color: #ee118a;
 }
+footer#colophon .site-info a:hover {
+  color: #ee118a;
+}
