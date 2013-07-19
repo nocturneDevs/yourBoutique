@@ -1,21 +1,19 @@
 html,
 body {
-  background-color: #ffffff;
+  background-color: #333333;
   height: 100%;
   margin: 0;
   padding: 0;
-}
-#bodyWrapper {
-  position: relative;
-  margin: 0 auto;
-  width: 100%;
-  min-height: 87.142857145%;
-  padding-bottom: 12.857142855000001rem;
 }
 #page {
   background-color: #ffffff;
   box-shadow: none;
   margin-top: 10px;
+  margin-top: 1rem;
+}
+#bodyWrapper {
+  background-color: #ffffff;
+  width: 100%;
 }
 div#top {
   width: 100%;
@@ -85,26 +83,57 @@ header#masthead #site-navigation li a:hover {
   color: #ee118a;
 }
 footer {
-  border-top: 1px solid #ededed;
-  clear: both;
   font-size: 12px;
   font-size: 0.857142857rem;
   line-height: 2;
-  margin-top: 1.714285714rem;
-  margin-left: 0;
-  margin-right: 0;
-  height: 12.857142855000001rem;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-}
-footer#colophon {
+  min-height: 3.428571429rem;
   background-color: #333333;
-  width: 100%;
+}
+footer#colophon #footerWrapper {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 800px;
+}
+footer#colophon #footerWrapper:before,
+footer#colophon #footerWrapper:after {
+  content: " ";
+  display: table;
+}
+footer#colophon #footerWrapper:after {
+  clear: both;
+}
+footer#colophon #footerNav {
+  float: left;
+  height: 100px;
+  width: 31%;
+}
+footer#colophon #footerDetailText {
+  float: left;
+  height: 100px;
+  width: 31%;
+}
+footer#colophon #footerSocialBar {
+  float: left;
+  width: 31%;
+  padding: 1.714285714rem 1.714285714rem 1.714285714rem 1.714285714rem;
+}
+footer#colophon #footerSocialBar a {
+  padding: 1.714285714rem 1.714285714rem 1.714285714rem 1.714285714rem;
+  text-decoration: none;
+  color: #706e6d;
+}
+footer#colophon #footerSocialBar a:hover {
+  color: #dd0079;
 }
 footer#colophon .site-info {
-  float: right;
-  padding-right: 1em;
+  clear: both;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  max-width: 100%;
+  margin: 1.714285714rem 1.714285714rem 0 1.714285714rem;
 }
 footer#colophon .site-info a {
   color: #817f7e;

@@ -1,6 +1,8 @@
 // VARIABLES
 // All variables here so that you can quickly tweak them
 
+@import "_mixins.less";
+
 @ybGray:#706e6d;
 @ybPink:#dd0079;
 @nocturneGreen: #339a80;
@@ -14,32 +16,29 @@
 @rem48:3.428571429rem;
 
 @maxHeaderImageWidth:400px;
-@footerHeight: 15*@rem12;
+@maxFooterHeight: 15*@rem12;
 
 
 // GLOBAL STYLES
 
 html, body {
-	background-color:@backgroundMain;
+	background-color:@footerColor;
 	height: 100%;
 	margin: 0;
 	padding: 0;
 }
 
-#bodyWrapper {
-	position: relative;
-	margin: 0 auto;
-	width: 100%;
-	min-height: 100% - @footerHeight;
-	padding-bottom: @footerHeight; // For the footer
-}
-
 #page {
 	background-color:@backgroundMain;
 	box-shadow:none;
-	margin-top:10px;
+	margin-top: 10px;
+	margin-top: 1rem;
 }
 
+#bodyWrapper {
+	background-color:@backgroundMain;
+	width: 100%;	
+}
 
 
 // HEADER STYLES
@@ -148,31 +147,54 @@ header#masthead {
 // FOOTER STYLES
 
 footer {
-	// Making the footer sticky
-	border-top: 1px solid #ededed;
-	clear: both;
 	font-size: 12px;
 	font-size: @rem12;
 	line-height: 2;
-	margin-top: 1.714285714rem;
-	margin-left: 0;
-	margin-right: 0;
-	height: @footerHeight;
-	width: 100%;
-	position:absolute;
-	bottom: 0;
+	min-height: @rem48;
+	background-color: @footerColor;
 }
 
 footer#colophon {
-	//Generic footer styling
-	background-color: @footerColor;
-	width: 100%;
 
+	#footerWrapper {
+		.center;
+		.clearfix;
+		max-width: 800px;
+	}
+
+	#footerNav {
+		float: left;
+		height: 100px;
+		width: 31%;
+	}
+
+	#footerDetailText {
+		float: left;
+		height: 100px;
+		width: 31%;
+	}
+
+	#footerSocialBar {
+		float: left;
+		width: 31%;
+		padding: @rem24 @rem24 @rem24 @rem24;
+		a {
+			padding: @rem24 @rem24 @rem24 @rem24;
+			text-decoration: none;
+			color: @ybGray;
+		}
+		a:hover {
+		color: @ybPink;
+		}
+	}
 
 	//Credits
 	.site-info{
-		float: right;
-		padding-right: 1em;
+		clear: both;
+		.center;
+		text-align: center;
+		max-width: 100%;
+		margin:@rem24 @rem24 0 @rem24;
 		a {
 			color: @ybGray + #111;
 			text-decoration: none;
