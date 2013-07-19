@@ -1,0 +1,10 @@
+div#top-left {
+  float: left;
+}
+div#top-right {
+  float: right;
+}
+header#masthead #site-navigation {
+  border-top: 1px solid #999;
+  border-bottom: 1px solid #999;
+}

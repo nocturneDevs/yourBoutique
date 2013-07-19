@@ -24,6 +24,8 @@
 
 <!-- FONTS --><!-- TODO: Is this the best way to do this? --> 
 <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+<!-- Scalable Vector Icons from Font Awesome -->
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
@@ -36,6 +38,8 @@
 </head>
 
 <body <?php body_class(); ?>>
+
+<div id="bodyWrapper">
 
 <div id="top">
 	<div id="top-left" class="top-content">

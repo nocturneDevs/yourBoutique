@@ -3,6 +3,7 @@
 
 @ybGray:#706e6d;
 @ybPink:#dd0079;
+@nocturneGreen: #339a80;
 
 @backgroundMain:#fff;
 @topColor:#787878;
@@ -13,12 +14,24 @@
 @rem48:3.428571429rem;
 
 @maxHeaderImageWidth:400px;
+@footerHeight: 15*@rem12;
 
 
 // GLOBAL STYLES
 
-body {
+html, body {
 	background-color:@backgroundMain;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+#bodyWrapper {
+	position: relative;
+	margin: 0 auto;
+	width: 100%;
+	min-height: 100% - @footerHeight;
+	padding-bottom: @footerHeight; // For the footer
 }
 
 #page {
@@ -135,21 +148,19 @@ header#masthead {
 // FOOTER STYLES
 
 footer {
+	// Making the footer sticky
 	border-top: 1px solid #ededed;
 	clear: both;
 	font-size: 12px;
 	font-size: @rem12;
 	line-height: 2;
-	margin-top: 24px;
 	margin-top: 1.714285714rem;
 	margin-left: 0;
 	margin-right: 0;
-	position:relative;
+	height: @footerHeight;
+	width: 100%;
+	position:absolute;
 	bottom: 0;
-}
-
-#fluff {
-	//font-size: 250px;
 }
 
 footer#colophon {
@@ -160,8 +171,14 @@ footer#colophon {
 
 	//Credits
 	.site-info{
+		float: right;
+		padding-right: 1em;
+		a {
+			color: @ybGray + #111;
+			text-decoration: none;
+		}
 		a:hover {
-			color: @ybPink + #111;
+			color: @nocturneGreen;
 		}
 	}
 }

@@ -1735,8 +1735,19 @@ img#wpstats {
     margin-left: 3.57142857rem;
   }
 }
+html,
 body {
   background-color: #ffffff;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+#bodyWrapper {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  min-height: 87.142857145%;
+  padding-bottom: 12.857142855000001rem;
 }
 #page {
   background-color: #ffffff;
@@ -1816,19 +1827,28 @@ footer {
   font-size: 12px;
   font-size: 0.857142857rem;
   line-height: 2;
-  margin-top: 24px;
   margin-top: 1.714285714rem;
   margin-left: 0;
   margin-right: 0;
-  position: relative;
+  height: 12.857142855000001rem;
+  width: 100%;
+  position: absolute;
   bottom: 0;
 }
 footer#colophon {
   background-color: #333333;
   width: 100%;
 }
+footer#colophon .site-info {
+  float: right;
+  padding-right: 1em;
+}
+footer#colophon .site-info a {
+  color: #817f7e;
+  text-decoration: none;
+}
 footer#colophon .site-info a:hover {
-  color: #ee118a;
+  color: #339a80;
 }
 @media screen and (min-width: 600px) {
   div#top-left {
