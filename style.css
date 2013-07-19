@@ -1742,7 +1742,6 @@ body {
   background-color: #ffffff;
   box-shadow: none;
   margin-top: 10px;
-  min-height: 90%;
 }
 div#top {
   width: 100%;
@@ -1810,6 +1809,8 @@ footer {
   margin-top: 1.714285714rem;
   margin-left: 0;
   margin-right: 0;
+  position: relative;
+  bottom: 0;
 }
 footer#colophon {
   background-color: #333333;
