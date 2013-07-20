@@ -18,12 +18,21 @@
 @maxHeaderImageWidth:400px;
 @maxFooterHeight: 15*@rem12;
 
+// Image parameters
+@imageBorderPadding:2px;
+@imageBorderPaddingRem:@rem12 / 6;
+@imageBorderColor:@ybGray;
+@imageBorderThickness:1px;
+
+
+// Product page
+@imageSectionWidth:64%;
 
 // Variables from WooCommerce
-@primary: 			@ybPink; 									/* Primary colour for buttons (alt) */
+@primary: 			lighten(desaturate(@ybPink,40),10%) + #100;//#ee80bc; 									/* Primary colour for buttons (alt) */
 @primarytext: 		desaturate(lighten(@primary,50%),18%);		/* Text on primary colour bg */
 
-@secondary:			#99f;
+@secondary:			#e3e3e3;
 //@secondary: 		desaturate(lighten(@primary,40%),18%);		/* Secondary buttons */
 @secondarytext:	 	desaturate(darken(@secondary,60%),18%);		/* Text on secondary colour bg */
 
@@ -322,6 +331,7 @@ p.demo_store {
 
 		/* Main product title */
 		.product_title {
+			font-size:2rem;
 			clear:none;
 			margin-top: 0;
 			padding: 0;
@@ -354,16 +364,26 @@ p.demo_store {
 		/* Product image and thumbnail */
 
 		div.images {
+
 			float:left;
 			width: 48%;
 			margin-bottom: 2em;
+
 			img {
 				display:block;
 				width: 100%;
 				height:auto;
-				.box_shadow(0,1px,2px,0,rgba(0,0,0,0.3));
+
+				padding: @imageBorderPadding;
+				padding: @imageBorderPaddingRem;
+
+				border: @imageBorderThickness solid @imageBorderColor;
+				border-radius:0;
+				//.box_shadow(0,0px,2px,0,rgba(0,0,0,0.3));
+				.box_shadow(0,0,0,0,rgba(0,0,0,0));
 				.transition();
 			}
+
 			div.thumbnails {
 				padding-top: 1em;
 				.clearfix;
@@ -379,6 +399,8 @@ p.demo_store {
 					clear:both;
 				}
 			}
+
+
 		}
 
 		/* Summary div (contains title, price etc) */
@@ -609,11 +631,19 @@ p.demo_store {
 	}
 
 	.related, .upsells.products {
+		
+		clear:both;
 		.clearfix();
+		border-top:1px solid @ybPink;
+
+		padding-top:24px;
+		padding-top:@rem24;
+
 		ul.products, ul {
 			float:none;
 			li.product {
-				width: 48%;
+				width: 96px;
+				width: @rem48 * 2;
 				img {
 					width: 100%;
 					height:auto;
