@@ -7,7 +7,7 @@
 @ybPink:#dd0079;
 @nocturneGreen: #339a80;
 
-@backgroundMain:#fff;
+@backgroundMainColor:#fff;
 @topColor:#787878;
 @footerColor: #333;
 
@@ -29,14 +29,18 @@ html, body {
 }
 
 #page {
-	background-color:@backgroundMain;
+	background-color:@backgroundMainColor;
 	box-shadow:none;
+	
 	margin-top: 10px;
 	margin-top: 1rem;
+	margin-bottom:0;
+	padding-bottom: 48px;
+	padding-bottom: @rem48;
 }
 
 #bodyWrapper {
-	background-color:@backgroundMain;
+	background-color:@backgroundMainColor;
 	width: 100%;	
 }
 
@@ -141,7 +145,21 @@ header#masthead {
 // CONTENT STYLES
 
 
+.woocommerce, .woocommerce-page {
 
+	div.product, #content div.product {
+
+		div.images {
+			width: 64%	!important;
+		}
+
+		div.summary {
+			width: 32% !important;
+		}
+
+	}
+
+}
 
 
 // FOOTER STYLES
@@ -203,4 +221,6 @@ footer#colophon {
 			color: @nocturneGreen;
 		}
 	}
+
+	box-shadow:0px 10px 10px -10px #111 inset;
 }

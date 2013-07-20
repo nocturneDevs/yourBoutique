@@ -1747,6 +1747,9 @@ body {
   box-shadow: none;
   margin-top: 10px;
   margin-top: 1rem;
+  margin-bottom: 0;
+  padding-bottom: 48px;
+  padding-bottom: 3.428571429rem;
 }
 #bodyWrapper {
   background-color: #ffffff;
@@ -1819,12 +1822,27 @@ header#masthead #site-navigation li a {
 header#masthead #site-navigation li a:hover {
   color: #ee118a;
 }
+.woocommerce div.product div.images,
+.woocommerce-page div.product div.images,
+.woocommerce #content div.product div.images,
+.woocommerce-page #content div.product div.images {
+  width: 64%	!important;
+}
+.woocommerce div.product div.summary,
+.woocommerce-page div.product div.summary,
+.woocommerce #content div.product div.summary,
+.woocommerce-page #content div.product div.summary {
+  width: 32% !important;
+}
 footer {
   font-size: 12px;
   font-size: 0.857142857rem;
   line-height: 2;
   min-height: 3.428571429rem;
   background-color: #333333;
+}
+footer#colophon {
+  box-shadow: 0px 10px 10px -10px #111111 inset;
 }
 footer#colophon #footerWrapper {
   display: block;
