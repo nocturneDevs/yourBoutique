@@ -1881,6 +1881,10 @@ header#masthead #site-navigation li a:hover {
 .woocommerce-page {
   color: #333333;
 }
+.woocommerce h1.page-title,
+.woocommerce-page h1.page-title {
+  font-size: 1.714285714rem;
+}
 .woocommerce a img,
 .woocommerce-page a img {
   padding: 2px;
@@ -1903,9 +1907,13 @@ header#masthead #site-navigation li a:hover {
 .woocommerce-page a:hover {
   color: #ee118a;
 }
+.woocommerce span.amount,
+.woocommerce-page span.amount {
+  color: #55aa66;
+}
 .woocommerce .woocommerce-breadcrumb,
 .woocommerce-page .woocommerce-breadcrumb {
-  margin: 0 0 1rem;
+  margin: 0;
   padding: 0;
   font-size: 0.87rem;
   color: #777777;
@@ -2203,7 +2211,9 @@ header#masthead #site-navigation li a:hover {
 .woocommerce-page ul.products li.product h3 {
   padding: .5em 0;
   margin: 0;
-  font-size: 1em;
+  font-family: "Lato", sans-serif;
+  font-weight: normal;
+  text-transform: uppercase;
 }
 .woocommerce ul.products li.product a,
 .woocommerce-page ul.products li.product a {
