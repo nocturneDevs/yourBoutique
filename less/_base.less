@@ -162,6 +162,8 @@ header#masthead {
 				
 				max-width:@maxHeaderImageWidth;
 				
+				padding:0;
+				border:none;
 				border-radius: 0px;
 				box-shadow: none;
 			}
@@ -194,6 +196,22 @@ header#masthead {
 
 // CONTENT STYLES
 .woocommerce, .woocommerce-page {
+
+	//img.attachment-shop_catalog {
+	a img {
+		padding: @imageBorderPadding;
+		padding: @imageBorderPaddingRem;
+
+		border: @imageBorderThickness solid @imageBorderColor;
+		border-radius:0;
+		//.box_shadow(0,0px,2px,0,rgba(0,0,0,0.3));
+		.box_shadow(0,0,0,0,rgba(0,0,0,0));
+		.transition();
+	}
+
+	a:hover img {
+		border: @imageBorderThickness solid @ybPink + #222;
+	}
 
 	color:@mainTextColor;
 	a:hover {
@@ -335,11 +353,9 @@ header#masthead {
 	 			height:auto;
 	 			display:block;
 	 			margin: 0 0 8px;
-	 			.box_shadow(0,1px,2px,0,rgba(0,0,0,0.3));
-	 			.transition();
 	 		}
 	 		a:hover img {
-	 			.box_shadow(0,1px,3px,0,rgba(0,0,0,0.4));
+
 	 		}
 	 		strong {
 	 			display:block;
