@@ -1747,6 +1747,39 @@ img#wpstats {
 .nobr {
   white-space: nowrap;
 }
+.clear {
+  clear: both;
+}
+.nobr {
+  white-space: nowrap;
+}
+body {
+  width: 100%;
+}
+body:before,
+body:after {
+  content: " ";
+  display: table;
+}
+body:after {
+  clear: both;
+}
+body:before,
+body:after {
+  content: " ";
+  display: table;
+}
+body:after {
+  clear: both;
+}
+body:before,
+body:after {
+  content: " ";
+  display: table;
+}
+body:after {
+  clear: both;
+}
 /* Text on primary colour bg */
 /* Text on secondary colour bg */
 /* Text on tertiary colour bg */
@@ -1879,6 +1912,17 @@ header#masthead #site-navigation li a:hover {
 .woocommerce-page .woocommerce-breadcrumb:after {
   clear: both;
 }
+.woocommerce .woocommerce-breadcrumb:before,
+.woocommerce-page .woocommerce-breadcrumb:before,
+.woocommerce .woocommerce-breadcrumb:after,
+.woocommerce-page .woocommerce-breadcrumb:after {
+  content: " ";
+  display: table;
+}
+.woocommerce .woocommerce-breadcrumb:after,
+.woocommerce-page .woocommerce-breadcrumb:after {
+  clear: both;
+}
 .woocommerce .woocommerce-breadcrumb a,
 .woocommerce-page .woocommerce-breadcrumb a {
   color: #777777;
@@ -1926,6 +1970,23 @@ header#masthead #site-navigation li a:hover {
 .woocommerce #content div.product div.images div.thumbnails,
 .woocommerce-page #content div.product div.images div.thumbnails {
   padding-top: 1em;
+}
+.woocommerce div.product div.images div.thumbnails:before,
+.woocommerce-page div.product div.images div.thumbnails:before,
+.woocommerce #content div.product div.images div.thumbnails:before,
+.woocommerce-page #content div.product div.images div.thumbnails:before,
+.woocommerce div.product div.images div.thumbnails:after,
+.woocommerce-page div.product div.images div.thumbnails:after,
+.woocommerce #content div.product div.images div.thumbnails:after,
+.woocommerce-page #content div.product div.images div.thumbnails:after {
+  content: " ";
+  display: table;
+}
+.woocommerce div.product div.images div.thumbnails:after,
+.woocommerce-page div.product div.images div.thumbnails:after,
+.woocommerce #content div.product div.images div.thumbnails:after,
+.woocommerce-page #content div.product div.images div.thumbnails:after {
+  clear: both;
 }
 .woocommerce div.product div.images div.thumbnails:before,
 .woocommerce-page div.product div.images div.thumbnails:before,
@@ -2051,6 +2112,23 @@ header#masthead #site-navigation li a:hover {
 .woocommerce-page .upsells.products:after {
   clear: both;
 }
+.woocommerce .related:before,
+.woocommerce-page .related:before,
+.woocommerce .upsells.products:before,
+.woocommerce-page .upsells.products:before,
+.woocommerce .related:after,
+.woocommerce-page .related:after,
+.woocommerce .upsells.products:after,
+.woocommerce-page .upsells.products:after {
+  content: " ";
+  display: table;
+}
+.woocommerce .related:after,
+.woocommerce-page .related:after,
+.woocommerce .upsells.products:after,
+.woocommerce-page .upsells.products:after {
+  clear: both;
+}
 .woocommerce .related ul.products,
 .woocommerce-page .related ul.products,
 .woocommerce .upsells.products ul.products,
@@ -2094,58 +2172,53 @@ footer#colophon {
   box-shadow: 0px 10px 10px -10px #111111 inset;
 }
 footer#colophon #footerWrapper {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 800px;
-}
-footer#colophon #footerWrapper:before,
-footer#colophon #footerWrapper:after {
-  content: " ";
-  display: table;
-}
-footer#colophon #footerWrapper:after {
-  clear: both;
-}
-footer#colophon #footerWrapper:before,
-footer#colophon #footerWrapper:after {
-  content: " ";
-  display: table;
-}
-footer#colophon #footerWrapper:after {
-  clear: both;
+  padding: 1.714285714rem 0;
+  color: #706e6d;
 }
 footer#colophon #footerNav {
+  display: inline;
   float: left;
-  height: 100px;
-  width: 31%;
+  width: 31.25%;
+  margin: 0 1.0416666666666665%;
 }
 footer#colophon #footerDetailText {
+  display: inline;
   float: left;
-  height: 100px;
-  width: 31%;
+  width: 31.25%;
+  margin: 0 1.0416666666666665%;
 }
-footer#colophon #footerSocialBar {
+footer#colophon #footerSocial {
+  display: inline;
   float: left;
-  width: 31%;
-  padding: 1.714285714rem 1.714285714rem 1.714285714rem 1.714285714rem;
+  width: 31.25%;
+  margin: 0 1.0416666666666665%;
 }
-footer#colophon #footerSocialBar a {
-  padding: 1.714285714rem 1.714285714rem 1.714285714rem 1.714285714rem;
+footer#colophon #footerSocial a {
   text-decoration: none;
   color: #706e6d;
 }
-footer#colophon #footerSocialBar a:hover {
+footer#colophon #footerSocial a:hover {
   color: #dd0079;
 }
-footer#colophon .site-info {
-  clear: both;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+footer#colophon #footerSocialButtons {
+  display: inline;
+  float: left;
+  width: 97.91666666666666%;
+  margin: 0 1.0416666666666665%;
   text-align: center;
-  max-width: 100%;
-  margin: 1.714285714rem 1.714285714rem 0 1.714285714rem;
+}
+footer#colophon .socialButton {
+  padding: 0 0.857142857rem;
+  margin: 0;
+}
+footer#colophon .site-info {
+  display: inline;
+  float: left;
+  width: 97.91666666666666%;
+  margin: 0 1.0416666666666665%;
+  border-top: solid 1px #3d3b3a;
+  text-align: center;
+  margin: 1.714285714rem 0;
 }
 footer#colophon .site-info a {
   color: #817f7e;

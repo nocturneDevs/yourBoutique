@@ -2,8 +2,15 @@
 // All variables here so that you can quickly tweak them
 
 @import "_mixins.less";
+@import "_grid.less";
 //@import "_woocommerce.less";
 
+// Grid setup
+
+@column-width: 60;
+@gutter-width: 20;
+@columns: 12;
+@total-width: 100%;
 
 // Colors
 @ybGray					: #706e6d;
@@ -381,29 +388,21 @@ footer#colophon {
 	background-color: @footerColor;
 
 	#footerWrapper {
-		.center;
-		.clearfix;
-		max-width: 800px;
+		padding: @rem24 0;
+		color: @ybGray;
 	}
 
 	#footerNav {
-		float: left;
-		height: 100px;
-		width: 31%;
+		.column(4);
 	}
 
 	#footerDetailText {
-		float: left;
-		height: 100px;
-		width: 31%;
+		.column(4);
 	}
 
-	#footerSocialBar {
-		float: left;
-		width: 31%;
-		padding: @rem24 @rem24 @rem24 @rem24;
+	#footerSocial {
+		.column(4);
 		a {
-			padding: @rem24 @rem24 @rem24 @rem24;
 			text-decoration: none;
 			color: @ybGray;
 		}
@@ -411,14 +410,23 @@ footer#colophon {
 		color: @ybPink;
 		}
 	}
+	
+	#footerSocialButtons {
+		.column(12);
+		text-align: center;
+	}
+	.socialButton {
+		padding: 0 @rem12;
+		margin: 0;
+	}
 
 	//Credits
 	.site-info{
-		clear: both;
-		.center;
+		.column(12);
+		border-top: solid 1px @ybGray - #333;
 		text-align: center;
-		max-width: 100%;
-		margin:@rem24 @rem24 0 @rem24;
+		margin: @rem24 0;
+		
 		a {
 			color: @ybGray + #111;
 			text-decoration: none;
