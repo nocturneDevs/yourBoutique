@@ -4,27 +4,39 @@
 @import "_mixins.less";
 //@import "_woocommerce.less";
 
-@ybGray:#706e6d;
-@ybPink:#dd0079;
-@nocturneGreen: #339a80;
 
-@backgroundMainColor:#fff;
-@topColor:#787878;
-@footerColor: #333;
+// Colors
+@ybGray					: #706e6d;
+@ybPink					: #dd0079;
+@nocturneGreen			: #339a80;
 
-@rem12:0.857142857rem;
-@rem24:1.714285714rem;
-@rem48:3.428571429rem;
+@backgroundMainColor	: #fff;
+@topColor 				: #787878;
+@footerColor			: #333;
 
-@maxHeaderImageWidth:400px;
-@maxFooterHeight: 15*@rem12;
+@mainTextColor			: #333;
+@headingTextColor		: #333;
+@subtleTextColor		: #777;
+@highlightTextColor		: @ybPink + #111;
+
+// EMs, REMs, and other delightful sizes
+@rem12					: 0.857142857rem;
+@rem24					: 1.714285714rem;
+@rem48					: 3.428571429rem;
+
+@maxHeaderImageWidth	: 400px;
+@maxFooterHeight		: 15*@rem12;
+
+@bigHeadingTextSize		: @rem24 * 1.5;
+@mediumHeadingTextSize	: @rem24;
+@smallHeadingTextSize	: @rem12 * 1.5;
+@subtleTextSize			: 0.87rem;
 
 // Image parameters
 @imageBorderPadding:2px;
 @imageBorderPaddingRem:@rem12 / 6;
 @imageBorderColor:@ybGray;
 @imageBorderThickness:1px;
-
 
 // Product page
 @imageSectionWidth:64%;
@@ -175,12 +187,34 @@ header#masthead {
 
 // CONTENT STYLES
 .woocommerce, .woocommerce-page {
+
+	color:@mainTextColor;
+	a:hover {
+		color: @highlightTextColor;
+	}
+
+	.woocommerce-breadcrumb{
+		.clearfix();
+		margin: 0 0 1rem;
+		padding: 0;
+		font-size: @subtleTextSize;
+		color: @subtleTextColor;
+		a {
+			color: @subtleTextColor;
+		}
+
+		a:hover {
+			color:@subtleTextColor - #222;
+		}
+	}
+
+
 	div.product, #content div.product {
 		div.images {
 
 			float:left;
 			width: 48%;
-			margin-bottom: 2em;
+			margin-bottom: 2rem;
 
 			img {
 				display:block;
@@ -222,19 +256,116 @@ header#masthead {
 			width: 32%;
 			margin-bottom: 2em;
 
+			.product_title {
+				font-size:@mediumHeadingTextSize;
+			}
+
+			.button {
+				
+			}
+
+
+
 			.product_meta {
-				font-size:0.92em;
-				color:#777;
-				a {
-					color:@ybPink + #111;
-				}
+				font-size:@subtleTextSize;
+				color:@subtleTextColor;
 				a:hover {
-					color:@ybPink + #445;
+					color:@ybPink + #111;
 				}
 			}
 
 		}
 	}
+
+	.related, .upsells.products {
+		
+		clear:both;
+		.clearfix();
+		border-top:1px solid @ybPink;
+
+		padding-top:24px;
+		padding-top:@rem24;
+
+		ul.products, ul {
+			float:none;
+			padding-top:12px;
+			padding-top:@rem12;
+			li.product {
+				width: 96px;
+				width: @rem48 * 2;
+				img {
+					width: 100%;
+					height:auto;
+				}
+			}
+		}
+	}
+
+	// ul.products {
+	// 	li.product {
+	// 		float:left;
+	// 		margin: 0 3.8% 2.992em 0;
+	// 		padding: 0;
+	// 		position: relative;
+	// 		width: 22.05%;
+	// 		margin-left: 0;
+	// 		.onsale {
+	// 			top: 0;
+	// 			right: 0;
+	// 			left:auto;
+	// 			margin: -6px -6px 0 0;
+	// 		}
+	// 		h3 {
+	// 			padding: .5em 0;
+	// 			margin: 0;
+	// 			font-size: 1em;
+	// 		}
+	// 		a {
+	// 			text-decoration:none;
+	// 		}
+	// 		a img {
+	// 			width: 100%;
+	// 			height:auto;
+	// 			display:block;
+	// 			margin: 0 0 8px;
+	// 			.box_shadow(0,1px,2px,0,rgba(0,0,0,0.3));
+	// 			.transition();
+	// 		}
+	// 		a:hover img {
+	// 			.box_shadow(0,1px,3px,0,rgba(0,0,0,0.4));
+	// 		}
+	// 		strong {
+	// 			display:block;
+	// 		}
+	// 		.price {
+	// 			color: @highlight;
+	// 			display:block;
+	// 			font-weight:normal;
+	// 			margin-bottom: .5em;
+	// 			del {
+	// 				font-size: 0.67em;
+	// 				color:fade( desaturate( @highlight, 75% ), 50% );
+	// 				margin: -2px 0 0 0;
+	// 			}
+	// 			ins {
+	// 				background:none;
+	// 			}
+	// 			.from {
+	// 				font-size: 0.67em;
+	// 				margin: -2px 0 0 0;
+	// 				text-transform: uppercase;
+	// 				color:fade( desaturate( @highlight, 75% ), 50% );
+	// 			}
+	// 		}
+	// 	}
+	// 	li.first {
+	// 		clear:both;
+	// 	}
+	// 	li.last {
+	// 		margin-right: 0;
+	// 	}
+	// }
+
 }
 
 
