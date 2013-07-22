@@ -15,6 +15,7 @@
 // Colors
 @ybGray					: #706e6d;
 @ybPink					: #dd0079;
+@triadBlue 				: #0079dd;
 @nocturneGreen			: #339a80;
 
 @backgroundMainColor	: #fff;
@@ -239,7 +240,7 @@ header#masthead {
 		padding:3px 6px 3px 6px;
 		padding:@rem12 / 4 @rem12 / 2 @rem12 / 4 @rem12 / 2;
 
-		background-color:@ybGray + #444;
+		background-color:fade(@triadBlue,80%);
 		// border-top:1px solid @ybGray + #444;
 		// border-left:1px solid @ybGray + #444;
 		// border-right:1px solid @ybGray + #222;
@@ -250,11 +251,11 @@ header#masthead {
 
 		&:hover {
 			color:#fff;
-			background-color:@ybGray+#555;
+			background-color:fade(@triadBlue,75%);
 		}
 
 		&:active {
-			background-color:@ybGray + #222;
+			background-color:@triadBlue;
 			// border-right:1px solid @ybGray + #444;
 			// border-bottom:1px solid @ybGray + #444;
 			// border-left:1px solid @ybGray + #222;
@@ -355,20 +356,19 @@ header#masthead {
 				padding:@rem12 @rem24*1.5 @rem12 @rem24*1.5;
 
 				border-radius:0;
-				border:1px solid @ybPink;
+				border:1px solid @triadBlue - #222;
 				background-image:none;
-				background-color:#f38;
+				background-color:@triadBlue;
 				// border-top:1px solid @ybGray + #444;
 				// border-left:1px solid @ybGray + #444;
 				// border-right:1px solid @ybGray + #222;
 				// border-bottom:1px solid @ybGray + #222;
 
-				font-size:1rem;
-				color:#fff;
+				
 
 				&:hover {
 					background-image:none;
-					background-color:#f38 + #111;
+					background-color:fade(@triadBlue,90%);
 
 					box-shadow:none;
 					-webkit-box-shadow:none;
@@ -377,7 +377,7 @@ header#masthead {
 
 				&:active {
 					background-image:none;
-					background-color:#f38 - #111;
+					background-color:@triadBlue - #111;
 					box-shadow:none;
 					-webkit-box-shadow:none;
 					-moz-box-shadow:none;
@@ -385,6 +385,17 @@ header#masthead {
 					// border-bottom:1px solid @ybGray + #444;
 					// border-left:1px solid @ybGray + #222;
 					// border-top:1px solid @ybGray + #222;				
+				}
+
+				#single-add-to-cart-text {
+					font-size:1rem;
+					color:#fff;
+					display:none;
+				}
+
+				#single-add-to-cart-icon {
+					font-size:1.2rem;
+					color:#fff;
 				}
 
 			}

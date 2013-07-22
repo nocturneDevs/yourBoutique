@@ -1944,18 +1944,18 @@ header#masthead #site-navigation li a:hover {
 .woocommerce-page .add_to_cart_button {
   padding: 3px 6px 3px 6px;
   padding: 0.21428571425rem 0.4285714285rem 0.21428571425rem 0.4285714285rem;
-  background-color: #b4b2b1;
+  background-color: rgba(0, 121, 221, 0.8);
   font-size: 0.8rem;
   color: #fff;
 }
 .woocommerce .add_to_cart_button:hover,
 .woocommerce-page .add_to_cart_button:hover {
   color: #fff;
-  background-color: #c5c3c2;
+  background-color: rgba(0, 121, 221, 0.75);
 }
 .woocommerce .add_to_cart_button:active,
 .woocommerce-page .add_to_cart_button:active {
-  background-color: #92908f;
+  background-color: #0079dd;
 }
 .woocommerce .woocommerce-breadcrumb,
 .woocommerce-page .woocommerce-breadcrumb {
@@ -2144,18 +2144,16 @@ header#masthead #site-navigation li a:hover {
   padding: 12px 36px 12px 36px;
   padding: 0.857142857rem 2.571428571rem 0.857142857rem 2.571428571rem;
   border-radius: 0;
-  border: 1px solid #dd0079;
+  border: 1px solid #0057bb;
   background-image: none;
-  background-color: #f38;
-  font-size: 1rem;
-  color: #fff;
+  background-color: #0079dd;
 }
 .woocommerce div.product div.summary .button:hover,
 .woocommerce-page div.product div.summary .button:hover,
 .woocommerce #content div.product div.summary .button:hover,
 .woocommerce-page #content div.product div.summary .button:hover {
   background-image: none;
-  background-color: #ff4499;
+  background-color: rgba(0, 121, 221, 0.9);
   box-shadow: none;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
@@ -2165,10 +2163,25 @@ header#masthead #site-navigation li a:hover {
 .woocommerce #content div.product div.summary .button:active,
 .woocommerce-page #content div.product div.summary .button:active {
   background-image: none;
-  background-color: #ee2277;
+  background-color: #0068cc;
   box-shadow: none;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
+}
+.woocommerce div.product div.summary .button #single-add-to-cart-text,
+.woocommerce-page div.product div.summary .button #single-add-to-cart-text,
+.woocommerce #content div.product div.summary .button #single-add-to-cart-text,
+.woocommerce-page #content div.product div.summary .button #single-add-to-cart-text {
+  font-size: 1rem;
+  color: #fff;
+  display: none;
+}
+.woocommerce div.product div.summary .button #single-add-to-cart-icon,
+.woocommerce-page div.product div.summary .button #single-add-to-cart-icon,
+.woocommerce #content div.product div.summary .button #single-add-to-cart-icon,
+.woocommerce-page #content div.product div.summary .button #single-add-to-cart-icon {
+  font-size: 1.2rem;
+  color: #fff;
 }
 .woocommerce div.product div.summary .product_meta,
 .woocommerce-page div.product div.summary .product_meta,
@@ -2520,6 +2533,12 @@ footer#colophon .site-info a:hover {
   .woocommerce #content div.product div.summary,
   .woocommerce-page #content div.product div.summary {
     width: 32%;
+  }
+  .woocommerce div.product div.summary .button #single-add-to-cart-text,
+  .woocommerce-page div.product div.summary .button #single-add-to-cart-text,
+  .woocommerce #content div.product div.summary .button #single-add-to-cart-text,
+  .woocommerce-page #content div.product div.summary .button #single-add-to-cart-text {
+    display: inline;
   }
   .woocommerce div.product .woocommerce-tabs,
   .woocommerce-page div.product .woocommerce-tabs,
