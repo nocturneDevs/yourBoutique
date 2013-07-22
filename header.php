@@ -47,9 +47,9 @@
 	</div>
 
 	<div id="top-right" class="top-content">
-		<a href="<?php echo esc_url(home_url('/my-account')); ?>" class="headerIcon"><i class="icon-user icon-2x"></i></a>
+		<a href="<?php echo esc_url(home_url('/my-account')); ?>" title="My Account" class="headerIcon"><i class="icon-user icon-2x"></i></a>
 		<div id="headerSpacer"><i class="icon-ellipsis-vertical icon-2x"></i></div>
-		<a href="<?php echo esc_url(home_url('/cart')); ?>" class="headerIcon"><i class="icon-shopping-cart icon-2x"></i></a>
+		<a href="<?php echo esc_url(home_url('/cart')); ?>" title="View Cart" class="headerIcon"><i class="icon-shopping-cart icon-2x"></i></a>
 	</div>
 
 </div>

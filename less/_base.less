@@ -36,7 +36,7 @@
 @rem24					: 1.714285714rem;
 @rem48					: 3.428571429rem;
 
-@maxHeaderImageWidth	: 400px;
+@maxHeaderImageWidth	: 360px;
 @maxFooterHeight		: 15*@rem12;
 
 @bigHeadingTextSize		: @rem24 * 1.5;
@@ -182,8 +182,9 @@ header#masthead {
 
 		a {
 			img#header-image {
-				margin-top: 12px;
-				margin-top: @rem12;
+				// margin-top: 12px;
+				// margin-top: @rem12;
+				margin-top:0;
 				width:100%;
 				
 				padding:0;
@@ -195,23 +196,36 @@ header#masthead {
 	}
 
 	#site-navigation {
-		margin-top:12px;
-		margin-top:@rem12;
+		margin-top:6px;
+		margin-top:@rem12 / 2;
 
 		div.nav-menu ul {
+			height:36px;
+			height:@rem12 * 3;
 			box-shadow:none;
 			border-style:none;
+			
+			li {
+				height:100%;
+
+				a {
+					vertical-align:middle;
+					line-height:36px;
+					line-height:@rem12 * 3;
+
+					font-size:14px;
+					font-size:@rem12 * 7 / 6;
+					font-family:'Lato',sans-serif;
+
+					&:hover {
+						color: @ybPink + #111;		
+					}
+				}
+				
+			}
 		}
 
-		li a {
-			font-size:14px;
-			font-size:@rem12 * 7 / 6;
-			font-family:'Lato',sans-serif;
-		}
-
-		li a:hover {
-			color: @ybPink + #111;
-		}
+		
 	}	
 }
 

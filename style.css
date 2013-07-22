@@ -1888,14 +1888,13 @@ header#masthead {
 }
 header#masthead div#header-image-wrapper {
   width: 100%;
-  max-width: 400px;
+  max-width: 360px;
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 header#masthead div#header-image-wrapper a img#header-image {
-  margin-top: 12px;
-  margin-top: 0.857142857rem;
+  margin-top: 0;
   width: 100%;
   padding: 0;
   border: none;
@@ -1903,19 +1902,27 @@ header#masthead div#header-image-wrapper a img#header-image {
   box-shadow: none;
 }
 header#masthead #site-navigation {
-  margin-top: 12px;
-  margin-top: 0.857142857rem;
+  margin-top: 6px;
+  margin-top: 0.4285714285rem;
 }
 header#masthead #site-navigation div.nav-menu ul {
+  height: 36px;
+  height: 2.571428571rem;
   box-shadow: none;
   border-style: none;
 }
-header#masthead #site-navigation li a {
+header#masthead #site-navigation div.nav-menu ul li {
+  height: 100%;
+}
+header#masthead #site-navigation div.nav-menu ul li a {
+  vertical-align: middle;
+  line-height: 36px;
+  line-height: 2.571428571rem;
   font-size: 14px;
   font-size: 0.9999999998333333rem;
   font-family: 'Lato', sans-serif;
 }
-header#masthead #site-navigation li a:hover {
+header#masthead #site-navigation div.nav-menu ul li a:hover {
   color: #ee118a;
 }
 .woocommerce,
