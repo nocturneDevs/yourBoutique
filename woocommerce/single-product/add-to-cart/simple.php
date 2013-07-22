@@ -39,7 +39,7 @@ if ( ! $product->is_purchasable() ) return;
 	 			) );
 	 	?>
 
-	 	<button type="submit" class="single_add_to_cart_button button alt"><?php echo apply_filters('single_add_to_cart_text', __( 'Add to cart', 'woocommerce' ), $product->product_type); ?></button>
+	 	<button type="submit" class="single_add_to_cart_button button alt"><a id="single-add-to-cart-text"><?php echo apply_filters('single_add_to_cart_text', __( 'Add to cart ', 'woocommerce' ), $product->product_type); ?></a><i id="single-add-to-cart-icon" class="icon-shopping-cart icon-1x"></i></button>
 
 	 	<?php do_action('woocommerce_after_add_to_cart_button'); ?>
 
