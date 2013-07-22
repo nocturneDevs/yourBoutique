@@ -47,7 +47,7 @@
 	</div>
 
 	<div id="top-right" class="top-content">
-		Login | Sign up | Checkout
+		Login | <i class="icon-shopping-cart icon-1x"></i>
 	</div>
 
 </div>
