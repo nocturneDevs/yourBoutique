@@ -29,7 +29,7 @@
 @highlightTextColor		: @ybPink + #111;
 @buttonHoverTextColor   : @ybPink + #555;
 
-@priceColor				: #5a6;
+@priceColor				: fade(@ybPink,90%);
 
 // EMs, REMs, and other delightful sizes
 @rem12					: 0.857142857rem;
@@ -273,7 +273,7 @@ header#masthead {
 		}
 
 		a:hover {
-			color:@subtleTextColor - #222;
+			color:@subtleTextColor - #444;
 		}
 	}
 
@@ -332,16 +332,49 @@ header#masthead {
 
 			.cart {
 				.quantity.buttons_added {
-					input.minus {
+					
+					input[type=button] {
+						background-image:none;
+						background-color:#e3e3e3;
+						.noshadows();
 
-					}
-					input.plus {
+						&:hover {
+							background-color:#f1f1f1;
+						}
 
+						&:active {
+							background-color:#dcdcdc;
+							border:1px solid rgba(0,0,0,0);
+						}
 					}
+
+					// input.minus {
+					// 	background-image:none;
+					// 	background-color:#e3e3e3;
+					// 	.noshadows();
+
+					// 	&:active {
+					// 		border:1px solid rgba(0,0,0,0);
+					// 	}
+					// }
+					// input.plus {
+					// 	background-image:none;
+					// 	background-color:#e3e3e3;
+					// 	.noshadows();
+
+					// 	&:active {
+					// 		border:1px solid rgba(0,0,0,0);
+					// 	}
+					// }
 
 					input[type=number] {
-						width:25px;
+						width:24px;
+						width:@rem24;
+						text-align:center;
+						// margin-left:auto;
+						// margin-right:auto;
 					}
+
 					input[type=number]::-webkit-inner-spin-button,
 					input[type=number]::-webkit-outer-spin-button {
 					    -webkit-appearance: none;
@@ -354,36 +387,22 @@ header#masthead {
 				padding:12px 36px 12px 36px;
 				padding:@rem12 @rem24*1.5 @rem12 @rem24*1.5;
 
+				border:none;
 				border-radius:0;
-				border:1px solid @triadBlue - #222;
 				background-image:none;
 				background-color:@triadBlue;
-				// border-top:1px solid @ybGray + #444;
-				// border-left:1px solid @ybGray + #444;
-				// border-right:1px solid @ybGray + #222;
-				// border-bottom:1px solid @ybGray + #222;
-
 				
 
 				&:hover {
 					background-image:none;
 					background-color:fade(@triadBlue,90%);
-
-					box-shadow:none;
-					-webkit-box-shadow:none;
-					-moz-box-shadow:none;
+					.noshadows();
 				}
 
 				&:active {
 					background-image:none;
 					background-color:@triadBlue - #111;
-					box-shadow:none;
-					-webkit-box-shadow:none;
-					-moz-box-shadow:none;
-					// border-right:1px solid @ybGray + #444;
-					// border-bottom:1px solid @ybGray + #444;
-					// border-left:1px solid @ybGray + #222;
-					// border-top:1px solid @ybGray + #222;				
+					.noshadows();
 				}
 
 				#single-add-to-cart-text {
@@ -453,10 +472,10 @@ header#masthead {
 	 		h3 {
 	 			padding: .5em 0;
 	 			margin: 0;
-	 			
-	 			font-family:"Lato",sans-serif;
+	 			color:#000;
+	 			//font-family:"Lato",sans-serif;
 	 			font-weight:normal;
-	 			text-transform:uppercase;
+	 			//text-transform:uppercase;
 
 	 		}
 	 		a {
@@ -469,7 +488,7 @@ header#masthead {
 	 			margin: 0 0 8px;
 	 		}
 	 		a:hover img {
-
+	 			color:#000;
 	 		}
 	 		strong {
 	 			display:block;
