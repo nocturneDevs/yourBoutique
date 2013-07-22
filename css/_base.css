@@ -60,6 +60,22 @@ body {
   margin: 0 1.0416666666666665%;
   margin-left: 9.374999999999998%;
 }
+#main.wrapper:before,
+#main.wrapper:after {
+  content: " ";
+  display: table;
+}
+#main.wrapper:after {
+  clear: both;
+}
+#main.wrapper:before,
+#main.wrapper:after {
+  content: " ";
+  display: table;
+}
+#main.wrapper:after {
+  clear: both;
+}
 #bodyWrapper {
   background-color: #ffffff;
   width: 100%;
