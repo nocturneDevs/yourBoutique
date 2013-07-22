@@ -2158,7 +2158,7 @@ header#masthead #site-navigation div.nav-menu ul li a:hover {
 .woocommerce-page #content div.product div.summary {
   float: right;
   width: 32%;
-  margin-bottom: 2em;
+  margin-bottom: 0;
 }
 .woocommerce div.product div.summary .product_title,
 .woocommerce-page div.product div.summary .product_title,
@@ -2224,6 +2224,25 @@ header#masthead #site-navigation div.nav-menu ul li a:hover {
 .woocommerce #content div.product div.summary .product_meta a:hover,
 .woocommerce-page #content div.product div.summary .product_meta a:hover {
   color: #ee118a;
+}
+.woocommerce div.product .woocommerce-tabs .description_tab,
+.woocommerce-page div.product .woocommerce-tabs .description_tab,
+.woocommerce #content div.product .woocommerce-tabs .description_tab,
+.woocommerce-page #content div.product .woocommerce-tabs .description_tab,
+.woocommerce div.product .woocommerce-tabs .reviews_tab,
+.woocommerce-page div.product .woocommerce-tabs .reviews_tab,
+.woocommerce #content div.product .woocommerce-tabs .reviews_tab,
+.woocommerce-page #content div.product .woocommerce-tabs .reviews_tab {
+  display: none;
+}
+.woocommerce div.product .woocommerce-tabs .panel h2,
+.woocommerce-page div.product .woocommerce-tabs .panel h2,
+.woocommerce #content div.product .woocommerce-tabs .panel h2,
+.woocommerce-page #content div.product .woocommerce-tabs .panel h2 {
+  margin-top: 6px;
+  margin-bottom: 6px;
+  margin-top: 0.4285714285rem;
+  margin-bottom: 0.4285714285rem;
 }
 .woocommerce .related,
 .woocommerce-page .related,

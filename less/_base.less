@@ -325,6 +325,7 @@ header#masthead {
 	}
 
 	.woocommerce-breadcrumb{
+		
 		.clearfix();
 		margin: 0;
 		padding:0;
@@ -387,7 +388,7 @@ header#masthead {
 		div.summary {
 			float: right;
 			width: 32%;
-			margin-bottom: 2em;
+			margin-bottom: 0;
 
 			.product_title {
 				font-size:@mediumHeadingTextSize;
@@ -442,7 +443,28 @@ header#masthead {
 				}
 			}
 
+
+
+		} // end summary
+
+		.woocommerce-tabs {
+			.description_tab,
+			.reviews_tab {
+				display:none;
+			}
+
+			.panel {
+				h2 {
+					margin-top:6px;
+					margin-bottom:6px;
+					margin-top:@rem12 / 2;
+					margin-bottom:@rem12 / 2;
+				}
+			}
 		}
+
+
+
 	}
 
 	.related, .upsells.products {
