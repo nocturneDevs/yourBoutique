@@ -1965,6 +1965,36 @@ header#masthead #site-navigation li a:hover {
 .woocommerce-page .add_to_cart_button:active {
   background-color: #0079dd;
 }
+.woocommerce .quantity.buttons_added input[type=button],
+.woocommerce-page .quantity.buttons_added input[type=button] {
+  background-image: none;
+  background-color: #e3e3e3;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+}
+.woocommerce .quantity.buttons_added input[type=button]:hover,
+.woocommerce-page .quantity.buttons_added input[type=button]:hover {
+  background-color: #f1f1f1;
+}
+.woocommerce .quantity.buttons_added input[type=button]:active,
+.woocommerce-page .quantity.buttons_added input[type=button]:active {
+  background-color: #dcdcdc;
+  border: 1px solid rgba(0, 0, 0, 0);
+}
+.woocommerce .quantity.buttons_added input[type=number],
+.woocommerce-page .quantity.buttons_added input[type=number] {
+  width: 24px;
+  width: 1.714285714rem;
+  text-align: center;
+}
+.woocommerce .quantity.buttons_added input[type=number]::-webkit-inner-spin-button,
+.woocommerce-page .quantity.buttons_added input[type=number]::-webkit-inner-spin-button,
+.woocommerce .quantity.buttons_added input[type=number]::-webkit-outer-spin-button,
+.woocommerce-page .quantity.buttons_added input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 .woocommerce .woocommerce-breadcrumb,
 .woocommerce-page .woocommerce-breadcrumb {
   margin: 0;
@@ -2127,48 +2157,6 @@ header#masthead #site-navigation li a:hover {
 .woocommerce #content div.product div.summary .product_title,
 .woocommerce-page #content div.product div.summary .product_title {
   font-size: 1.714285714rem;
-}
-.woocommerce div.product div.summary .cart .quantity.buttons_added input[type=button],
-.woocommerce-page div.product div.summary .cart .quantity.buttons_added input[type=button],
-.woocommerce #content div.product div.summary .cart .quantity.buttons_added input[type=button],
-.woocommerce-page #content div.product div.summary .cart .quantity.buttons_added input[type=button] {
-  background-image: none;
-  background-color: #e3e3e3;
-  box-shadow: none;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-}
-.woocommerce div.product div.summary .cart .quantity.buttons_added input[type=button]:hover,
-.woocommerce-page div.product div.summary .cart .quantity.buttons_added input[type=button]:hover,
-.woocommerce #content div.product div.summary .cart .quantity.buttons_added input[type=button]:hover,
-.woocommerce-page #content div.product div.summary .cart .quantity.buttons_added input[type=button]:hover {
-  background-color: #f1f1f1;
-}
-.woocommerce div.product div.summary .cart .quantity.buttons_added input[type=button]:active,
-.woocommerce-page div.product div.summary .cart .quantity.buttons_added input[type=button]:active,
-.woocommerce #content div.product div.summary .cart .quantity.buttons_added input[type=button]:active,
-.woocommerce-page #content div.product div.summary .cart .quantity.buttons_added input[type=button]:active {
-  background-color: #dcdcdc;
-  border: 1px solid rgba(0, 0, 0, 0);
-}
-.woocommerce div.product div.summary .cart .quantity.buttons_added input[type=number],
-.woocommerce-page div.product div.summary .cart .quantity.buttons_added input[type=number],
-.woocommerce #content div.product div.summary .cart .quantity.buttons_added input[type=number],
-.woocommerce-page #content div.product div.summary .cart .quantity.buttons_added input[type=number] {
-  width: 24px;
-  width: 1.714285714rem;
-  text-align: center;
-}
-.woocommerce div.product div.summary .cart .quantity.buttons_added input[type=number]::-webkit-inner-spin-button,
-.woocommerce-page div.product div.summary .cart .quantity.buttons_added input[type=number]::-webkit-inner-spin-button,
-.woocommerce #content div.product div.summary .cart .quantity.buttons_added input[type=number]::-webkit-inner-spin-button,
-.woocommerce-page #content div.product div.summary .cart .quantity.buttons_added input[type=number]::-webkit-inner-spin-button,
-.woocommerce div.product div.summary .cart .quantity.buttons_added input[type=number]::-webkit-outer-spin-button,
-.woocommerce-page div.product div.summary .cart .quantity.buttons_added input[type=number]::-webkit-outer-spin-button,
-.woocommerce #content div.product div.summary .cart .quantity.buttons_added input[type=number]::-webkit-outer-spin-button,
-.woocommerce-page #content div.product div.summary .cart .quantity.buttons_added input[type=number]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
 }
 .woocommerce div.product div.summary .button,
 .woocommerce-page div.product div.summary .button,
@@ -2483,7 +2471,6 @@ table.cart td.actions .button.alt,
 }
 table.cart input,
 #content table.cart input {
-  margin: 0;
   vertical-align: middle;
   line-height: 1em;
 }
