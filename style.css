@@ -1850,7 +1850,7 @@ div#top {
 div#top .top-content {
   font-size: 0.857142857rem;
   color: #cccccc;
-  line-height: 2;
+  line-height: 1.5;
 }
 div#top a.headerIcon {
   text-decoration: none;
@@ -1870,18 +1870,18 @@ div#top div#top-left {
   margin-right: 3.428571429rem;
   padding-top: 9px;
   padding-top: 0.64285714275rem;
-  padding-bottom: 9px;
-  padding-bottom: 0.64285714275rem;
+  padding-bottom: 3px;
+  padding-bottom: 0.21428571425rem;
 }
 div#top div#top-right {
   margin-left: 48px;
   margin-left: 3.428571429rem;
   margin-right: 48px;
   margin-right: 3.428571429rem;
-  padding-top: 9px;
-  padding-top: 0.64285714275rem;
-  padding-bottom: 9px;
-  padding-bottom: 0.64285714275rem;
+  padding-top: 6px;
+  padding-top: 0.4285714285rem;
+  padding-bottom: 6px;
+  padding-bottom: 0.4285714285rem;
 }
 header#masthead {
   padding-top: 0;
@@ -2242,6 +2242,10 @@ ul.products li.product h3 {
 }
 ul.products li.product a {
   text-decoration: none;
+}
+ul.products li.product a h3 mark {
+  background-color: rgba(0, 0, 0, 0);
+  color: #777777;
 }
 ul.products li.product a img {
   width: 100%;

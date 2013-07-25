@@ -127,7 +127,7 @@ div#top {
 	.top-content {
 		font-size:@rem12;
 		color:@topFontColor;
-		line-height: 2;
+		line-height: 1.5;
 
 	}
 
@@ -153,8 +153,8 @@ div#top {
 
 		padding-top:9px;
 		padding-top:@rem12 * 0.75;
-		padding-bottom:9px;
-		padding-bottom:@rem12 * 0.75;
+		padding-bottom:3px;
+		padding-bottom:@rem12 * 0.25;
 
 	}
 
@@ -164,10 +164,10 @@ div#top {
 		margin-right:48px;
 		margin-right:@rem48;
 
-		padding-top:9px;
-		padding-top:@rem12 * 0.75;
-		padding-bottom:9px;
-		padding-bottom:@rem12 * 0.75;
+		padding-top:6px;
+		padding-top:@rem12 * 0.5;
+		padding-bottom:6px;
+		padding-bottom:@rem12 * 0.5;
 	}	
 }
 
@@ -516,6 +516,13 @@ header#masthead {
 	 		}
 	 		a {
 	 			text-decoration:none;
+
+	 			h3 {
+	 				mark {
+	 					background-color:rgba(0,0,0,0);
+	 					color:@subtleTextColor;
+	 				}
+	 			}
 	 		}
 	 		a img {
 	 			width: 100%;
@@ -549,6 +556,7 @@ header#masthead {
 	 				color:fade( desaturate( @highlight, 75% ), 50% );
 	 			}
 	 		}
+
 	 	}
 	 	li.first {
 	 		clear:both;

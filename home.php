@@ -13,16 +13,16 @@ get_header('shop'); ?>
 
 	<div id="whatsnewwrapper" class="homesectionwrapper">
 
-		<a href="/?product_cat=whatsnew"><h1 class="page-title">What's New</h1></a>
+		<a href="/?product_tag=new"><h1 class="page-title">What's New</h1></a>
 		<?php 
 		$args = array(
 		                'post_type' => 'product',
 		                'showposts' => 4,
 		                'tax_query' => array (
 		                	array (
-		                		'taxonomy' => 'product_cat',
+		                		'taxonomy' => 'product_tag',
 		                		'field' => 'slug',
-		                		'terms' => 'whatsnew'
+		                		'terms' => 'new'
 		                	)
 		                )
 		            );
@@ -59,14 +59,14 @@ get_header('shop'); ?>
 	</div> <!-- whatsnewwrapper -->
 
 	<div id="featuredwrapper" class="homesectionwrapper">
-		<a href="/?product_cat=featured"><h1 class="page-title">Featured</h1></a>
+		<a href="/?product_tag=featured"><h1 class="page-title">Featured</h1></a>
 		<?php 
 		$args = array(
 		                'post_type' => 'product',
 		                'showposts' => 4,
 		                'tax_query' => array (
 		                	array (
-		                		'taxonomy' => 'product_cat',
+		                		'taxonomy' => 'product_tag',
 		                		'field' => 'slug',
 		                		'terms' => 'featured'
 		                	)
@@ -106,14 +106,14 @@ get_header('shop'); ?>
 
 
 	<div id="clothingwrapper" class="homesectionwrapper">
-		<a href="/?product_cat=clothing"><h1 class="page-title">Clothing</h1></a>
+		<a href="/?product_tag=clothing"><h1 class="page-title">Clothing</h1></a>
 		<?php 
 		$args = array(
 		                'post_type' => 'product',
 		                'showposts' => 4,
 		                'tax_query' => array (
 		                	array (
-		                		'taxonomy' => 'product_cat',
+		                		'taxonomy' => 'product_tag',
 		                		'field' => 'slug',
 		                		'terms' => 'clothing'
 		                	)
@@ -152,7 +152,7 @@ get_header('shop'); ?>
 	</div> <!-- clothingwrapper -->
 
 	<div id="bagswrapper" class="homesectionwrapper">
-		<a href="/?product_cat=bags"><h1 class="page-title">Bags</h1></a>
+		<a href="/?product_tag=bags"><h1 class="page-title">Bags</h1></a>
 
 		<?php 
 		$args = array(
@@ -160,7 +160,7 @@ get_header('shop'); ?>
 		                'showposts' => 4,
 		                'tax_query' => array (
 		                	array (
-		                		'taxonomy' => 'product_cat',
+		                		'taxonomy' => 'product_tag',
 		                		'field' => 'slug',
 		                		'terms' => 'bags'
 		                	)
@@ -202,14 +202,14 @@ get_header('shop'); ?>
 
 	<div id="accessorieswrapper" class="homesectionwrapper homesectionwrapperlast">
 
-		<a href="/?product_cat=accessories"><h1 class="page-title">Accessories</h1></a>
+		<a href="/?product_tag=accessories"><h1 class="page-title">Accessories</h1></a>
 		<?php 
 		$args = array(
 		                'post_type' => 'product',
 		                'showposts' => 4,
 		                'tax_query' => array (
 		                	array (
-		                		'taxonomy' => 'product_cat',
+		                		'taxonomy' => 'product_tag',
 		                		'field' => 'slug',
 		                		'terms' => 'accessories'
 		                	)
