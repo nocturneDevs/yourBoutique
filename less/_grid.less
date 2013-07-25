@@ -17,6 +17,11 @@
 // @min-width: 960;
 // @correction: 0.5 / @min-width * 100 * 1%;
 
+/* apply a natural box layout model to all elements */
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+ }
+
 // Grid
 
 body {
