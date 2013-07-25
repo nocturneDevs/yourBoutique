@@ -573,6 +573,61 @@ header#masthead {
 //}
 
 
+// HOME PAGE STYLING
+
+div#homewrapper {
+	div.homesectionwrapper {
+		.clearfix();
+		.transition();
+		margin-bottom:18px;
+		margin-bottom:@rem12 * 1.5;
+
+		border-bottom:1px solid @mainTextColor;
+		a {
+			text-decoration:none;
+		}
+
+		h1.page-title {
+			.transition();
+			//border-top:1px solid @ybPink;
+			//border-bottom:1px solid @mainTextColor;
+			margin:0;
+			padding-left:6px;
+			padding-left:@rem12 / 2;
+
+			line-height:120%;
+
+			//background-color:#e3e3e3;
+		}
+
+		p.woocommerce-result-count,
+		form.woocommerce-ordering,
+		.woocommerce-pagination {
+			display:none;
+		}
+
+		ul {
+			li {
+				margin-bottom:18px;
+				margin-bottom:@rem12 * 1.5;
+			}
+		}
+
+		&:hover {
+			background-color:fade(#000,8%);
+			.box_shadow(0px,0px,5px,0px,fade(#000,8%));
+			h1.page-title {
+				color:@ybPink;
+			}
+		}
+	}
+
+	div.homesectionwrapperlast {
+		border-bottom:none;
+	}
+}
+
+
 // CART STYLING
 /* =Cart
 	-------------------------------------------------------------- */

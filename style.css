@@ -2292,6 +2292,73 @@ ul.products li.last {
 .woocommerce-ordering select {
   vertical-align: top;
 }
+div#homewrapper div.homesectionwrapper {
+  -webkit-transition: all ease-in-out 0.2s;
+  -moz-transition: all ease-in-out 0.2s;
+  -o-transition: all ease-in-out 0.2s;
+  transition: all ease-in-out 0.2s;
+  margin-bottom: 18px;
+  margin-bottom: 1.2857142855rem;
+  border-bottom: 1px solid #333333;
+}
+div#homewrapper div.homesectionwrapper:before,
+div#homewrapper div.homesectionwrapper:after {
+  content: " ";
+  display: table;
+}
+div#homewrapper div.homesectionwrapper:after {
+  clear: both;
+}
+div#homewrapper div.homesectionwrapper:before,
+div#homewrapper div.homesectionwrapper:after {
+  content: " ";
+  display: table;
+}
+div#homewrapper div.homesectionwrapper:after {
+  clear: both;
+}
+div#homewrapper div.homesectionwrapper:before,
+div#homewrapper div.homesectionwrapper:after {
+  content: " ";
+  display: table;
+}
+div#homewrapper div.homesectionwrapper:after {
+  clear: both;
+}
+div#homewrapper div.homesectionwrapper a {
+  text-decoration: none;
+}
+div#homewrapper div.homesectionwrapper h1.page-title {
+  -webkit-transition: all ease-in-out 0.2s;
+  -moz-transition: all ease-in-out 0.2s;
+  -o-transition: all ease-in-out 0.2s;
+  transition: all ease-in-out 0.2s;
+  margin: 0;
+  padding-left: 6px;
+  padding-left: 0.4285714285rem;
+  line-height: 120%;
+}
+div#homewrapper div.homesectionwrapper p.woocommerce-result-count,
+div#homewrapper div.homesectionwrapper form.woocommerce-ordering,
+div#homewrapper div.homesectionwrapper .woocommerce-pagination {
+  display: none;
+}
+div#homewrapper div.homesectionwrapper ul li {
+  margin-bottom: 18px;
+  margin-bottom: 1.2857142855rem;
+}
+div#homewrapper div.homesectionwrapper:hover {
+  background-color: rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.08);
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.08);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.08);
+}
+div#homewrapper div.homesectionwrapper:hover h1.page-title {
+  color: #dd0079;
+}
+div#homewrapper div.homesectionwrapperlast {
+  border-bottom: none;
+}
 /* =Cart
 	-------------------------------------------------------------- */
 table.cart .product-thumbnail,
