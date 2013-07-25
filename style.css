@@ -1905,16 +1905,16 @@ header#masthead #site-navigation {
   margin-top: 6px;
   margin-top: 0.4285714285rem;
 }
-header#masthead #site-navigation div.nav-menu ul {
+header#masthead #site-navigation div ul {
   height: 36px;
   height: 2.571428571rem;
   box-shadow: none;
   border-style: none;
 }
-header#masthead #site-navigation div.nav-menu ul li {
+header#masthead #site-navigation div ul li {
   height: 100%;
 }
-header#masthead #site-navigation div.nav-menu ul li a {
+header#masthead #site-navigation div ul li a {
   vertical-align: middle;
   line-height: 36px;
   line-height: 2.571428571rem;
@@ -1922,7 +1922,7 @@ header#masthead #site-navigation div.nav-menu ul li a {
   font-size: 0.9999999998333333rem;
   font-family: 'Lato', sans-serif;
 }
-header#masthead #site-navigation div.nav-menu ul li a:hover {
+header#masthead #site-navigation div ul li a:hover {
   color: #ee118a;
 }
 h1.page-title {
