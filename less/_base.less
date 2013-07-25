@@ -855,10 +855,12 @@ ul.cart_list, ul.product_list_widget {
 form {
 	.required {
 		color: @triadBlue;
+		border: none;
+		cursor: auto;
 	}
 }
 
-form.login , form.register {
+form {
 
 	p {
 		.column(12);
@@ -868,17 +870,18 @@ form.login , form.register {
 		label{
 			.column(4);
 			text-align: right;
+			clear: both;
 		}
 
 		input {
 			.column(4);
-			.border_radius(4px);
+			.border_radius(6px);
 		}
 	}
 
 	.clear {
-		padding-top: 24px;
-		padding-top: @rem24;
+		padding-top: 12px;
+		padding-top: @rem12;
 	}
 
 	p.buttonRow {
@@ -904,6 +907,12 @@ form.login , form.register {
 		color: @triadBlue;
 	}
 
+	input:focus {
+		outline: none;
+		.box_shadow(0,0,3px,1px,#333);
+		.transition(cubic-bezier(0,0.82,1,0.21),0.3s);
+	}
+
 }
 
 .col-1, .col-2 {
@@ -927,11 +936,6 @@ form.login , form.register {
 		margin-top: 0;
 		margin-bottom: 12px;
 		margin-bottom: @rem12;
-	}
-
-	input:focus {
-		outline: none;
-		.box_shadow(0,0,3px,1px,#333);
 	}
 }
 

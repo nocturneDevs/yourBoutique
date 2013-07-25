@@ -2743,9 +2743,10 @@ ul.product_list_widget li .star-rating {
 }
 form .required {
   color: #0079dd;
+  border: none;
+  cursor: auto;
 }
-form.login p,
-form.register p {
+form p {
   display: inline;
   float: left;
   width: 97.91666666666666%;
@@ -2753,39 +2754,35 @@ form.register p {
   margin: 6px 0;
   margin: 0.4285714285rem 0;
 }
-form.login p label,
-form.register p label {
+form p label {
   display: inline;
   float: left;
   width: 31.25%;
   margin: 0 1.0416666666666665%;
   text-align: right;
+  clear: both;
 }
-form.login p input,
-form.register p input {
+form p input {
   display: inline;
   float: left;
   width: 31.25%;
   margin: 0 1.0416666666666665%;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
 }
-form.login .clear,
-form.register .clear {
-  padding-top: 24px;
-  padding-top: 1.714285714rem;
+form .clear {
+  padding-top: 12px;
+  padding-top: 0.857142857rem;
 }
-form.login p.buttonRow input,
-form.register p.buttonRow input {
+form p.buttonRow input {
   display: inline;
   float: left;
   width: 14.583333333333334%;
   margin: 0 1.0416666666666665%;
   margin-left: 42.708333333333336%;
 }
-form.login a.lost_password,
-form.register a.lost_password {
+form a.lost_password {
   clear: both;
   display: inline;
   float: left;
@@ -2801,6 +2798,16 @@ form.register a.lost_password {
   font-size: 10px;
   font-size: 0.7142857141666668rem;
   color: #0079dd;
+}
+form input:focus {
+  outline: none;
+  box-shadow: 0 0 3px 1px #333333;
+  -webkit-box-shadow: 0 0 3px 1px #333333;
+  -moz-box-shadow: 0 0 3px 1px #333333;
+  -webkit-transition: cubic-bezier(0, 0.82, 1, 0.21) 0.3s 0.2s;
+  -moz-transition: cubic-bezier(0, 0.82, 1, 0.21) 0.3s 0.2s;
+  -o-transition: cubic-bezier(0, 0.82, 1, 0.21) 0.3s 0.2s;
+  transition: cubic-bezier(0, 0.82, 1, 0.21) 0.3s 0.2s;
 }
 .col-1,
 .col-2 {
@@ -2862,13 +2869,6 @@ form.register a.lost_password {
   margin-top: 0;
   margin-bottom: 12px;
   margin-bottom: 0.857142857rem;
-}
-.col-1 input:focus,
-.col-2 input:focus {
-  outline: none;
-  box-shadow: 0 0 3px 1px #333333;
-  -webkit-box-shadow: 0 0 3px 1px #333333;
-  -moz-box-shadow: 0 0 3px 1px #333333;
 }
 footer#colophon {
   font-size: 12px;
