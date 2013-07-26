@@ -202,8 +202,8 @@ header#masthead {
 		margin-top:@rem12 / 2;
 
 		div ul {
-			height:27px;
-			height:@rem12 * 2.25;
+			//height:27px;
+			//height:@rem12 * 2.25;
 			box-shadow:none;
 			border-style:none;
 			
@@ -512,12 +512,16 @@ header#masthead {
 
 	ul.products {
 		li.product {
-			float:left;
+			float:none;
 	 		margin: 0 3.8% 2.992em 0;
 	 		padding: 0;
 	 		position: relative;
-	 		width: 22.05%;
+	 		width:90%;
+	 		margin-top:12px;
+	 		margin-top:@rem12;
 	 		margin-left: 0;
+	 		border-bottom:1px solid fade(@ybPink,85%);
+
 	 		.onsale {
 	 			top: 0;
 	 			right: 0;
@@ -606,6 +610,7 @@ header#masthead {
 // HOME PAGE STYLING
 
 div#homewrapper {
+	.clearfix();
 	div.homesectionwrapper {
 		.clearfix();
 		.transition();
