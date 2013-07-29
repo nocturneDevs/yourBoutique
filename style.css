@@ -3046,7 +3046,7 @@ footer#colophon .site-info a:hover {
   #content div.product div.images div.thumbnails {
     float: left;
     width: 22%;
-    height: 300px;
+    height: 100%;
     padding-top: 0;
   }
   div.product div.images div.thumbnails a,
