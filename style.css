@@ -2268,6 +2268,10 @@ div.product .woocommerce-tabs .panel h2,
   margin-top: 0.4285714285rem;
   margin-bottom: 0.4285714285rem;
 }
+div.product .woocommerce-tabs .panel p,
+#content div.product .woocommerce-tabs .panel p {
+  text-align: justify;
+}
 .related,
 .upsells.products {
   clear: both;
@@ -2322,6 +2326,8 @@ div.product .woocommerce-tabs .panel h2,
 .upsells.products ul li.product {
   width: 96px;
   width: 6.857142858rem;
+  margin-bottom: 12px;
+  margin-bottom: 0.857142857rem;
 }
 .related ul.products li.product img,
 .upsells.products ul.products li.product img,
@@ -2985,6 +2991,7 @@ footer#colophon:after {
 }
 footer#colophon #footerWrapper {
   padding: 1.714285714rem 0;
+  padding-bottom: 0;
   color: #706e6d;
   display: inline;
   float: left;
