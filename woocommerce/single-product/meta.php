@@ -21,12 +21,12 @@ global $post, $product;
 
 	<?php
 		$size = sizeof( get_the_terms( $post->ID, 'product_cat' ) );
-		echo $product->get_categories( ', ', '<span class="posted_in">' . _n( 'Category:', 'Categories:', $size, 'woocommerce' ) . ' ', '</span>' );
+		echo $product->get_categories( ', ', '<div class="posted_in">' . _n( 'Boutique:', 'Boutiques:', $size, 'woocommerce' ) . ' ', '</div>' );
 	?>
 
 	<?php
 		$size = sizeof( get_the_terms( $post->ID, 'product_tag' ) );
-		echo $product->get_tags( ', ', '<span class="tagged_as">' . _n( 'Tag:', 'Tags:', $size, 'woocommerce' ) . ' ', '</span>' );
+		echo $product->get_tags( ', ', '<div class="tagged_as">' . _n( 'Tag:', 'Tags:', $size, 'woocommerce' ) . ' ', '</div>' );
 	?>
 
 	<?php do_action( 'woocommerce_product_meta_end' ); ?>

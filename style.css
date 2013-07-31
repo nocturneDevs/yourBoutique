@@ -2093,6 +2093,12 @@ span.amount {
 .woocommerce-breadcrumb a:hover {
   color: #333333;
 }
+.woocommerce-message {
+  margin-top: 6px;
+  margin-bottom: 6px;
+  margin-top: 0.4285714285rem;
+  margin-bottom: 0.4285714285rem;
+}
 div.product,
 #content div.product {
   /* Summary div (contains title, price etc) */
@@ -2170,7 +2176,20 @@ div.product div.summary,
 }
 div.product div.summary .product_title,
 #content div.product div.summary .product_title {
+  margin-bottom: 6px;
+  margin-bottom: 0.4285714285rem;
   font-size: 1.714285714rem;
+}
+div.product div.summary .price,
+#content div.product div.summary .price {
+  margin-bottom: 6px;
+  margin-bottom: 0.4285714285rem;
+  font-size: 1.2rem;
+}
+div.product div.summary div[itemprop="price"] p,
+#content div.product div.summary div[itemprop="price"] p {
+  margin-bottom: 6px;
+  margin-bottom: 0.4285714285rem;
 }
 div.product div.summary .quantity.buttons_added,
 #content div.product div.summary .quantity.buttons_added {
@@ -2234,6 +2253,8 @@ div.product div.summary .product_meta a:hover,
 #content div.product div.summary .product_meta a:hover {
   color: #ee118a;
 }
+div.product .woocommerce-tabs .additional_information_tab,
+#content div.product .woocommerce-tabs .additional_information_tab,
 div.product .woocommerce-tabs .description_tab,
 #content div.product .woocommerce-tabs .description_tab,
 div.product .woocommerce-tabs .reviews_tab,
@@ -2370,6 +2391,10 @@ ul.products li.product .price .from {
   margin: -2px 0 0 0;
   text-transform: uppercase;
   color: rgba(145, 145, 145, 0.5);
+}
+ul.products li.product .added_to_cart {
+  clear: both;
+  font-size: 0.8em;
 }
 ul.products li.first {
   clear: both;
