@@ -15,7 +15,20 @@
 	<footer id="colophon" role="contentinfo">
 	<div id="footerWrapper">
 				<div id="footerNav">
-				Nulla vitae elit libero, a pharetra augue. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+					<div id="column1">
+					<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a></p>
+					<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>cart/">Cart</a></p>
+					<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>my-account/">My Account</a></p>
+					<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>cart/logout/">Logout</a></p>
+					<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Contact Us</a></p>
+					</div>
+					<div id="column2">
+					<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>?product_tag=new">What's New</a></p>
+					<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>?product_tag=featured">Featured</a></p>
+					<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>?product_tag=clothing">Clothing</a></p>
+					<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>?product_tag=bags">Bags</a></p>
+					<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>?product_tag=accessories">Accessories</a></p>
+					</div>
 				</div>
 				<div id="footerDetailText">
 				Nulla vitae elit libero, a pharetra augue. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.

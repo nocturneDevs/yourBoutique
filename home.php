@@ -11,7 +11,7 @@ get_header('shop'); ?>
 
 <div id="homewrapper">
 
-	<div id="whatsnewwrapper" class="homesectionwrapper">
+	<div id="whatsNewWrapper" class="homeSectionWrapper">
 
 		<a href="/?product_tag=new"><h1 class="page-title">What's New</h1></a>
 		<?php 
@@ -58,7 +58,7 @@ get_header('shop'); ?>
 				<?php endif; ?>
 	</div> <!-- whatsnewwrapper -->
 
-	<div id="featuredwrapper" class="homesectionwrapper">
+	<div id="featuredWrapper" class="homeSectionWrapper">
 		<a href="/?product_tag=featured"><h1 class="page-title">Featured</h1></a>
 		<?php 
 		$args = array(
@@ -105,7 +105,7 @@ get_header('shop'); ?>
 	</div> <!-- featuredwrapper -->
 
 
-	<div id="clothingwrapper" class="homesectionwrapper">
+	<div id="clothingWrapper" class="homeSectionWrapper">
 		<a href="/?product_tag=clothing"><h1 class="page-title">Clothing</h1></a>
 		<?php 
 		$args = array(
@@ -151,7 +151,7 @@ get_header('shop'); ?>
 				<?php endif; ?>
 	</div> <!-- clothingwrapper -->
 
-	<div id="bagswrapper" class="homesectionwrapper">
+	<div id="bagsWrapper" class="homeSectionWrapper">
 		<a href="/?product_tag=bags"><h1 class="page-title">Bags</h1></a>
 
 		<?php 
@@ -200,7 +200,7 @@ get_header('shop'); ?>
 	</div> <!-- bagswrapper -->
 
 
-	<div id="accessorieswrapper" class="homesectionwrapper homesectionwrapperlast">
+	<div id="accessoriesWrapper" class="homeSectionWrapper homeSectionWrapperLast">
 
 		<a href="/?product_tag=accessories"><h1 class="page-title">Accessories</h1></a>
 		<?php 

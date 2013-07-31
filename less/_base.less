@@ -97,9 +97,9 @@ html, body {
 }
 
 #main.wrapper {
-	.column(10);
-	.push(1);
-	.clearfix;
+	.column(12);
+	//.column(10);
+	//.push(1);
 }
 
 #bodyWrapper {
@@ -648,13 +648,13 @@ header#masthead {
 
 div#homewrapper {
 	.clearfix();
-	div.homesectionwrapper {
+	div.homeSectionWrapper {
 		.clearfix();
 		.transition();
-		margin-bottom:18px;
-		margin-bottom:@rem12 * 1.5;
+		padding-bottom:18px;
+		padding-bottom:@rem12 * 1.5;
 
-		border-bottom:1px solid @mainTextColor;
+		//border-bottom:1px solid @mainTextColor;
 		a {
 			text-decoration:none;
 		}
@@ -666,7 +666,6 @@ div#homewrapper {
 			margin:0;
 			padding-left:6px;
 			padding-left:@rem12 / 2;
-
 			line-height:120%;
 
 			//background-color:#e3e3e3;
@@ -694,8 +693,28 @@ div#homewrapper {
 		}
 	}
 
-	div.homesectionwrapperlast {
+	div.homeSectionWrapperLast {
 		border-bottom:none;
+	}
+
+	#whatsNewWrapper {
+		.column(12);
+	}
+
+	#featuredWrapper {
+		.column(12);
+	}
+
+	#clothingWrapper {
+		.column(4);
+	}
+
+	#bagsWrapper {
+		.column(4);
+	}
+
+	#accessoriesWrapper {
+		.column(4);
 	}
 }
 
@@ -1049,6 +1068,30 @@ footer#colophon {
 	.socialButton {
 		padding: 0 @rem12;
 		margin: 0;
+	}
+
+	#footerNav {
+		p {
+			margin: @rem12/4;
+			padding: 0;
+			a {
+				font-size: 12px;
+				font-size: @rem12;
+				line-height: 1;
+				text-decoration: none;
+				color: @ybGray;
+			}
+			a:hover {
+				color: @ybPink;
+			}
+		}
+
+		#column1 {
+			.column(6);
+		}
+		#column2 {
+			.column(6);
+		}
 	}
 
 	//Credits
