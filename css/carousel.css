@@ -21,13 +21,16 @@
   display: block;
   line-height: 1;
 }
-.carousel .active, .carousel .next, .carousel .prev {
+.carousel .active,
+.carousel .next,
+.carousel .prev {
   display: block;
 }
 .carousel .active {
   left: 0;
 }
-.carousel .next, .carousel .prev {
+.carousel .next,
+.carousel .prev {
   position: absolute;
   top: 0;
   width: 100%;
@@ -38,7 +41,8 @@
 .carousel .prev {
   left: -100%;
 }
-.carousel .next.left, .carousel .prev.right {
+.carousel .next.left,
+.carousel .prev.right {
   left: 0;
 }
 .carousel .active.left {

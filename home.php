@@ -13,14 +13,8 @@ get_header('shop'); ?>
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 	<!-- Latest compiled and minified JavaScript -->
-	<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.min.js"></script>
-	<script>
-		$(document).ready(function() {
-        	$('#featured-carousel').carousel({
-        //options here
-        });
-    });
-	</script>
+	<script src="<?php echo get_template_directory_uri(); ?>/js/carousel.js"></script>
+	<script src="<?php echo get_template_directory_uri(); ?>/js/transition.js"></script>
 	<div id="carousel-featured" class="carousel slide">
 	 	<!-- Indicators -->
 		<ol class="carousel-indicators">
@@ -49,10 +43,18 @@ get_header('shop'); ?>
 		</div>
 
 		<!-- Controls -->
-		<a class="left carousel-control" href="#carousel-featured" data-slide="prev">.</a>
-		<a class="right carousel-control" href="#carousel-featured" data-slide="next">.</a>
+		<a class="left carousel-control" href="#carousel-featured" data-slide="prev">&lsaquo;</a>
+		<a class="right carousel-control" href="#carousel-featured" data-slide="next">&rsaquo;</a>
 
 	</div>
+
+	<script>
+		$(function() {
+        	$('#carousel-featured').carousel({
+        		interval:2000
+        });
+    });
+	</script>
 
 	<div id="whatsNewWrapper" class="homeSectionWrapper">
 
