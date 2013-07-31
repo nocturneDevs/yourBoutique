@@ -9,7 +9,7 @@
 
 get_header('shop'); ?>
 
-<div id="homewrapper">
+<div id="homeWrapper">
 
 	<div id="whatsNewWrapper" class="homeSectionWrapper">
 

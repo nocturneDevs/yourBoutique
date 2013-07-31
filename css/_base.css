@@ -309,6 +309,12 @@ span.amount {
 .woocommerce-breadcrumb a:hover {
   color: #333333;
 }
+.woocommerce-message {
+  margin-top: 6px;
+  margin-bottom: 6px;
+  margin-top: 0.4285714285rem;
+  margin-bottom: 0.4285714285rem;
+}
 div.product,
 #content div.product {
   /* Summary div (contains title, price etc) */
@@ -375,7 +381,20 @@ div.product div.summary,
 }
 div.product div.summary .product_title,
 #content div.product div.summary .product_title {
+  margin-bottom: 6px;
+  margin-bottom: 0.4285714285rem;
   font-size: 1.714285714rem;
+}
+div.product div.summary .price,
+#content div.product div.summary .price {
+  margin-bottom: 6px;
+  margin-bottom: 0.4285714285rem;
+  font-size: 1.2rem;
+}
+div.product div.summary div[itemprop="price"] p,
+#content div.product div.summary div[itemprop="price"] p {
+  margin-bottom: 6px;
+  margin-bottom: 0.4285714285rem;
 }
 div.product div.summary .quantity.buttons_added,
 #content div.product div.summary .quantity.buttons_added {
@@ -439,6 +458,8 @@ div.product div.summary .product_meta a:hover,
 #content div.product div.summary .product_meta a:hover {
   color: #ee118a;
 }
+div.product .woocommerce-tabs .additional_information_tab,
+#content div.product .woocommerce-tabs .additional_information_tab,
 div.product .woocommerce-tabs .description_tab,
 #content div.product .woocommerce-tabs .description_tab,
 div.product .woocommerce-tabs .reviews_tab,
@@ -451,6 +472,10 @@ div.product .woocommerce-tabs .panel h2,
   margin-bottom: 6px;
   margin-top: 0.4285714285rem;
   margin-bottom: 0.4285714285rem;
+}
+div.product .woocommerce-tabs .panel p,
+#content div.product .woocommerce-tabs .panel p {
+  text-align: justify;
 }
 .related,
 .upsells.products {
@@ -495,6 +520,8 @@ div.product .woocommerce-tabs .panel h2,
 .upsells.products ul li.product {
   width: 96px;
   width: 6.857142858rem;
+  margin-bottom: 12px;
+  margin-bottom: 0.857142857rem;
 }
 .related ul.products li.product img,
 .upsells.products ul.products li.product img,
@@ -565,6 +592,10 @@ ul.products li.product .price .from {
   text-transform: uppercase;
   color: rgba(145, 145, 145, 0.5);
 }
+ul.products li.product .added_to_cart {
+  clear: both;
+  font-size: 0.8em;
+}
 ul.products li.first {
   clear: both;
 }
@@ -585,23 +616,23 @@ ul.products li.last {
 .woocommerce-ordering select {
   vertical-align: top;
 }
-div#homewrapper:before,
-div#homewrapper:after {
+#homeWrapper:before,
+#homeWrapper:after {
   content: " ";
   display: table;
 }
-div#homewrapper:after {
+#homeWrapper:after {
   clear: both;
 }
-div#homewrapper:before,
-div#homewrapper:after {
+#homeWrapper:before,
+#homeWrapper:after {
   content: " ";
   display: table;
 }
-div#homewrapper:after {
+#homeWrapper:after {
   clear: both;
 }
-div#homewrapper div.homeSectionWrapper {
+#homeWrapper .homeSectionWrapper {
   -webkit-transition: all ease-in-out 0.2s;
   -moz-transition: all ease-in-out 0.2s;
   -o-transition: all ease-in-out 0.2s;
@@ -609,26 +640,26 @@ div#homewrapper div.homeSectionWrapper {
   padding-bottom: 18px;
   padding-bottom: 1.2857142855rem;
 }
-div#homewrapper div.homeSectionWrapper:before,
-div#homewrapper div.homeSectionWrapper:after {
+#homeWrapper .homeSectionWrapper:before,
+#homeWrapper .homeSectionWrapper:after {
   content: " ";
   display: table;
 }
-div#homewrapper div.homeSectionWrapper:after {
+#homeWrapper .homeSectionWrapper:after {
   clear: both;
 }
-div#homewrapper div.homeSectionWrapper:before,
-div#homewrapper div.homeSectionWrapper:after {
+#homeWrapper .homeSectionWrapper:before,
+#homeWrapper .homeSectionWrapper:after {
   content: " ";
   display: table;
 }
-div#homewrapper div.homeSectionWrapper:after {
+#homeWrapper .homeSectionWrapper:after {
   clear: both;
 }
-div#homewrapper div.homeSectionWrapper a {
+#homeWrapper .homeSectionWrapper a {
   text-decoration: none;
 }
-div#homewrapper div.homeSectionWrapper h1.page-title {
+#homeWrapper .homeSectionWrapper h1.page-title {
   -webkit-transition: all ease-in-out 0.2s;
   -moz-transition: all ease-in-out 0.2s;
   -o-transition: all ease-in-out 0.2s;
@@ -638,52 +669,52 @@ div#homewrapper div.homeSectionWrapper h1.page-title {
   padding-left: 0.4285714285rem;
   line-height: 120%;
 }
-div#homewrapper div.homeSectionWrapper p.woocommerce-result-count,
-div#homewrapper div.homeSectionWrapper form.woocommerce-ordering,
-div#homewrapper div.homeSectionWrapper .woocommerce-pagination {
+#homeWrapper .homeSectionWrapper p.woocommerce-result-count,
+#homeWrapper .homeSectionWrapper form.woocommerce-ordering,
+#homeWrapper .homeSectionWrapper .woocommerce-pagination {
   display: none;
 }
-div#homewrapper div.homeSectionWrapper ul li {
+#homeWrapper .homeSectionWrapper ul li {
   margin-bottom: 18px;
   margin-bottom: 1.2857142855rem;
 }
-div#homewrapper div.homeSectionWrapper:hover {
+#homeWrapper .homeSectionWrapper:hover {
   background-color: rgba(0, 0, 0, 0.08);
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.08);
   -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.08);
   -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.08);
 }
-div#homewrapper div.homeSectionWrapper:hover h1.page-title {
+#homeWrapper .homeSectionWrapper:hover h1.page-title {
   color: #dd0079;
 }
-div#homewrapper div.homeSectionWrapperLast {
+#homeWrapper .homeSectionWrapperLast {
   border-bottom: none;
 }
-div#homewrapper #whatsNewWrapper {
+#homeWrapper #whatsNewWrapper {
   display: inline;
   float: left;
   width: 97.91666666666666%;
   margin: 0 1.0416666666666665%;
 }
-div#homewrapper #featuredWrapper {
+#homeWrapper #featuredWrapper {
   display: inline;
   float: left;
   width: 97.91666666666666%;
   margin: 0 1.0416666666666665%;
 }
-div#homewrapper #clothingWrapper {
+#homeWrapper #clothingWrapper {
   display: inline;
   float: left;
   width: 31.25%;
   margin: 0 1.0416666666666665%;
 }
-div#homewrapper #bagsWrapper {
+#homeWrapper #bagsWrapper {
   display: inline;
   float: left;
   width: 31.25%;
   margin: 0 1.0416666666666665%;
 }
-div#homewrapper #accessoriesWrapper {
+#homeWrapper #accessoriesWrapper {
   display: inline;
   float: left;
   width: 31.25%;
@@ -1113,6 +1144,7 @@ footer#colophon:after {
 }
 footer#colophon #footerWrapper {
   padding: 1.714285714rem 0;
+  padding-bottom: 0;
   color: #706e6d;
   display: inline;
   float: left;
