@@ -14,7 +14,6 @@ get_header('shop'); ?>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="<?php echo get_template_directory_uri(); ?>/js/carousel.js"></script>
-	<script src="<?php echo get_template_directory_uri(); ?>/js/transition.js"></script>
 	<div id="carousel-featured" class="carousel slide">
 	 	<!-- Indicators -->
 		<ol class="carousel-indicators">
