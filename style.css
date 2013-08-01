@@ -3199,12 +3199,6 @@ footer#colophon #footerWrapper {
   margin: 0 1.0416666666666665%;
   margin-left: 9.374999999999998%;
 }
-footer#colophon #footerNav {
-  display: inline;
-  float: left;
-  width: 31.25%;
-  margin: 0 1.0416666666666665%;
-}
 footer#colophon #footerDetailText {
   display: inline;
   float: left;
@@ -3234,6 +3228,12 @@ footer#colophon #footerSocialButtons {
 footer#colophon .socialButton {
   padding: 0 0.857142857rem;
   margin: 0;
+}
+footer#colophon #footerNav {
+  display: inline;
+  float: left;
+  width: 31.25%;
+  margin: 0 1.0416666666666665%;
 }
 footer#colophon #footerNav p {
   margin: 0.21428571425rem;
