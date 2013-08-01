@@ -1931,9 +1931,9 @@ body:after {
   width: 40px;
   height: 40px;
   margin-top: -20px;
-  font-size: 60px;
+  font-size: 40px;
   font-weight: 100;
-  line-height: 30px;
+  line-height: 25px;
   color: #ffffff;
   text-align: center;
   background: #222222;
@@ -2675,17 +2675,35 @@ ul.products li.last {
   width: 31.25%;
   margin: 0 1.0416666666666665%;
 }
+#homeWrapper #clothingWrapper ul {
+  width: 100%;
+}
+#homeWrapper #clothingWrapper ul li {
+  width: 40%;
+}
 #homeWrapper #bagsWrapper {
   display: inline;
   float: left;
   width: 31.25%;
   margin: 0 1.0416666666666665%;
 }
+#homeWrapper #bagsWrapper ul {
+  width: 100%;
+}
+#homeWrapper #bagsWrapper ul li {
+  width: 40%;
+}
 #homeWrapper #accessoriesWrapper {
   display: inline;
   float: left;
   width: 31.25%;
   margin: 0 1.0416666666666665%;
+}
+#homeWrapper #accessoriesWrapper ul {
+  width: 100%;
+}
+#homeWrapper #accessoriesWrapper ul li {
+  width: 40%;
 }
 table.cart .product-thumbnail,
 #content table.cart .product-thumbnail {

@@ -21,6 +21,8 @@ get_header('shop'); ?>
 			<li data-target="#carousel-featured" data-slide-to="0" class="active"></li>
 			<li data-target="#carousel-featured" data-slide-to="1"></li>
 			<li data-target="#carousel-featured" data-slide-to="2"></li>
+			<li data-target="#carousel-featured" data-slide-to="3"></li>
+			<li data-target="#carousel-featured" data-slide-to="4"></li>
 		</ol>
 
 		<!-- Wrapper for slides -->
@@ -40,6 +42,16 @@ get_header('shop'); ?>
 				<div class="carousel-caption">
 				</div>
 			</div>
+			<div class="item">
+				<img src="<?php echo get_template_directory_uri(); ?>/resources/images/carousel4.jpg" width="100%">
+				<div class="carousel-caption">
+				</div>
+			</div>
+			<div class="item">
+				<img src="<?php echo get_template_directory_uri(); ?>/resources/images/carousel5.jpg" width="100%">
+				<div class="carousel-caption">
+				</div>
+			</div>
 		</div>
 
 		<!-- Controls -->
@@ -51,7 +63,7 @@ get_header('shop'); ?>
 	<script>
 		$(function() {
         	$('#carousel-featured').carousel({
-        		interval:2000
+        		interval:6000
         });
     });
 	</script>
@@ -160,7 +172,7 @@ get_header('shop'); ?>
 		<?php 
 		$args = array(
 		                'post_type' => 'product',
-		                'showposts' => 1,
+		                'showposts' => 2,
 		                'tax_query' => array (
 		                	array (
 		                		'taxonomy' => 'product_tag',
@@ -208,7 +220,7 @@ get_header('shop'); ?>
 		<?php 
 		$args = array(
 		                'post_type' => 'product',
-		                'showposts' => 1,
+		                'showposts' => 2,
 		                'tax_query' => array (
 		                	array (
 		                		'taxonomy' => 'product_tag',
@@ -259,7 +271,7 @@ get_header('shop'); ?>
 		<?php 
 		$args = array(
 		                'post_type' => 'product',
-		                'showposts' => 1,
+		                'showposts' => 2,
 		                'tax_query' => array (
 		                	array (
 		                		'taxonomy' => 'product_tag',
