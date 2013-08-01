@@ -1763,6 +1763,7 @@ img#wpstats {
 }
 body {
   width: 100%;
+  *zoom: 1;
 }
 body:before,
 body:after {
@@ -1843,62 +1844,89 @@ body:after {
   font-weight: bold;
   cursor: pointer;
 }
-#homeWrapper .carousel {
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+.hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.carousel {
   position: relative;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
   line-height: 1;
 }
-#homeWrapper .carousel-inner {
+.carousel-inner {
   overflow: hidden;
   width: 100%;
   position: relative;
 }
-#homeWrapper .carousel .item {
+.carousel-inner > .item {
   display: none;
   position: relative;
-  -webkit-transition: 0.5s ease-in-out left;
-  -moz-transition: 0.5s ease-in-out left;
-  -ms-transition: 0.5s ease-in-out left;
-  -o-transition: 0.5s ease-in-out left;
-  transition: 0.5s ease-in-out left;
+  -webkit-transition: 0.6s ease-in-out left;
+  -moz-transition: 0.6s ease-in-out left;
+  -o-transition: 0.6s ease-in-out left;
+  transition: 0.6s ease-in-out left;
 }
-#homeWrapper .carousel .item > img {
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
   display: block;
   line-height: 1;
 }
-#homeWrapper .carousel .active,
-#homeWrapper .carousel .next,
-#homeWrapper .carousel .prev {
+.carousel-inner > .active,
+.carousel-inner > .next,
+.carousel-inner > .prev {
   display: block;
 }
-#homeWrapper .carousel .active {
+.carousel-inner > .active {
   left: 0;
 }
-#homeWrapper .carousel .next,
-#homeWrapper .carousel .prev {
+.carousel-inner > .next,
+.carousel-inner > .prev {
   position: absolute;
   top: 0;
   width: 100%;
 }
-#homeWrapper .carousel .next {
+.carousel-inner > .next {
   left: 100%;
 }
-#homeWrapper .carousel .prev {
+.carousel-inner > .prev {
   left: -100%;
 }
-#homeWrapper .carousel .next.left,
-#homeWrapper .carousel .prev.right {
+.carousel-inner > .next.left,
+.carousel-inner > .prev.right {
   left: 0;
 }
-#homeWrapper .carousel .active.left {
+.carousel-inner > .active.left {
   left: -100%;
 }
-#homeWrapper .carousel .active.right {
+.carousel-inner > .active.right {
   left: 100%;
 }
-#homeWrapper .carousel-control {
+.carousel-control {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 15px;
   width: 40px;
   height: 40px;
@@ -1910,34 +1938,65 @@ body:after {
   text-align: center;
   background: #222222;
   border: 3px solid #ffffff;
+  text-decoration: none;
   -webkit-border-radius: 23px;
   -moz-border-radius: 23px;
   border-radius: 23px;
   opacity: 0.5;
   filter: alpha(opacity=50);
 }
-#homeWrapper .carousel-control.right {
+.carousel-control.right {
   left: auto;
   right: 15px;
 }
-#homeWrapper .carousel-control:hover {
+.carousel-control:hover,
+.carousel-control:focus {
   color: #ffffff;
   text-decoration: none;
   opacity: 0.9;
   filter: alpha(opacity=90);
 }
-#homeWrapper .carousel-caption {
+.carousel-indicators {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 5;
+  margin: 0;
+  list-style: none;
+}
+.carousel-indicators li {
+  display: block;
+  float: left;
+  width: 10px;
+  height: 10px;
+  margin-left: 5px;
+  text-indent: -999px;
+  background-color: #ccc;
+  background-color: rgba(255, 255, 255, 0.25);
+  border-radius: 5px;
+}
+.carousel-indicators .active {
+  background-color: #fff;
+}
+.carousel-caption {
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 10px 15px;
+  padding: 15px;
   background: #333333;
   background: rgba(0, 0, 0, 0.75);
 }
-#homeWrapper .carousel-caption p {
+.carousel-caption h4,
+.carousel-caption p {
   color: #ffffff;
-  margin: 0;
+  line-height: 20px;
+}
+.carousel-caption h4 {
+  margin: 0 0 5px;
+}
+.carousel-caption p {
+  margin-bottom: 0;
 }
 /* Text on primary colour bg */
 /* Text on secondary colour bg */
@@ -2129,6 +2188,7 @@ span.amount {
   margin: 0;
 }
 .woocommerce-breadcrumb {
+  *zoom: 1;
   margin: 0;
   padding: 0;
   font-size: 0.87rem;
@@ -2191,6 +2251,7 @@ div.product div.images img,
 div.product div.images div.thumbnails,
 #content div.product div.images div.thumbnails {
   padding-top: 1em;
+  *zoom: 1;
 }
 div.product div.images div.thumbnails:before,
 #content div.product div.images div.thumbnails:before,
@@ -2346,6 +2407,7 @@ div.product .woocommerce-tabs .panel p,
 .related,
 .upsells.products {
   clear: both;
+  *zoom: 1;
   border-top: 1px solid #dd0079;
   padding-top: 24px;
   padding-top: 1.714285714rem;
@@ -2493,6 +2555,9 @@ ul.products li.last {
 .woocommerce-ordering select {
   vertical-align: top;
 }
+#homeWrapper {
+  *zoom: 1;
+}
 #homeWrapper:before,
 #homeWrapper:after {
   content: " ";
@@ -2518,6 +2583,7 @@ ul.products li.last {
   clear: both;
 }
 #homeWrapper .homeSectionWrapper {
+  *zoom: 1;
   -webkit-transition: all ease-in-out 0.2s;
   -moz-transition: all ease-in-out 0.2s;
   -o-transition: all ease-in-out 0.2s;
@@ -2704,6 +2770,7 @@ ul.cart_list li,
 ul.product_list_widget li {
   padding: 4px 0;
   margin: 0;
+  *zoom: 1;
   list-style: none;
 }
 ul.cart_list li:before,
@@ -2783,6 +2850,9 @@ ul.product_list_widget li .star-rating {
   min-width: 40px;
   display: inline-block;
 }
+.widget_shopping_cart .buttons {
+  *zoom: 1;
+}
 .widget_shopping_cart .buttons:before,
 .widget_shopping_cart .buttons:after {
   content: " ";
@@ -2808,6 +2878,7 @@ ul.product_list_widget li .star-rating {
   clear: both;
 }
 .cart-collaterals {
+  *zoom: 1;
   width: 100%;
 }
 .cart-collaterals:before,
@@ -2851,6 +2922,7 @@ ul.product_list_widget li .star-rating {
 .cart-collaterals .shipping_calculator {
   width: 48%;
   text-align: right;
+  *zoom: 1;
   margin: 20px 0 0 0;
   clear: right;
   float: right;
@@ -3015,6 +3087,7 @@ form input:focus {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
+  *zoom: 1;
 }
 .col-1:before,
 .col-2:before,
@@ -3071,6 +3144,7 @@ footer#colophon {
   line-height: 2;
   min-height: 3.428571429rem;
   background-color: #333333;
+  *zoom: 1;
   box-shadow: 0px 10px 10px -10px #111111 inset;
 }
 footer#colophon:before,

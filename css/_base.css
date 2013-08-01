@@ -187,6 +187,7 @@ body:after {
   text-align: center;
   background: #222222;
   border: 3px solid #ffffff;
+  text-decoration: none;
   -webkit-border-radius: 23px;
   -moz-border-radius: 23px;
   border-radius: 23px;
