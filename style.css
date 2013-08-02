@@ -2105,28 +2105,26 @@ div#top div#top-right {
   padding-bottom: 0.4285714285rem;
 }
 div#top div#top-right input#s {
-  padding: 3px;
+  padding: 1px 3px;
   padding: 0.21428571425rem;
+  margin-top: 0;
+  margin-bottom: 0;
 }
-div#top div#top-right input#searchsubmit {
-  padding-top: 3px;
-  padding-top: 0.21428571425rem;
-  padding-bottom: 3px;
-  padding-bottom: 0.21428571425rem;
-  padding-left: 6px;
-  padding-right: 6px;
-  color: #cccccc;
-  background: #21759b;
+div#top div#top-right button#searchsubmit {
+  margin: 0;
+  padding: 0;
+  background: none;
+  color: #21759b;
   border: none;
   box-shadow: none;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
 }
-div#top div#top-right input#searchsubmit:hover {
-  background: #dd0079;
+div#top div#top-right button#searchsubmit:hover {
+  color: #dd0079;
 }
-div#top div#top-right input#searchsubmit:active {
-  background: #cc0068;
+div#top div#top-right button#searchsubmit:active {
+  color: #cc0068;
 }
 header#masthead {
   padding-top: 0;

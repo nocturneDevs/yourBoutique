@@ -70,7 +70,9 @@
 			<form role="search" method="get" id="searchform" action="http://localhost:8888/" >
 				<div>
 					<input type="text" value="" name="s" id="s" />
-					<input type="submit" id="searchsubmit" value="Search" />
+					<button type="submit" id="searchsubmit">
+						<i class="icon-search icon-2x"></i>
+					</button>
 				</div>
 			</form>
 		</div>
