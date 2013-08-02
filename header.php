@@ -43,7 +43,18 @@
 
 <div id="top">
 	<div id="top-left" class="top-content">
-		Rs. 599 off your first purchase
+		<?php
+
+		$path = get_template_directory_uri();
+		$path = $path."/resources/text/topannouncement.txt";
+		$f = fopen($path,"r");
+
+		// Read line from the text file and write the contents to the client
+		echo fgets($f); 
+
+		fclose($f);
+
+		?>
 	</div>
 
 	<div id="top-right" class="top-content">
