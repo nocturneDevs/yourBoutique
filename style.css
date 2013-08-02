@@ -3355,8 +3355,19 @@ footer#colophon .site-info a:hover {
     margin-bottom: 0;
   }
   header#masthead #site-navigation {
+    position: relative;
     border-top: 1px solid #999;
     border-bottom: 1px solid #999;
+  }
+  header#masthead #site-navigation div#togglesearchWrapper {
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  header#masthead #site-navigation div#togglesearchWrapper i#navtogglesearch {
+    line-height: 1.8;
+    vertical-align: middle;
   }
   div.product div.images,
   #content div.product div.images {
