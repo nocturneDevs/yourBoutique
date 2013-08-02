@@ -84,8 +84,8 @@
 			<a href="<?php echo esc_url(home_url('/cart')); ?>" title="View Cart" class="headerIcon"><i class="icon-shopping-cart icon-2x"></i></a>
 
 			<?php if (is_user_logged_in()) : ?>
-				<a href="<?php echo esc_url(home_url('/cart/logout')); ?>" title="Logout" class="headerIcon"><i class="icon-off icon-2x"></i></a>
 				<div id="headerSpacer"><i class="icon-ellipsis-vertical icon-2x"></i></div>
+				<a href="<?php echo esc_url(home_url('/cart/logout')); ?>" title="Logout" class="headerIcon"><i class="icon-off icon-2x"></i></a>
 			<?php endif; ?>
 		</div>
 		

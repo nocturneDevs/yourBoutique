@@ -18,14 +18,38 @@ get_header(); ?>
 				<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'twentytwelve' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 			</header>
 
-			<?php twentytwelve_content_nav( 'nav-above' ); ?>
+			<?php
+				/**
+				 * woocommerce_before_shop_loop hook
+				 *
+				 * @hooked woocommerce_result_count - 20
+				 * @hooked woocommerce_catalog_ordering - 30
+				 */
+				do_action( 'woocommerce_before_shop_loop' );
+			?>
+			<?php woocommerce_product_loop_start(); ?>
+				<?php woocommerce_product_subcategories(); ?>
+				<?php while ( have_posts() ) : the_post(); ?>
+					<?php woocommerce_get_template_part( 'content', 'product' ); ?>
+				<?php endwhile; // end of the loop. ?>
+			<?php woocommerce_product_loop_end(); ?>
+			<?php
+				/**
+				 * woocommerce_after_shop_loop hook
+				 *
+				 * @hooked woocommerce_pagination - 10
+				 */
+				do_action( 'woocommerce_after_shop_loop' );
+			?>
+
+			<?php //twentytwelve_content_nav( 'nav-above' ); ?>
 
 			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
-				<?php get_template_part( 'content', get_post_format() ); ?>
-			<?php endwhile; ?>
+			<?php //while ( have_posts() ) : the_post(); ?>
+				<?php //get_template_part( 'content', get_post_format() ); ?>
+			<?php //endwhile; ?>
 
-			<?php twentytwelve_content_nav( 'nav-below' ); ?>
+			<?php //twentytwelve_content_nav( 'nav-below' ); ?>
 
 		<?php else : ?>
 

@@ -2104,11 +2104,16 @@ div#top div#top-right {
   padding-bottom: 6px;
   padding-bottom: 0.4285714285rem;
 }
+div#top div#top-right div#searchformWrapper,
+div#top div#top-right div#toprightIconsWrapper {
+  float: left;
+}
 div#top div#top-right input#s {
   padding: 1px 3px;
   padding: 0.21428571425rem;
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 6px;
+  margin-bottom: 0.4285714285rem;
 }
 div#top div#top-right button#searchsubmit {
   margin: 0;
@@ -3346,9 +3351,8 @@ footer#colophon .site-info a:hover {
   div#top-right {
     float: right;
   }
-  div#top-right div#searchformWrapper,
-  div#top-right div#toprightIconsWrapper {
-    float: left;
+  div#top-right input#s {
+    margin-bottom: 0;
   }
   header#masthead #site-navigation {
     border-top: 1px solid #999;
