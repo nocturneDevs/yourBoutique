@@ -66,19 +66,7 @@
 
 	<div id="top-right" class="top-content">
 
-		<div id="searchformWrapper">
-			<form role="search" method="get" id="searchform" action="http://localhost:8888/" >
-				<div>
-					<input type="text" value="" name="s" id="s" />
-					<button type="submit" id="searchsubmit">
-						<i class="icon-search icon-2x"></i>
-					</button>
-				</div>
-			</form>
-		</div>
-
 		<div id="toprightIconsWrapper">
-			<div id="headerSpacer"><i class="icon-ellipsis-vertical icon-2x"></i></div>
 			<a href="<?php echo esc_url(home_url('/my-account')); ?>" title="My Account" class="headerIcon"><i class="icon-user icon-2x"></i></a>
 			<div id="headerSpacer"><i class="icon-ellipsis-vertical icon-2x"></i></div>
 			<a href="<?php echo esc_url(home_url('/cart')); ?>" title="View Cart" class="headerIcon"><i class="icon-shopping-cart icon-2x"></i></a>
@@ -111,7 +99,17 @@
 			<h3 class="menu-toggle"><?php _e( 'Menu', 'twentytwelve' ); ?></h3>
 			<a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to content', 'twentytwelve' ); ?>"><?php _e( 'Skip to content', 'twentytwelve' ); ?></a>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
-			<div id="togglesearchWrapper"><i id="navtogglesearch" class="icon-search icon"></i></div>
+			<div id="togglesearchWrapper">
+				<i id="navtogglesearch" class="icon-search icon"></i>
+				<div id="searchformWrapper">
+					<form role="search" method="get" id="searchform" action="http://localhost:8888/" >
+						<div>
+							<input type="text" value="" name="s" id="s" />
+							<input type="submit" id="searchsubmit" value="Search" />
+						</div>
+					</form>
+				</div>
+			</div>
 		</nav><!-- #site-navigation -->
 
 	</header><!-- #masthead -->

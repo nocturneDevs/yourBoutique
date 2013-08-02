@@ -180,46 +180,46 @@ div#top {
 		padding-bottom:6px;
 		padding-bottom:@rem12 * 0.5;
 
-		div#searchformWrapper,
-		div#toprightIconsWrapper {
-			float:left;
-		}
+		// div#searchformWrapper,
+		// div#toprightIconsWrapper {
+		// 	float:left;
+		// }
 
-		input#s {
-			padding:1px 3px;
-			padding:@rem12 / 4;
+		// input#s {
+		// 	padding:1px 3px;
+		// 	padding:@rem12 / 4;
 
-			margin-top:0;
-			margin-bottom:6px;
-			margin-bottom:@rem12 / 2;
-		}
+		// 	margin-top:0;
+		// 	margin-bottom:6px;
+		// 	margin-bottom:@rem12 / 2;
+		// }
 
-		button#searchsubmit {
+		// button#searchsubmit {
 
 			
-			margin:0;
-			padding:0;
-			// padding-top:3px;
-			// padding-top:@rem12 / 4;	
-			// padding-bottom:3px;
-			// padding-bottom:@rem12 / 4;	
-			// padding-left:6px;
-			// padding-right:6px;
+		// 	margin:0;
+		// 	padding:0;
+		// 	// padding-top:3px;
+		// 	// padding-top:@rem12 / 4;	
+		// 	// padding-bottom:3px;
+		// 	// padding-bottom:@rem12 / 4;	
+		// 	// padding-left:6px;
+		// 	// padding-right:6px;
 
-			background:none;
-			color:@topIconColor;
-			border:none;
-			.noshadows();
+		// 	background:none;
+		// 	color:@topIconColor;
+		// 	border:none;
+		// 	.noshadows();
 
-			&:hover {
-				color:@ybPink;
-			}
+		// 	&:hover {
+		// 		color:@ybPink;
+		// 	}
 
-			&:active {
-				color:@ybPink - #111;
-			}
+		// 	&:active {
+		// 		color:@ybPink - #111;
+		// 	}
 
-		}
+		// }
 	}	
 }
 
@@ -278,6 +278,39 @@ header#masthead {
 			}
 		}
 
+		div#searchformWrapper {
+			position:absolute;
+			right:0;
+			top:36px;
+			top:@rem12 * 3;
+
+			width:200px;
+
+			#s {
+				float:left;
+
+				width:144px;
+				width:@rem48 * 3;
+				
+				margin-top:0;
+				margin-bottom:0;
+				margin-left:0;
+				margin-right:6px;
+				margin-right:@rem12 / 2;
+				padding:3px;
+
+			}
+
+			#searchsubmit {
+				float:right;
+				height:23px;
+
+				margin:0;
+				padding:0 6px;
+				line-height:100%
+
+			}
+		}
 		
 	}	
 }

@@ -2104,33 +2104,6 @@ div#top div#top-right {
   padding-bottom: 6px;
   padding-bottom: 0.4285714285rem;
 }
-div#top div#top-right div#searchformWrapper,
-div#top div#top-right div#toprightIconsWrapper {
-  float: left;
-}
-div#top div#top-right input#s {
-  padding: 1px 3px;
-  padding: 0.21428571425rem;
-  margin-top: 0;
-  margin-bottom: 6px;
-  margin-bottom: 0.4285714285rem;
-}
-div#top div#top-right button#searchsubmit {
-  margin: 0;
-  padding: 0;
-  background: none;
-  color: #21759b;
-  border: none;
-  box-shadow: none;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-}
-div#top div#top-right button#searchsubmit:hover {
-  color: #dd0079;
-}
-div#top div#top-right button#searchsubmit:active {
-  color: #cc0068;
-}
 header#masthead {
   padding-top: 0;
 }
@@ -2170,6 +2143,31 @@ header#masthead #site-navigation div ul li a {
 }
 header#masthead #site-navigation div ul li a:hover {
   color: #ee118a;
+}
+header#masthead #site-navigation div#searchformWrapper {
+  position: absolute;
+  right: 0;
+  top: 36px;
+  top: 2.571428571rem;
+  width: 200px;
+}
+header#masthead #site-navigation div#searchformWrapper #s {
+  float: left;
+  width: 144px;
+  width: 10.285714287rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 6px;
+  margin-right: 0.4285714285rem;
+  padding: 3px;
+}
+header#masthead #site-navigation div#searchformWrapper #searchsubmit {
+  float: right;
+  height: 23px;
+  margin: 0;
+  padding: 0 6px;
+  line-height: 100%;
 }
 h1.page-title {
   font-size: 1.714285714rem;
@@ -3350,9 +3348,6 @@ footer#colophon .site-info a:hover {
   }
   div#top-right {
     float: right;
-  }
-  div#top-right input#s {
-    margin-bottom: 0;
   }
   header#masthead #site-navigation {
     position: relative;
