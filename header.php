@@ -50,7 +50,9 @@
 		$f = fopen($path,"r");
 
 		// Read line from the text file and write the contents to the client
-		echo fgets($f); 
+		while(!feof($f)) { 
+	    	echo fgets($f) . "<br />";
+		} 
 
 		fclose($f);
 
