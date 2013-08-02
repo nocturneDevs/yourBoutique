@@ -1,0 +1,4 @@
+Changelog
+
+	- Hid the admin bar in functions.php
+	- Manipulate display of user's name, logout button based on whether user is logged in in header.php

@@ -44,7 +44,12 @@
 <div id="top">
 	<div id="top-left" class="top-content">
 		<?php
-
+		if (is_user_logged_in()) :
+			$current_user = wp_get_current_user();
+			echo "Hi ".$current_user->user_firstname."! ";
+		endif; ?>
+		
+		<?php
 		$path = get_template_directory_uri();
 		$path = $path."/resources/text/topannouncement.txt";
 		$f = fopen($path,"r");
@@ -63,6 +68,10 @@
 		<a href="<?php echo esc_url(home_url('/my-account')); ?>" title="My Account" class="headerIcon"><i class="icon-user icon-2x"></i></a>
 		<div id="headerSpacer"><i class="icon-ellipsis-vertical icon-2x"></i></div>
 		<a href="<?php echo esc_url(home_url('/cart')); ?>" title="View Cart" class="headerIcon"><i class="icon-shopping-cart icon-2x"></i></a>
+		<?php if (is_user_logged_in()) : ?>
+			<div id="headerSpacer"><i class="icon-ellipsis-vertical icon-2x"></i></div>
+			<a href="<?php echo esc_url(home_url('/cart/logout')); ?>" title="View Cart" class="headerIcon"><i class="icon-off icon-2x"></i></a>
+		<?php endif; ?>
 	</div>
 
 </div>

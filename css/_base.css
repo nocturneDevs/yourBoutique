@@ -1368,14 +1368,18 @@ footer#colophon #footerWrapper {
 footer#colophon #footerDetailText {
   display: inline;
   float: left;
-  width: 31.25%;
+  width: 97.91666666666666%;
   margin: 0 1.0416666666666665%;
+  margin-bottom: 48px;
+  margin-bottom: 3.428571429rem;
 }
 footer#colophon #footerSocial {
   display: inline;
   float: left;
-  width: 31.25%;
+  width: 97.91666666666666%;
   margin: 0 1.0416666666666665%;
+  margin-bottom: 48px;
+  margin-bottom: 3.428571429rem;
 }
 footer#colophon #footerSocial a {
   text-decoration: none;
@@ -1398,8 +1402,10 @@ footer#colophon .socialButton {
 footer#colophon #footerNav {
   display: inline;
   float: left;
-  width: 31.25%;
+  width: 97.91666666666666%;
   margin: 0 1.0416666666666665%;
+  margin-bottom: 48px;
+  margin-bottom: 3.428571429rem;
 }
 footer#colophon #footerNav p {
   margin: 0.21428571425rem;

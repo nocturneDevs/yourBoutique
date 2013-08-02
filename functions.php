@@ -449,4 +449,6 @@ function twentytwelve_customize_preview_js() {
 }
 add_action( 'customize_preview_init', 'twentytwelve_customize_preview_js' );
 
-define('woocommerce_lock_down_admin', 'FALSE');
+// CUSTOM FUNCTIONS @ nocturne
+
+/** * Hide the Toolbar if not in the admin section */ if ( ! is_admin() ) { show_admin_bar(false); }
