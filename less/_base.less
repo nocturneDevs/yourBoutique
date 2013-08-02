@@ -31,6 +31,7 @@
 @subtleTextColor		: #777;
 @highlightTextColor		: @ybPink + #111;
 @buttonHoverTextColor   : @ybPink + #555;
+@topIconColor			: #21759b;
 
 @priceColor				: fade(@ybPink,90%);
 @cartButtonColor 		: fade(@ybPink,80%);//@triadBlue;
@@ -137,11 +138,16 @@ div#top {
 	}
 
 	a.headerIcon {
+		color:@topIconColor;
 		text-decoration: none;
-	}
 
-	a.headerIcon:hover {
-		color: @ybPink;
+		&:hover {
+			color:@ybPink;
+		}
+
+		&:active {
+			color:@ybPink - #111;
+		}
 	}
 
 	#headerSpacer {
@@ -173,6 +179,36 @@ div#top {
 		padding-top:@rem12 * 0.5;
 		padding-bottom:6px;
 		padding-bottom:@rem12 * 0.5;
+
+		input#s {
+			padding:3px;
+			padding:@rem12 / 4;
+		}
+		
+		input#searchsubmit {
+
+			padding-top:3px;
+			padding-top:@rem12 / 4;	
+			padding-bottom:3px;
+			padding-bottom:@rem12 / 4;	
+
+			padding-left:6px;
+			padding-right:6px;
+
+			color:@topFontColor;
+			background:@topIconColor;
+			border:none;
+			.noshadows();
+
+			&:hover {
+				background:@ybPink;
+			}
+
+			&:active {
+				background:@ybPink - #111;
+			}
+
+		}
 	}	
 }
 
@@ -199,6 +235,7 @@ header#masthead {
 			}
 		}
 	}
+
 
 	#site-navigation {
 		margin-top:6px;
@@ -651,6 +688,11 @@ header#masthead {
 
 #homeWrapper {
 	.clearfix();
+
+	#carouselWrapper {
+		.column(12);
+	}
+
 	.homeSectionWrapper {
 		.clearfix();
 		.transition();

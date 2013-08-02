@@ -2070,10 +2070,14 @@ div#top .top-content {
   line-height: 1.5;
 }
 div#top a.headerIcon {
+  color: #21759b;
   text-decoration: none;
 }
 div#top a.headerIcon:hover {
   color: #dd0079;
+}
+div#top a.headerIcon:active {
+  color: #cc0068;
 }
 div#top #headerSpacer {
   display: inline;
@@ -2099,6 +2103,30 @@ div#top div#top-right {
   padding-top: 0.4285714285rem;
   padding-bottom: 6px;
   padding-bottom: 0.4285714285rem;
+}
+div#top div#top-right input#s {
+  padding: 3px;
+  padding: 0.21428571425rem;
+}
+div#top div#top-right input#searchsubmit {
+  padding-top: 3px;
+  padding-top: 0.21428571425rem;
+  padding-bottom: 3px;
+  padding-bottom: 0.21428571425rem;
+  padding-left: 6px;
+  padding-right: 6px;
+  color: #cccccc;
+  background: #21759b;
+  border: none;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+}
+div#top div#top-right input#searchsubmit:hover {
+  background: #dd0079;
+}
+div#top div#top-right input#searchsubmit:active {
+  background: #cc0068;
 }
 header#masthead {
   padding-top: 0;
@@ -2605,6 +2633,12 @@ ul.products li.last {
 }
 #homeWrapper:after {
   clear: both;
+}
+#homeWrapper #carouselWrapper {
+  display: inline;
+  float: left;
+  width: 97.91666666666666%;
+  margin: 0 1.0416666666666665%;
 }
 #homeWrapper .homeSectionWrapper {
   *zoom: 1;
@@ -3313,6 +3347,10 @@ footer#colophon .site-info a:hover {
   }
   div#top-right {
     float: right;
+  }
+  div#top-right div#searchformWrapper,
+  div#top-right div#toprightIconsWrapper {
+    float: left;
   }
   header#masthead #site-navigation {
     border-top: 1px solid #999;

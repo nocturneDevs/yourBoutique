@@ -65,13 +65,28 @@
 	</div>
 
 	<div id="top-right" class="top-content">
-		<a href="<?php echo esc_url(home_url('/my-account')); ?>" title="My Account" class="headerIcon"><i class="icon-user icon-2x"></i></a>
-		<div id="headerSpacer"><i class="icon-ellipsis-vertical icon-2x"></i></div>
-		<a href="<?php echo esc_url(home_url('/cart')); ?>" title="View Cart" class="headerIcon"><i class="icon-shopping-cart icon-2x"></i></a>
-		<?php if (is_user_logged_in()) : ?>
+
+		<div id="searchformWrapper">
+			<form role="search" method="get" id="searchform" action="http://localhost:8888/" >
+				<div>
+					<input type="text" value="" name="s" id="s" />
+					<input type="submit" id="searchsubmit" value="Search" />
+				</div>
+			</form>
+		</div>
+
+		<div id="toprightIconsWrapper">
 			<div id="headerSpacer"><i class="icon-ellipsis-vertical icon-2x"></i></div>
-			<a href="<?php echo esc_url(home_url('/cart/logout')); ?>" title="View Cart" class="headerIcon"><i class="icon-off icon-2x"></i></a>
-		<?php endif; ?>
+			<a href="<?php echo esc_url(home_url('/my-account')); ?>" title="My Account" class="headerIcon"><i class="icon-user icon-2x"></i></a>
+			<div id="headerSpacer"><i class="icon-ellipsis-vertical icon-2x"></i></div>
+			<a href="<?php echo esc_url(home_url('/cart')); ?>" title="View Cart" class="headerIcon"><i class="icon-shopping-cart icon-2x"></i></a>
+
+			<?php if (is_user_logged_in()) : ?>
+				<a href="<?php echo esc_url(home_url('/cart/logout')); ?>" title="Logout" class="headerIcon"><i class="icon-off icon-2x"></i></a>
+				<div id="headerSpacer"><i class="icon-ellipsis-vertical icon-2x"></i></div>
+			<?php endif; ?>
+		</div>
+		
 	</div>
 
 </div>
