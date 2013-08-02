@@ -2146,10 +2146,16 @@ header#masthead #site-navigation div ul li a:hover {
 }
 header#masthead #site-navigation div#searchformWrapper {
   position: absolute;
+  overflow: hidden;
   right: 0;
   top: 36px;
   top: 2.571428571rem;
+  height: 0;
   width: 200px;
+  -webkit-transition: height ease-out 0.03s;
+  -moz-transition: height ease-out 0.03s;
+  -o-transition: height ease-out 0.03s;
+  transition: height ease-out 0.03s;
 }
 header#masthead #site-navigation div#searchformWrapper #s {
   float: left;

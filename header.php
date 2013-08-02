@@ -27,6 +27,9 @@
 <!-- Scalable Vector Icons from Font Awesome -->
 <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 
+<!-- JAVASCRIPT -->
+<script src="<?php echo get_template_directory_uri(); ?>/js/search.js" type="text/javascript"></script>
+
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
@@ -100,7 +103,7 @@
 			<a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to content', 'twentytwelve' ); ?>"><?php _e( 'Skip to content', 'twentytwelve' ); ?></a>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
 			<div id="togglesearchWrapper">
-				<i id="navtogglesearch" class="icon-search icon"></i>
+				<i id="navtogglesearch" class="icon-search icon" onclick="ToggleSearch()"></i>
 				<div id="searchformWrapper">
 					<form role="search" method="get" id="searchform" action="http://localhost:8888/" >
 						<div>

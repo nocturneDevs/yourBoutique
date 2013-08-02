@@ -179,47 +179,6 @@ div#top {
 		padding-top:@rem12 * 0.5;
 		padding-bottom:6px;
 		padding-bottom:@rem12 * 0.5;
-
-		// div#searchformWrapper,
-		// div#toprightIconsWrapper {
-		// 	float:left;
-		// }
-
-		// input#s {
-		// 	padding:1px 3px;
-		// 	padding:@rem12 / 4;
-
-		// 	margin-top:0;
-		// 	margin-bottom:6px;
-		// 	margin-bottom:@rem12 / 2;
-		// }
-
-		// button#searchsubmit {
-
-			
-		// 	margin:0;
-		// 	padding:0;
-		// 	// padding-top:3px;
-		// 	// padding-top:@rem12 / 4;	
-		// 	// padding-bottom:3px;
-		// 	// padding-bottom:@rem12 / 4;	
-		// 	// padding-left:6px;
-		// 	// padding-right:6px;
-
-		// 	background:none;
-		// 	color:@topIconColor;
-		// 	border:none;
-		// 	.noshadows();
-
-		// 	&:hover {
-		// 		color:@ybPink;
-		// 	}
-
-		// 	&:active {
-		// 		color:@ybPink - #111;
-		// 	}
-
-		// }
 	}	
 }
 
@@ -280,11 +239,15 @@ header#masthead {
 
 		div#searchformWrapper {
 			position:absolute;
+			overflow:hidden;
 			right:0;
 			top:36px;
 			top:@rem12 * 3;
+			height:0;
 
 			width:200px;
+
+			.transition(height,ease-out,0.03s);
 
 			#s {
 				float:left;
