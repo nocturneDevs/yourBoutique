@@ -888,9 +888,8 @@ ul.products li.last {
   -o-transition: all ease-in-out 0.2s;
   transition: all ease-in-out 0.2s;
   margin: 0;
-  padding-left: 6px;
-  padding-left: 0.4285714285rem;
   line-height: 120%;
+  text-align: center;
 }
 #homeWrapper .homeSectionWrapper p.woocommerce-result-count,
 #homeWrapper .homeSectionWrapper form.woocommerce-ordering,
