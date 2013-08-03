@@ -312,10 +312,14 @@ div#top .top-content {
   line-height: 1.5;
 }
 div#top a.headerIcon {
+  color: #21759b;
   text-decoration: none;
 }
 div#top a.headerIcon:hover {
   color: #dd0079;
+}
+div#top a.headerIcon:active {
+  color: #cc0068;
 }
 div#top #headerSpacer {
   display: inline;
@@ -323,20 +327,12 @@ div#top #headerSpacer {
   padding: 0 0.857142857rem;
 }
 div#top div#top-left {
-  margin-left: 48px;
-  margin-left: 3.428571429rem;
-  margin-right: 48px;
-  margin-right: 3.428571429rem;
   padding-top: 9px;
   padding-top: 0.64285714275rem;
   padding-bottom: 3px;
   padding-bottom: 0.21428571425rem;
 }
 div#top div#top-right {
-  margin-left: 48px;
-  margin-left: 3.428571429rem;
-  margin-right: 48px;
-  margin-right: 3.428571429rem;
   padding-top: 6px;
   padding-top: 0.4285714285rem;
   padding-bottom: 6px;
@@ -365,11 +361,18 @@ header#masthead #site-navigation {
   margin-top: 0.4285714285rem;
 }
 header#masthead #site-navigation div ul {
+  padding: 0;
   box-shadow: none;
   border-style: none;
 }
 header#masthead #site-navigation div ul li {
   height: 100%;
+  display: inline;
+  float: left;
+  width: 47.91666666666667%;
+  margin: 0 1.0416666666666665%;
+  margin-top: 3px;
+  margin-top: 0.21428571425rem;
 }
 header#masthead #site-navigation div ul li a {
   vertical-align: middle;
@@ -381,6 +384,39 @@ header#masthead #site-navigation div ul li a {
 }
 header#masthead #site-navigation div ul li a:hover {
   color: #ee118a;
+}
+header#masthead #site-navigation div#togglesearchWrapper {
+  position: relative;
+}
+header#masthead #site-navigation div#togglesearchWrapper div#searchformWrapper {
+  position: absolute;
+  overflow: hidden;
+  top: 36px;
+  top: 2.571428571rem;
+  height: 0;
+  width: 200px;
+  -webkit-transition: height ease-out 0.03s;
+  -moz-transition: height ease-out 0.03s;
+  -o-transition: height ease-out 0.03s;
+  transition: height ease-out 0.03s;
+}
+header#masthead #site-navigation div#togglesearchWrapper div#searchformWrapper #s {
+  float: left;
+  width: 144px;
+  width: 10.285714287rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 6px;
+  margin-right: 0.4285714285rem;
+  padding: 3px;
+}
+header#masthead #site-navigation div#togglesearchWrapper div#searchformWrapper #searchsubmit {
+  float: right;
+  height: 23px;
+  margin: 0;
+  padding: 0 6px;
+  line-height: 100%;
 }
 h1.page-title {
   font-size: 1.714285714rem;
@@ -706,15 +742,17 @@ div.product .woocommerce-tabs .panel p,
   height: auto;
 }
 ul.products li.product {
-  float: none;
-  margin: 0 3.8% 2.992em 0;
+  margin-bottom: 2.992em;
   padding: 0;
   position: relative;
-  width: 90%;
   margin-top: 12px;
   margin-top: 0.857142857rem;
   margin-left: 0;
   border-bottom: 1px solid rgba(221, 0, 121, 0.85);
+  display: inline;
+  float: left;
+  width: 47.91666666666667%;
+  margin: 0 1.0416666666666665%;
 }
 ul.products li.product .onsale {
   top: 0;
@@ -809,6 +847,12 @@ ul.products li.last {
 }
 #homeWrapper:after {
   clear: both;
+}
+#homeWrapper #carouselWrapper {
+  display: inline;
+  float: left;
+  width: 97.91666666666666%;
+  margin: 0 1.0416666666666665%;
 }
 #homeWrapper .homeSectionWrapper {
   *zoom: 1;
@@ -1408,6 +1452,7 @@ footer#colophon #footerNav {
   margin-bottom: 3.428571429rem;
 }
 footer#colophon #footerNav p {
+  text-align: center;
   margin: 0.21428571425rem;
   padding: 0;
 }

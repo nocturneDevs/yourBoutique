@@ -3310,6 +3310,7 @@ footer#colophon #footerNav {
   margin-bottom: 3.428571429rem;
 }
 footer#colophon #footerNav p {
+  text-align: center;
   margin: 0.21428571425rem;
   padding: 0;
 }
@@ -3482,5 +3483,8 @@ footer#colophon .site-info a:hover {
     width: 31.25%;
     margin: 0 1.0416666666666665%;
     margin-bottom: 0;
+  }
+  footer#colophon #footerNav p {
+    text-align: left;
   }
 }
