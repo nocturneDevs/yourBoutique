@@ -34,18 +34,18 @@ $template_container = "
 	-webkit-border-radius:6px !important;
 	border-radius:6px !important;
 	background-color: " . esc_attr( $body ) . ";
-	border: 1px solid $bg_darker_10;
+	border: 1px solid #dd0079;
 	-webkit-border-radius:6px !important;
 	border-radius:6px !important;
 ";
 $template_header = "
-	background-color: " . esc_attr( $base ) .";
+	background-color: #dd0079;
 	color: $base_text;
 	-webkit-border-top-left-radius:6px !important;
 	-webkit-border-top-right-radius:6px !important;
 	border-top-left-radius:6px !important;
 	border-top-right-radius:6px !important;
-	border-bottom: 0;
+	border-bottom: 1px solid #dd0079;
 	font-family:Arial;
 	font-weight:bold;
 	line-height:100%;
@@ -57,14 +57,14 @@ $body_content = "
 	border-radius:6px !important;
 ";
 $body_content_inner = "
-	color: $text_lighter_20;
+	color: #5e5e5e;
 	font-family:Arial;
 	font-size:14px;
 	line-height:150%;
 	text-align:left;
 ";
 $header_content_h1 = "
-	color: " . esc_attr( $base_text ) . ";
+	color:#f5f5f5;
 	margin:0;
 	padding: 28px 24px;
 	text-shadow: 0 1px 0 $base_lighter_20;
@@ -88,7 +88,7 @@ $header_content_h1 = "
                 	<td align="center" valign="top">
                 		<?php
                 			if ( $img = get_option( 'woocommerce_email_header_image' ) ) {
-                				echo '<p style="margin-top:0;"><img src="' . esc_url( $img ) . '" alt="' . get_bloginfo( 'name' ) . '" /></p>';
+                				echo '<p style="margin-top:0;"><img width="350" src="' . esc_url( $img ) . '" alt="' . get_bloginfo( 'name' ) . '" /></p>';
                 			}
                 		?>
                     	<table border="0" cellpadding="0" cellspacing="0" width="600" id="template_container" style="<?php echo $template_container; ?>">
