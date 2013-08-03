@@ -2085,20 +2085,12 @@ div#top #headerSpacer {
   padding: 0 0.857142857rem;
 }
 div#top div#top-left {
-  margin-left: 48px;
-  margin-left: 3.428571429rem;
-  margin-right: 48px;
-  margin-right: 3.428571429rem;
   padding-top: 9px;
   padding-top: 0.64285714275rem;
   padding-bottom: 3px;
   padding-bottom: 0.21428571425rem;
 }
 div#top div#top-right {
-  margin-left: 48px;
-  margin-left: 3.428571429rem;
-  margin-right: 48px;
-  margin-right: 3.428571429rem;
   padding-top: 6px;
   padding-top: 0.4285714285rem;
   padding-bottom: 6px;
@@ -2127,11 +2119,18 @@ header#masthead #site-navigation {
   margin-top: 0.4285714285rem;
 }
 header#masthead #site-navigation div ul {
+  padding: 0;
   box-shadow: none;
   border-style: none;
 }
 header#masthead #site-navigation div ul li {
   height: 100%;
+  display: inline;
+  float: left;
+  width: 47.91666666666667%;
+  margin: 0 1.0416666666666665%;
+  margin-top: 3px;
+  margin-top: 0.21428571425rem;
 }
 header#masthead #site-navigation div ul li a {
   vertical-align: middle;
@@ -2144,10 +2143,12 @@ header#masthead #site-navigation div ul li a {
 header#masthead #site-navigation div ul li a:hover {
   color: #ee118a;
 }
-header#masthead #site-navigation div#searchformWrapper {
+header#masthead #site-navigation div#togglesearchWrapper {
+  position: relative;
+}
+header#masthead #site-navigation div#togglesearchWrapper div#searchformWrapper {
   position: absolute;
   overflow: hidden;
-  right: 0;
   top: 36px;
   top: 2.571428571rem;
   height: 0;
@@ -2157,7 +2158,7 @@ header#masthead #site-navigation div#searchformWrapper {
   -o-transition: height ease-out 0.03s;
   transition: height ease-out 0.03s;
 }
-header#masthead #site-navigation div#searchformWrapper #s {
+header#masthead #site-navigation div#togglesearchWrapper div#searchformWrapper #s {
   float: left;
   width: 144px;
   width: 10.285714287rem;
@@ -2168,7 +2169,7 @@ header#masthead #site-navigation div#searchformWrapper #s {
   margin-right: 0.4285714285rem;
   padding: 3px;
 }
-header#masthead #site-navigation div#searchformWrapper #searchsubmit {
+header#masthead #site-navigation div#togglesearchWrapper div#searchformWrapper #searchsubmit {
   float: right;
   height: 23px;
   margin: 0;
@@ -3351,20 +3352,39 @@ footer#colophon .site-info a:hover {
 @media screen and (min-width: 600px) {
   div#top-left {
     float: left;
+    margin-left: 48px;
+    margin-left: 3.428571429rem;
+    margin-right: 48px;
+    margin-right: 3.428571429rem;
   }
   div#top-right {
     float: right;
+    margin-left: 48px;
+    margin-left: 3.428571429rem;
+    margin-right: 48px;
+    margin-right: 3.428571429rem;
   }
   header#masthead #site-navigation {
     position: relative;
     border-top: 1px solid #999;
     border-bottom: 1px solid #999;
   }
+  header#masthead #site-navigation div ul li {
+    display: inline-block;
+    margin-left: 0;
+    margin-right: 40px;
+    margin-right: 2.85428571381rem;
+    width: auto;
+  }
   header#masthead #site-navigation div#togglesearchWrapper {
     height: 100%;
     position: absolute;
     right: 0;
     top: 0;
+  }
+  header#masthead #site-navigation div#togglesearchWrapper div#searchformWrapper {
+    margin: 0;
+    right: 0;
   }
   header#masthead #site-navigation div#togglesearchWrapper i#navtogglesearch {
     line-height: 1.8;

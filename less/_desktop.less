@@ -6,10 +6,19 @@
 
 div#top-left {
 	float:left;
+
+	margin-left:48px;
+	margin-left:@rem48;
+	margin-right:48px;
+	margin-right:@rem48;
 }
 
 div#top-right {
 	float:right;
+	margin-left:48px;
+	margin-left:@rem48;
+	margin-right:48px;
+	margin-right:@rem48;
 }
 // 	input#s {
 // 		margin-bottom:0;
@@ -23,12 +32,27 @@ header#masthead {
 		border-top:1px solid #999;
 		border-bottom:1px solid #999;
 
+		div ul {
+			li {
+				display:inline-block;
+				margin-left:0;
+				margin-right:40px;
+				margin-right:@rem12 * 3.33;
+				width:auto;
+			}
+		}
+
 		div#togglesearchWrapper {
 			height:100%;
 
 			position:absolute;
 			right:0;
 			top:0;
+
+			div#searchformWrapper {
+				margin:0;
+				right:0;
+			}
 
 			i#navtogglesearch {
 				line-height:1.8;
