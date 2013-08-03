@@ -101,17 +101,13 @@
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
 			<div id="togglesearchWrapper">
 				<i id="navtogglesearch" class="icon-search icon" onclick="ToggleSearch()"></i>
-				<div id="searchformWrapper">
-					<form role="search" method="get" id="searchform" action="http://localhost:8888/" >
-						<div>
-							<input type="text" value="" name="s" id="s" />
-							<input type="submit" id="searchsubmit" value="Search" />
-						</div>
-					</form>
-				</div>
+				
 			</div>
 		</nav><!-- #site-navigation -->
 
+		<div id="searchformWrapper">
+			<?php get_search_form(); ?>
+		</div>
 	</header><!-- #masthead -->
 
 	<div id="main" class="wrapper">

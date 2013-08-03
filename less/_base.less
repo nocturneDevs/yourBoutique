@@ -178,7 +178,8 @@ div#top {
 // Header
 header#masthead {
 	padding-top:0;
-
+	padding-bottom:12px;
+	padding-bottom:@rem12;
 	div#header-image-wrapper {
 		width:100%;
 		max-width:@maxHeaderImageWidth;
@@ -236,51 +237,51 @@ header#masthead {
 		}
 
 		div#togglesearchWrapper {
-
-			position:relative;
-
-			div#searchformWrapper {
-				position:absolute;
-				overflow:hidden;
-				
-				top:36px;
-				top:@rem12 * 3;
-
-				height:0;
-				width:200px;
-
-				
-				.transition(height,ease-out,0.03s);
-
-				#s {
-					float:left;
-
-					width:144px;
-					width:@rem48 * 3;
-					
-					margin-top:0;
-					margin-bottom:0;
-					margin-left:0;
-					margin-right:6px;
-					margin-right:@rem12 / 2;
-					padding:3px;
-
-				}
-
-				#searchsubmit {
-					float:right;
-					height:23px;
-
-					margin:0;
-					padding:0 6px;
-					line-height:100%
-
-				}
+			&:hover {
+				color:@ybPink + #111;
 			}
 		}
 		
 		
 	}	
+
+	div#searchformWrapper {
+		
+		height:0;
+		width:200px;		
+		overflow:hidden;
+
+		margin-top:6px;
+		margin-top:@rem12 / 2;
+
+		.center;
+		.transition(height,ease-out,0.5s);
+
+		#s {
+			float:left;
+
+			width:144px;
+			width:@rem48 * 3;
+			
+			margin-top:0;
+			margin-bottom:0;
+			margin-left:0;
+			margin-right:6px;
+			margin-right:@rem12 / 2;
+			padding:3px;
+
+		}
+
+		#searchsubmit {
+			float:right;
+			height:23px;
+
+			margin:0;
+			padding:0 6px;
+			line-height:100%
+
+		}
+	}
 }
 
 
@@ -1129,6 +1130,7 @@ footer#colophon {
 
 	#footerDetailText {
 		.column(12);
+		text-align:justify;
 		margin-bottom:48px;
 		margin-bottom:@rem48;
 	}

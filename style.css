@@ -2098,6 +2098,8 @@ div#top div#top-right {
 }
 header#masthead {
   padding-top: 0;
+  padding-bottom: 12px;
+  padding-bottom: 0.857142857rem;
 }
 header#masthead div#header-image-wrapper {
   width: 100%;
@@ -2143,22 +2145,24 @@ header#masthead #site-navigation div ul li a {
 header#masthead #site-navigation div ul li a:hover {
   color: #ee118a;
 }
-header#masthead #site-navigation div#togglesearchWrapper {
-  position: relative;
+header#masthead #site-navigation div#togglesearchWrapper:hover {
+  color: #ee118a;
 }
-header#masthead #site-navigation div#togglesearchWrapper div#searchformWrapper {
-  position: absolute;
-  overflow: hidden;
-  top: 36px;
-  top: 2.571428571rem;
+header#masthead div#searchformWrapper {
   height: 0;
   width: 200px;
-  -webkit-transition: height ease-out 0.03s;
-  -moz-transition: height ease-out 0.03s;
-  -o-transition: height ease-out 0.03s;
-  transition: height ease-out 0.03s;
+  overflow: hidden;
+  margin-top: 6px;
+  margin-top: 0.4285714285rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-transition: height ease-out 0.5s;
+  -moz-transition: height ease-out 0.5s;
+  -o-transition: height ease-out 0.5s;
+  transition: height ease-out 0.5s;
 }
-header#masthead #site-navigation div#togglesearchWrapper div#searchformWrapper #s {
+header#masthead div#searchformWrapper #s {
   float: left;
   width: 144px;
   width: 10.285714287rem;
@@ -2169,7 +2173,7 @@ header#masthead #site-navigation div#togglesearchWrapper div#searchformWrapper #
   margin-right: 0.4285714285rem;
   padding: 3px;
 }
-header#masthead #site-navigation div#togglesearchWrapper div#searchformWrapper #searchsubmit {
+header#masthead div#searchformWrapper #searchsubmit {
   float: right;
   height: 23px;
   margin: 0;
@@ -3271,6 +3275,7 @@ footer#colophon #footerDetailText {
   float: left;
   width: 97.91666666666666%;
   margin: 0 1.0416666666666665%;
+  text-align: justify;
   margin-bottom: 48px;
   margin-bottom: 3.428571429rem;
 }
@@ -3383,13 +3388,15 @@ footer#colophon .site-info a:hover {
     position: absolute;
     right: 0;
     top: 0;
+    padding-right: 12px;
+    padding-right: 0.857142857rem;
   }
   header#masthead #site-navigation div#togglesearchWrapper div#searchformWrapper {
     margin: 0;
     right: 0;
   }
   header#masthead #site-navigation div#togglesearchWrapper i#navtogglesearch {
-    line-height: 1.8;
+    line-height: 2;
     vertical-align: middle;
   }
   div.product div.images,

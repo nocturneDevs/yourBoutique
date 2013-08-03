@@ -4,7 +4,7 @@ function ToggleSearch() {
 	var s = document.getElementById("searchformWrapper");
 
 	if (bSearchVisible) {
-		s.style.height = "0px";
+		s.style.height = "0";
 		bSearchVisible = false;
 	}
 	else {
