@@ -2533,18 +2533,21 @@ div.product .woocommerce-tabs .panel p,
   width: 100%;
   height: auto;
 }
+ul.products {
+  margin: 0;
+  padding: 0;
+}
 ul.products li.product {
-  margin-bottom: 2.992em;
   padding: 0;
   position: relative;
-  margin-top: 12px;
-  margin-top: 0.857142857rem;
-  margin-left: 0;
-  border-bottom: 1px solid rgba(221, 0, 121, 0.85);
   display: inline;
   float: left;
   width: 47.91666666666667%;
   margin: 0 1.0416666666666665%;
+  margin-top: 12px;
+  margin-top: 0.857142857rem;
+  margin-bottom: 12px;
+  margin-bottom: 0.857142857rem;
 }
 ul.products li.product .onsale {
   top: 0;
@@ -2557,8 +2560,10 @@ ul.products li.product h3 {
   margin: 0;
   color: #000;
   font-weight: normal;
+  font-size: 12px;
 }
 ul.products li.product a {
+  font-size: 12px;
   text-decoration: none;
 }
 ul.products li.product a h3 mark {
@@ -2580,6 +2585,7 @@ ul.products li.product strong {
 ul.products li.product .price {
   color: #41e042;
   display: block;
+  font-size: 12px;
   font-weight: normal;
   margin-bottom: .5em;
 }
@@ -2743,38 +2749,47 @@ ul.products li.last {
 #homeWrapper #clothingWrapper {
   display: inline;
   float: left;
-  width: 31.25%;
+  width: 97.91666666666666%;
   margin: 0 1.0416666666666665%;
 }
 #homeWrapper #clothingWrapper ul {
-  width: 100%;
+  padding: 0;
 }
 #homeWrapper #clothingWrapper ul li {
-  width: 40%;
+  display: inline;
+  float: left;
+  width: 47.91666666666667%;
+  margin: 0 1.0416666666666665%;
 }
 #homeWrapper #bagsWrapper {
   display: inline;
   float: left;
-  width: 31.25%;
+  width: 97.91666666666666%;
   margin: 0 1.0416666666666665%;
 }
 #homeWrapper #bagsWrapper ul {
-  width: 100%;
+  padding: 0;
 }
 #homeWrapper #bagsWrapper ul li {
-  width: 40%;
+  display: inline;
+  float: left;
+  width: 47.91666666666667%;
+  margin: 0 1.0416666666666665%;
 }
 #homeWrapper #accessoriesWrapper {
   display: inline;
   float: left;
-  width: 31.25%;
+  width: 97.91666666666666%;
   margin: 0 1.0416666666666665%;
 }
 #homeWrapper #accessoriesWrapper ul {
-  width: 100%;
+  padding: 0;
 }
 #homeWrapper #accessoriesWrapper ul li {
-  width: 40%;
+  display: inline;
+  float: left;
+  width: 47.91666666666667%;
+  margin: 0 1.0416666666666665%;
 }
 table.cart .product-thumbnail,
 #content table.cart .product-thumbnail {
@@ -3467,7 +3482,26 @@ footer#colophon .site-info a:hover {
     width: 22.916666666666664%;
     margin: 0 1.0416666666666665%;
     margin-top: 0;
+    margin-bottom: 1.714285714rem;
     border-bottom: none;
+  }
+  div#homeWrapper #clothingWrapper {
+    display: inline;
+    float: left;
+    width: 31.25%;
+    margin: 0 1.0416666666666665%;
+  }
+  div#homeWrapper #bagsWrapper {
+    display: inline;
+    float: left;
+    width: 31.25%;
+    margin: 0 1.0416666666666665%;
+  }
+  div#homeWrapper #accessoriesWrapper {
+    display: inline;
+    float: left;
+    width: 31.25%;
+    margin: 0 1.0416666666666665%;
   }
   footer#colophon #footerDetailText {
     display: inline;
