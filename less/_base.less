@@ -158,7 +158,8 @@ div#top {
 
 	div#top-left {
 		
-
+		.center;
+		max-width:50%;
 		padding-top:9px;
 		padding-top:@rem12 * 0.75;
 		padding-bottom:3px;
@@ -168,6 +169,8 @@ div#top {
 
 	div#top-right {
 
+		.center;
+		max-width:50%;
 		padding-top:6px;
 		padding-top:@rem12 * 0.5;
 		padding-bottom:6px;
@@ -187,8 +190,7 @@ header#masthead {
 
 		a {
 			img#header-image {
-				// margin-top: 12px;
-				// margin-top: @rem12;
+				
 				margin-top:0;
 				width:100%;
 				
@@ -206,9 +208,7 @@ header#masthead {
 		margin-top:@rem12 / 2;
 
 		div ul {
-			//height:27px;
-			//height:@rem12 * 2.25;
-			
+
 			padding:0;
 			box-shadow:none;
 			border-style:none;
@@ -297,21 +297,16 @@ h1.page-title {
 	margin:(@rem12 / 2) 0 0 0 ;
 }
 
-//img.attachment-shop_catalog {
 a img {
 	padding: @imageBorderPadding;
 	padding: @imageBorderPaddingRem;
 
-	//border: @imageBorderThickness solid @imageBorderColor;
 	border-radius:0;
-	//.box_shadow(0,0px,2px,0,rgba(0,0,0,0.3));
 	.box_shadow(0,0,3px,1px,rgba(0,0,0,0.3));
-	//.transition();
 }
 
 a:hover img {
 	.box_shadow(0,0,3px,1px,@ybPink);
-	//border: @imageBorderThickness solid @ybPink + #222;
 }
 
 color:@mainTextColor;
@@ -331,7 +326,6 @@ span.amount {
 	border:1px solid rgba(0,0,0,0);
 	border-radius:0;
 	background-image:none;
-	//background-color:@cartButtonColor;
 	background-color:rgba(0,0,0,0);				
 	
 	&:hover {
@@ -418,29 +412,23 @@ div.product, #content div.product {
 			display:block;
 			width: 100%;
 			height:auto;
-
-			// padding: @imageBorderPadding;
-			// padding: @imageBorderPaddingRem;
-
-			// border: @imageBorderThickness solid @imageBorderColor;
-			// border-radius:0;
-			// //.box_shadow(0,0px,2px,0,rgba(0,0,0,0.3));
-			// .box_shadow(0,0,0,0,rgba(0,0,0,0));
-			// .transition();
 		}
 
 		div.thumbnails {
-			// height:100%;
+
 			padding-top: 1em;
 			.clearfix;
+
 			a {
 				float:left;
 				width: 30.75%;
 				margin-right: 3.8%;
 			}
+
 			a.last {
 				margin-right: 0;
 			}
+
 			a.first {
 				clear:both;
 			}
@@ -594,17 +582,15 @@ div.product, #content div.product {
 }
 
 ul.products {
+
 	margin:0;
 	padding:0;
+	
 	li.product {
-		// float:none;
- 		// margin: 0 3.8% 2.992em 0;
  		
  		padding: 0;
  		position: relative;
- 		// width:90%;
- 		// border-bottom:1px solid fade(@ybPink,85%);
-
+ 		
  		.column(6);
  		
  		margin-top:12px;
@@ -623,9 +609,7 @@ ul.products {
  			padding: .5em 0;
  			margin: 0;
  			color:#000;
- 			//font-family:"Lato",sans-serif;
  			font-weight:normal;
- 			//text-transform:uppercase;
  			font-size:12px;
  		}
 
@@ -646,12 +630,15 @@ ul.products {
  			display:block;
  			margin: 0 0 8px;
  		}
+
  		a:hover img {
  			color:#000;
  		}
+
  		strong {
  			display:block;
  		}
+
  		.price {
  			color: @highlight;
  			display:block;
@@ -680,6 +667,7 @@ ul.products {
  		}
 
  	}
+
  	li.first {
  		clear:both;
  	}
@@ -719,22 +707,15 @@ ul.products {
 		padding-bottom:18px;
 		padding-bottom:@rem12 * 1.5;
 
-		//border-bottom:1px solid @mainTextColor;
 		a {
 			text-decoration:none;
 		}
 
 		h1.page-title {
 			.transition();
-			//border-top:1px solid @ybPink;
-			//border-bottom:1px solid @mainTextColor;
 			margin:0;
-			//padding-left:6px;
-			//padding-left:@rem12 / 2;
 			line-height:120%;
 			text-align: center;
-
-			//background-color:#e3e3e3;
 		}
 
 		p.woocommerce-result-count,
@@ -858,7 +839,6 @@ table.cart, #content table.cart {
 				padding: 6px 6px 5px;
 				margin: 0 4px 0 0;
 				outline: 0;
-				//background: lighten(@secondary, 5) none;
 				line-height: 1em;
 			}
 		}
@@ -868,7 +848,6 @@ table.cart, #content table.cart {
 		}
 	}
 	input {
-		//margin: 0;
 		vertical-align: middle;
 		line-height: 1em;
 	}
@@ -1135,14 +1114,14 @@ footer#colophon {
 	#footerDetailText {
 		.column(12);
 		text-align:justify;
-		margin-bottom:48px;
-		margin-bottom:@rem48;
+		margin-bottom:12px;
+		margin-bottom:@rem12;
 	}
 
 	#footerSocial {
 		.column(12);
-		margin-bottom:48px;
-		margin-bottom:@rem48;
+		margin-bottom:12px;
+		margin-bottom:@rem12;
 		a {
 			text-decoration: none;
 			color: @ybGray;
@@ -1163,8 +1142,8 @@ footer#colophon {
 
 	#footerNav {
 		.column(12);
-		margin-bottom:48px;
-		margin-bottom:@rem48;
+		margin-bottom:12px;
+		margin-bottom:@rem12;
 
 		p {
 			text-align: center;

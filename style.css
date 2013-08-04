@@ -2085,12 +2085,20 @@ div#top #headerSpacer {
   padding: 0 0.857142857rem;
 }
 div#top div#top-left {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 50%;
   padding-top: 9px;
   padding-top: 0.64285714275rem;
   padding-bottom: 3px;
   padding-bottom: 0.21428571425rem;
 }
 div#top div#top-right {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 50%;
   padding-top: 6px;
   padding-top: 0.4285714285rem;
   padding-bottom: 6px;
@@ -3291,16 +3299,16 @@ footer#colophon #footerDetailText {
   width: 97.91666666666666%;
   margin: 0 1.0416666666666665%;
   text-align: justify;
-  margin-bottom: 48px;
-  margin-bottom: 3.428571429rem;
+  margin-bottom: 12px;
+  margin-bottom: 0.857142857rem;
 }
 footer#colophon #footerSocial {
   display: inline;
   float: left;
   width: 97.91666666666666%;
   margin: 0 1.0416666666666665%;
-  margin-bottom: 48px;
-  margin-bottom: 3.428571429rem;
+  margin-bottom: 12px;
+  margin-bottom: 0.857142857rem;
 }
 footer#colophon #footerSocial a {
   text-decoration: none;
@@ -3325,8 +3333,8 @@ footer#colophon #footerNav {
   float: left;
   width: 97.91666666666666%;
   margin: 0 1.0416666666666665%;
-  margin-bottom: 48px;
-  margin-bottom: 3.428571429rem;
+  margin-bottom: 12px;
+  margin-bottom: 0.857142857rem;
 }
 footer#colophon #footerNav p {
   text-align: center;
@@ -3372,14 +3380,14 @@ footer#colophon .site-info a:hover {
   color: #339a80;
 }
 @media screen and (min-width: 600px) {
-  div#top-left {
+  div#top div#top-left {
     float: left;
     margin-left: 48px;
     margin-left: 3.428571429rem;
     margin-right: 48px;
     margin-right: 3.428571429rem;
   }
-  div#top-right {
+  div#top div#top-right {
     float: right;
     margin-left: 48px;
     margin-left: 3.428571429rem;
@@ -3405,10 +3413,6 @@ footer#colophon .site-info a:hover {
     top: 0;
     padding-right: 12px;
     padding-right: 0.857142857rem;
-  }
-  header#masthead #site-navigation div#togglesearchWrapper div#searchformWrapper {
-    margin: 0;
-    right: 0;
   }
   header#masthead #site-navigation div#togglesearchWrapper i#navtogglesearch {
     line-height: 2;
