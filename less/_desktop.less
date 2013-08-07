@@ -5,6 +5,12 @@
 @rem48:3.428571429rem;
 
 div#top {
+
+	position:fixed;
+	z-index:1;
+	top:0;
+	left:0;
+
 	div#top-left {
 		float:left;
 
@@ -14,6 +20,10 @@ div#top {
 		margin-right:@rem48;
 	}
 
+	div#top-middle {
+		background-color:#f77;
+	}
+
 	div#top-right {
 		float:right;
 		margin-left:48px;
@@ -21,6 +31,11 @@ div#top {
 		margin-right:48px;
 		margin-right:@rem48;
 	}
+}
+
+#page {
+	padding-top:36px;
+	padding-top:@rem12 * 3;
 }
 
 header#masthead {

@@ -2084,6 +2084,28 @@ div#top #headerSpacer {
   color: #706e6d;
   padding: 0 0.857142857rem;
 }
+div#top div#top-image {
+  height: 36px;
+  height: 2.571428571rem;
+  margin-left: 12px;
+  margin-left: 0.857142857rem;
+  padding-top: 3px;
+  padding-top: 0.21428571425rem;
+  padding-bottom: 3px;
+  padding-bottom: 0.21428571425rem;
+  float: left;
+}
+div#top div#top-image img {
+  height: 100%;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+}
+div#top div#top-image img:hover {
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+}
 div#top div#top-left {
   display: block;
   margin-left: auto;
@@ -3380,6 +3402,12 @@ footer#colophon .site-info a:hover {
   color: #339a80;
 }
 @media screen and (min-width: 600px) {
+  div#top {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+  }
   div#top div#top-left {
     float: left;
     margin-left: 48px;
@@ -3387,12 +3415,19 @@ footer#colophon .site-info a:hover {
     margin-right: 48px;
     margin-right: 3.428571429rem;
   }
+  div#top div#top-middle {
+    background-color: #f77;
+  }
   div#top div#top-right {
     float: right;
     margin-left: 48px;
     margin-left: 3.428571429rem;
     margin-right: 48px;
     margin-right: 3.428571429rem;
+  }
+  #page {
+    padding-top: 36px;
+    padding-top: 2.571428571rem;
   }
   header#masthead #site-navigation {
     position: relative;
