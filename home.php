@@ -24,7 +24,6 @@ get_header('shop'); ?>
 				<li data-target="#carousel-featured" data-slide-to="1"></li>
 				<li data-target="#carousel-featured" data-slide-to="2"></li>
 				<li data-target="#carousel-featured" data-slide-to="3"></li>
-				<li data-target="#carousel-featured" data-slide-to="4"></li>
 			</ol>
 
 			<!-- Wrapper for slides -->
@@ -46,11 +45,6 @@ get_header('shop'); ?>
 				</div>
 				<div class="item">
 					<img src="<?php echo get_template_directory_uri(); ?>/resources/images/carousel4.jpg" width="100%">
-					<div class="carousel-caption">
-					</div>
-				</div>
-				<div class="item">
-					<img src="<?php echo get_template_directory_uri(); ?>/resources/images/carousel5.jpg" width="100%">
 					<div class="carousel-caption">
 					</div>
 				</div>
