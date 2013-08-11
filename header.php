@@ -46,11 +46,11 @@
 
 <div id="top">
 
-	<!-- <div id="top-image">
+	<div id="top-image">
 		<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-			<img src="<?php echo get_template_directory_uri(); ?>/resources/images/minilogo.jpg">
+			<img src="<?php echo get_template_directory_uri(); ?>/resources/images/minilogo.png">
 		</a>
-	</div> -->
+	</div>
 	<div id="top-left" class="top-content">
 		<?php
 		if (is_user_logged_in()) :
