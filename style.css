@@ -3315,41 +3315,6 @@ footer#colophon #footerWrapper {
   margin: 0 1.0416666666666665%;
   margin-left: 9.374999999999998%;
 }
-footer#colophon #footerDetailText {
-  display: inline;
-  float: left;
-  width: 97.91666666666666%;
-  margin: 0 1.0416666666666665%;
-  text-align: justify;
-  margin-bottom: 12px;
-  margin-bottom: 0.857142857rem;
-}
-footer#colophon #footerSocial {
-  display: inline;
-  float: left;
-  width: 97.91666666666666%;
-  margin: 0 1.0416666666666665%;
-  margin-bottom: 12px;
-  margin-bottom: 0.857142857rem;
-}
-footer#colophon #footerSocial a {
-  text-decoration: none;
-  color: #706e6d;
-}
-footer#colophon #footerSocial a:hover {
-  color: #dd0079;
-}
-footer#colophon #footerSocialButtons {
-  display: inline;
-  float: left;
-  width: 97.91666666666666%;
-  margin: 0 1.0416666666666665%;
-  text-align: center;
-}
-footer#colophon .socialButton {
-  padding: 0 0.857142857rem;
-  margin: 0;
-}
 footer#colophon #footerNav {
   display: inline;
   float: left;
@@ -3384,6 +3349,67 @@ footer#colophon #footerNav #column2 {
   float: left;
   width: 47.91666666666667%;
   margin: 0 1.0416666666666665%;
+}
+footer#colophon #footerPages {
+  display: inline;
+  float: left;
+  width: 97.91666666666666%;
+  margin: 0 1.0416666666666665%;
+  margin-bottom: 12px;
+  margin-bottom: 0.857142857rem;
+}
+footer#colophon #footerPages p {
+  text-align: center;
+  margin: 0.21428571425rem;
+  padding: 0;
+}
+footer#colophon #footerPages p a {
+  font-size: 12px;
+  font-size: 0.857142857rem;
+  line-height: 1;
+  text-decoration: none;
+  color: #706e6d;
+}
+footer#colophon #footerPages p a:hover {
+  color: #dd0079;
+}
+footer#colophon #footerPages #column3 {
+  display: inline;
+  float: left;
+  width: 47.91666666666667%;
+  margin: 0 1.0416666666666665%;
+}
+footer#colophon #footerPages #column4 {
+  display: inline;
+  float: left;
+  width: 47.91666666666667%;
+  margin: 0 1.0416666666666665%;
+}
+footer#colophon #footerSocial {
+  display: inline;
+  float: left;
+  width: 97.91666666666666%;
+  margin: 0 1.0416666666666665%;
+  margin-bottom: 12px;
+  margin-bottom: 0.857142857rem;
+}
+footer#colophon #footerSocial a {
+  text-decoration: none;
+  color: #706e6d;
+}
+footer#colophon #footerSocial a:hover {
+  color: #dd0079;
+}
+footer#colophon #footerSocialButtons {
+  display: inline;
+  float: left;
+  width: 97.91666666666666%;
+  margin: 0 1.0416666666666665%;
+  text-align: center;
+}
+footer#colophon .socialButton {
+  padding: 0 0.857142857rem;
+  margin: 0;
 }
 footer#colophon .site-info {
   display: inline;
@@ -3542,12 +3568,15 @@ footer#colophon .site-info a:hover {
     width: 31.25%;
     margin: 0 1.0416666666666665%;
   }
-  footer#colophon #footerDetailText {
+  footer#colophon #footerPages {
     display: inline;
     float: left;
     width: 31.25%;
     margin: 0 1.0416666666666665%;
     margin-bottom: 0;
+  }
+  footer#colophon #footerPages p {
+    text-align: left;
   }
   footer#colophon #footerSocial {
     display: inline;

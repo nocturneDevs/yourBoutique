@@ -1134,35 +1134,6 @@ footer#colophon {
 		.push(1);
 	}
 
-	#footerDetailText {
-		.column(12);
-		text-align:justify;
-		margin-bottom:12px;
-		margin-bottom:@rem12;
-	}
-
-	#footerSocial {
-		.column(12);
-		margin-bottom:12px;
-		margin-bottom:@rem12;
-		a {
-			text-decoration: none;
-			color: @ybGray;
-		}
-		a:hover {
-		color: @ybPink;
-		}
-	}
-	
-	#footerSocialButtons {
-		.column(12);
-		text-align: center;
-	}
-	.socialButton {
-		padding: 0 @rem12;
-		margin: 0;
-	}
-
 	#footerNav {
 		.column(12);
 		margin-bottom:12px;
@@ -1191,6 +1162,59 @@ footer#colophon {
 			.column(6);
 		}
 	}
+
+	#footerPages {
+		.column(12);
+		margin-bottom:12px;
+		margin-bottom:@rem12;
+
+		p {
+			text-align: center;
+			margin: @rem12/4;
+			padding: 0;
+			a {
+				font-size: 12px;
+				font-size: @rem12;
+				line-height: 1;
+				text-decoration: none;
+				color: @ybGray;
+			}
+			a:hover {
+				color: @ybPink;
+			}
+		}
+
+		#column3 {
+			.column(6);
+		}
+		#column4 {
+			.column(6);
+		}
+	}
+
+	#footerSocial {
+		.column(12);
+		margin-bottom:12px;
+		margin-bottom:@rem12;
+		a {
+			text-decoration: none;
+			color: @ybGray;
+		}
+		a:hover {
+		color: @ybPink;
+		}
+	}
+	
+	#footerSocialButtons {
+		.column(12);
+		text-align: center;
+	}
+	.socialButton {
+		padding: 0 @rem12;
+		margin: 0;
+	}
+
+	
 
 	//Credits
 	.site-info{
