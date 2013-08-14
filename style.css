@@ -2220,14 +2220,19 @@ a img {
   padding: 0px;
   padding: 0;
   border-radius: 0;
-  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.3);
-  -webkit-box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
 }
 a:hover img {
-  box-shadow: 0 0 3px 1px #dd0079;
-  -webkit-box-shadow: 0 0 3px 1px #dd0079;
-  -moz-box-shadow: 0 0 3px 1px #dd0079;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+}
+img.wp-post-image {
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
 }
 a:hover {
   color: #ee118a;
@@ -2385,6 +2390,12 @@ div.product div.images div.thumbnails a,
   float: left;
   width: 30.75%;
   margin-right: 3.8%;
+}
+div.product div.images div.thumbnails a img:hover,
+#content div.product div.images div.thumbnails a img:hover {
+  box-shadow: 0 0 1px 1px #dd0079;
+  -webkit-box-shadow: 0 0 1px 1px #dd0079;
+  -moz-box-shadow: 0 0 1px 1px #dd0079;
 }
 div.product div.images div.thumbnails a.last,
 #content div.product div.images div.thumbnails a.last {
@@ -2605,9 +2616,17 @@ ul.products li.product a img {
   height: auto;
   display: block;
   margin: 0 0 8px;
+  border-radius: 0;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
 }
 ul.products li.product a:hover img {
   color: #000;
+  border-radius: 0;
+  box-shadow: 0 0 1px 1px #dd0079;
+  -webkit-box-shadow: 0 0 1px 1px #dd0079;
+  -moz-box-shadow: 0 0 1px 1px #dd0079;
 }
 ul.products li.product strong {
   display: block;
@@ -2743,12 +2762,6 @@ ul.products li.last {
 #homeWrapper .homeSectionWrapper ul li {
   margin-bottom: 18px;
   margin-bottom: 1.2857142855rem;
-}
-#homeWrapper .homeSectionWrapper:hover {
-  background-color: rgba(0, 0, 0, 0.08);
-  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.08);
-  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.08);
-  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.08);
 }
 #homeWrapper .homeSectionWrapper:hover h1.page-title {
   color: #dd0079;

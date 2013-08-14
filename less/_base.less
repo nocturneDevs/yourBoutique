@@ -325,11 +325,15 @@ a img {
 	padding: @imageBorderPaddingRem;
 
 	border-radius:0;
-	.box_shadow(0,0,3px,1px,rgba(0,0,0,0.3));
+	.noshadows();
 }
 
 a:hover img {
-	.box_shadow(0,0,3px,1px,@ybPink);
+	.noshadows();
+}
+
+img.wp-post-image {
+	.noshadows();
 }
 
 color:@mainTextColor;
@@ -446,6 +450,10 @@ div.product, #content div.product {
 				float:left;
 				width: 30.75%;
 				margin-right: 3.8%;
+
+				img:hover {
+					.box_shadow(0,0,1px,1px,@ybPink);
+				}
 			}
 
 			a.last {
@@ -652,10 +660,15 @@ ul.products {
  			height:auto;	 			
  			display:block;
  			margin: 0 0 8px;
+
+ 			border-radius:0;
+ 			.noshadows();
  		}
 
  		a:hover img {
  			color:#000;
+ 			border-radius:0;
+ 			.box_shadow(0,0,1px,1px,@ybPink);
  		}
 
  		strong {
@@ -755,8 +768,8 @@ ul.products {
 		}
 
 		&:hover {
-			background-color:fade(#000,8%);
-			.box_shadow(0px,0px,5px,0px,fade(#000,8%));
+			//background-color:fade(#000,8%);
+			//.box_shadow(0px,0px,5px,0px,fade(#000,8%));
 			h1.page-title {
 				color:@ybPink;
 			}
