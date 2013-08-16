@@ -21,6 +21,9 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 	 do_action( 'woocommerce_before_single_product' );
 ?>
 
+<!-- Featured Image Switcher Script -->
+<script src="<?php echo get_template_directory_uri(); ?>/js/product-image-switcher.js" type="text/javascript"></script>
+
 <div itemscope itemtype="http://schema.org/Product" id="product-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<?php
