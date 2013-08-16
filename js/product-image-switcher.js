@@ -1,10 +1,12 @@
 function SetFeaturedImage(thumbnail) {
 
-	var fsrc = document.getElementById("featured-image").firstChild.src;
+	var featured = document.getElementById("featured-image");
+	var fsrc = featured.firstChild.src;
 	var tsrc = thumbnail.firstChild.src;
 	var flen = fsrc.length;
 	var tlen = tsrc.length;
 
+	//Finding lengths of root filenames (excluding resolutions)
 	while(fsrc[flen-1] != "-") {
 		flen--;
 	}
@@ -18,11 +20,11 @@ function SetFeaturedImage(thumbnail) {
 	}
 	tlen--;
 
+	// Assemble root filename from thumbnail and resolution from featured image
 	tsrc = tsrc.substring(0,tlen);
 	tsrc = tsrc.concat(fsrc.substring(flen));
-	console.log(tsrc);
 
-
-
-	document.getElementById("featured-image").firstChild.src = tsrc;
+	// Set featured image to assembled filename
+	featured.href = tsrc.substring(0,tlen).concat(".jpg");
+	featured.firstChild.src = tsrc;
 }
