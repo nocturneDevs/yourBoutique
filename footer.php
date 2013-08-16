@@ -37,14 +37,16 @@
 						<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>terms-and-conditions/">Terms and Conditions</a></p>
 					</div>
 					
-					<div id="colum4">
+					<div id="column4">
 						
 					</div>
 				</div>
 				<div id="footerSocial">
 					<div id="footerSocialButtons">
-						<a href="<?php echo esc_url('http://www.facebook.com'); ?>" title="<?php esc_attr_e( 'Like YB on Facebook!'); ?>" target="_blank" class="socialButton"><i class="icon-facebook icon-3x"></i></a>
+						<a href="<?php echo esc_url('https://www.facebook.com/pages/YourBoutique/400076350083620'); ?>" title="<?php esc_attr_e( 'Like YB on Facebook!'); ?>" target="_blank" class="socialButton"><i class="icon-facebook icon-3x"></i></a>
 						<a href="<?php echo esc_url('http://www.twitter.com'); ?>" title="<?php esc_attr_e( 'Follow YB on Twitter!'); ?>" target="_blank" class="socialButton"><i class="icon-twitter icon-3x"></i></a>
+						<a href="<?php echo esc_url('http://www.youtube.com'); ?>" title="<?php esc_attr_e( 'Email YB!'); ?>" target="_blank" class="socialButton"><i class="icon-youtube icon-3x"></i></a>
+						<a href="<?php echo esc_url('https://pinterest.com'); ?>" title="<?php esc_attr_e( 'Email YB!'); ?>" target="_blank" class="socialButton"><i class="icon-pinterest icon-3x"></i></a>
 						<a href="<?php echo esc_url('http://www.gmail.com'); ?>" title="<?php esc_attr_e( 'Email YB!'); ?>" target="_blank" class="socialButton"><i class="icon-envelope icon-3x"></i></a>
 					</div>
 				</div>
