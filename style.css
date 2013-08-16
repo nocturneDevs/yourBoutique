@@ -2216,6 +2216,24 @@ h1.page-title {
   margin: 6px 0 0 0;
   margin: 0.4285714285rem 0 0 0;
 }
+img#categoryHeaderImage {
+  width: 100%;
+}
+div.term-description {
+  width: 100%;
+  margin: 0;
+  margin-bottom: 24px;
+  margin-bottom: 1.714285714rem;
+  padding-top: 12px;
+  padding-top: 0.857142857rem;
+  padding-bottom: 24px;
+  padding-bottom: 1.714285714rem;
+  border-bottom: 1px solid #999;
+}
+div.term-description p {
+  margin: 0;
+  padding: 0;
+}
 a img {
   padding: 0px;
   padding: 0;
@@ -3414,7 +3432,7 @@ footer#colophon #footerSocial a:hover {
   color: #dd0079;
 }
 footer#colophon #footerSocial a#facebookSocial {
-  color: #6d84b4;
+  color: #4c68a2;
 }
 footer#colophon #footerSocial a#facebookSocial:hover {
   color: #dd0079;

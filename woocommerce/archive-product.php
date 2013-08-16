@@ -29,6 +29,16 @@ get_header('shop'); ?>
 
 		<?php endif; ?>
 
+		<?php if (is_product_category()){
+			    global $wp_query;			   
+			    $cat = $wp_query->get_queried_object();
+			    $thumbnail_id = get_woocommerce_term_meta( $cat->term_id, 'thumbnail_id', true ); 
+			    $image = wp_get_attachment_url( $thumbnail_id ); 
+			    echo '<img id="categoryHeaderImage" src="'.$image.'" alt=""/>';
+		} ?>
+
+		
+
 		<?php do_action( 'woocommerce_archive_description' ); ?>
 
 		<?php if ( have_posts() ) : ?>
