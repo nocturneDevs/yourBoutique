@@ -3413,6 +3413,36 @@ footer#colophon #footerSocial a {
 footer#colophon #footerSocial a:hover {
   color: #dd0079;
 }
+footer#colophon #footerSocial a#facebookSocial {
+  color: #6d84b4;
+}
+footer#colophon #footerSocial a#facebookSocial:hover {
+  color: #dd0079;
+}
+footer#colophon #footerSocial a#twitterSocial {
+  color: #00aced;
+}
+footer#colophon #footerSocial a#twitterSocial:hover {
+  color: #dd0079;
+}
+footer#colophon #footerSocial a#youtubeSocial {
+  color: #dd3333;
+}
+footer#colophon #footerSocial a#youtubeSocial:hover {
+  color: #dd0079;
+}
+footer#colophon #footerSocial a#pinterestSocial {
+  color: #cd3037;
+}
+footer#colophon #footerSocial a#pinterestSocial:hover {
+  color: #dd0079;
+}
+footer#colophon #footerSocial a#mailSocial {
+  color: #cccccc;
+}
+footer#colophon #footerSocial a#mailSocial:hover {
+  color: #dd0079;
+}
 footer#colophon #footerSocialButtons {
   display: inline;
   float: left;

@@ -36,6 +36,14 @@
 @priceColor				: fade(@ybPink,90%);
 @cartButtonColor 		: fade(@ybPink,80%);//@triadBlue;
 
+// Social colors
+@facebookColor				: #6d84b4;
+@twitterColor 				: #00aced;
+@youtubeColor 				: #dd3333;
+@pinterestColor 			: #cd3037;
+@mailColor 					: #cccccc;
+
+
 // EMs, REMs, and other delightful sizes
 @rem12					: 0.857142857rem;
 @rem24					: 1.714285714rem;
@@ -1213,9 +1221,46 @@ footer#colophon {
 			text-decoration: none;
 			color: @ybGray;
 		}
+
 		a:hover {
-		color: @ybPink;
+			color: @ybPink;
 		}
+
+		a#facebookSocial {
+			color: @facebookColor;
+			&:hover {
+				color: @ybPink;
+			}
+		}
+
+		a#twitterSocial {
+			color: @twitterColor;
+			&:hover {
+				color: @ybPink;
+			}
+		}
+
+		a#youtubeSocial {
+			color: @youtubeColor;
+			&:hover {
+				color: @ybPink;
+			}
+		}
+
+		a#pinterestSocial {
+			color: @pinterestColor;
+			&:hover {
+				color: @ybPink;
+			}
+		}
+
+		a#mailSocial {
+			color: @mailColor;
+			&:hover {
+				color: @ybPink;
+			}
+		}
+
 	}
 	
 	#footerSocialButtons {
