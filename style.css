@@ -2096,6 +2096,7 @@ div#top .top-content {
   font-size: 0.857142857rem;
   color: #333333;
   line-height: 1.5;
+  text-align: center;
 }
 div#top a.headerIcon {
   color: #21759b;
@@ -2138,7 +2139,7 @@ div#top div#top-left {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  max-width: 50%;
+  max-width: 100%;
   padding-top: 9px;
   padding-top: 0.64285714275rem;
   padding-bottom: 3px;
@@ -2148,7 +2149,7 @@ div#top div#top-right {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  max-width: 50%;
+  max-width: 100%;
   padding-top: 6px;
   padding-top: 0.4285714285rem;
   padding-bottom: 6px;
