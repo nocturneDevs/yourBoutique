@@ -22,8 +22,8 @@
 @nocturneGreen			: #339a80;
 
 @backgroundMainColor	: #fff;
-@topFontColor			: #ccc;
-@topBarColor			: #333;
+@topFontColor			: #333;
+@topBarColor			: #fff;
 @footerColor			: #333;
 
 @mainTextColor			: #333;
@@ -115,8 +115,11 @@ html, body {
 }
 
 #bodyWrapper {
+	.clearfix();
 	background-color:@backgroundMainColor;
-	width: 100%;	
+	width: 100%;
+	margin: 0;
+	padding: 0;
 }
 
 
@@ -133,10 +136,9 @@ div#top {
 	//padding-top:@rem12 * 0.25;
 	//padding-bottom:3px;
 	//padding-bottom:@rem12 * 0.25;
-
+	opacity: 0.9;
 	background-color:@topBarColor;
-
-	box-shadow:0px 0px 2px 0px #666;
+	box-shadow:0px 0px 1px 0px #999;
 
 	.top-content {
 		font-size:@rem12;
@@ -206,7 +208,7 @@ div#top {
 		padding-top:@rem12 * 0.5;
 		padding-bottom:6px;
 		padding-bottom:@rem12 * 0.5;
-	}	
+	}
 }
 
 // Header

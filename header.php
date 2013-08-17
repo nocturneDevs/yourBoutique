@@ -46,7 +46,6 @@
 <div id="bodyWrapper">
 
 <div id="top">
-
 	<div id="top-image">
 		<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
 			<img src="<?php echo get_template_directory_uri(); ?>/resources/images/minilogo.png">
@@ -88,7 +87,6 @@
 		</div>
 		
 	</div>
-
 </div>
 
 <div id="page" class="hfeed site">
