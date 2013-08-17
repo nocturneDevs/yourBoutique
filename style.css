@@ -3554,6 +3554,9 @@ footer#colophon .site-info a:hover {
     line-height: 2;
     vertical-align: middle;
   }
+  .loupe-js {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
   div.product div.images,
   #content div.product div.images {
     float: left;

@@ -40,3 +40,15 @@ global $post, $woocommerce, $product;
 	<?php do_action( 'woocommerce_product_thumbnails' ); ?>
 
 </div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<!-- Latest JavaScript -->
+<script src="<?php echo get_template_directory_uri(); ?>/js/loupe.js"></script>
+
+<script type="text/javascript">
+$('#featured-image').loupe({
+  width: 250, // width of magnifier
+  height: 200, // height of magnifier
+  loupe: 'loupe-js' // css class for magnifier
+});
+</script>
