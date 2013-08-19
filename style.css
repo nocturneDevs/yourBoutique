@@ -2089,7 +2089,7 @@ div#top {
   min-height: 12px;
   min-height: 0.857142857rem;
   opacity: 0.9;
-  background-color: #ffffff;
+  background-color: #f6f6f6;
   box-shadow: 0px 0px 1px 0px #999;
 }
 div#top .top-content {
@@ -2559,8 +2559,9 @@ div.product .woocommerce-tabs .panel p,
 div.product .buyNowWrapper,
 #content div.product .buyNowWrapper {
   *zoom: 1;
-  float: right;
   width: 32%;
+  margin-bottom: 12px;
+  margin-bottom: 0.857142857rem;
 }
 div.product .buyNowWrapper:before,
 #content div.product .buyNowWrapper:before,
@@ -3705,6 +3706,10 @@ footer#colophon .site-info a:hover {
     clear: none;
     float: right;
     width: 32%;
+  }
+  div.product .buyNowWrapper,
+  #content div.product .buyNowWrapper {
+    float: right;
   }
   ul.products li.product {
     display: inline;
