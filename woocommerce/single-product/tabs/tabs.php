@@ -38,4 +38,12 @@ if ( ! empty( $tabs ) ) : ?>
 		<?php endforeach; ?>
 	</div>
 
+	<div class="buyNowWrapper">
+		<a href="<?php echo esc_url( home_url( '/' ) ) . 'cart/?add-to-cart=' . get_the_ID(); ?>">
+			<div class="buyNowButton">
+				<p>Buy Now</p>
+			</div>
+		</a>
+	</div>
+
 <?php endif; ?>

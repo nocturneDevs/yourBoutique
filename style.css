@@ -2556,6 +2556,78 @@ div.product .woocommerce-tabs .panel p,
 #content div.product .woocommerce-tabs .panel p {
   text-align: justify;
 }
+div.product .buyNowWrapper,
+#content div.product .buyNowWrapper {
+  *zoom: 1;
+  float: right;
+  width: 32%;
+}
+div.product .buyNowWrapper:before,
+#content div.product .buyNowWrapper:before,
+div.product .buyNowWrapper:after,
+#content div.product .buyNowWrapper:after {
+  content: " ";
+  display: table;
+}
+div.product .buyNowWrapper:after,
+#content div.product .buyNowWrapper:after {
+  clear: both;
+}
+div.product .buyNowWrapper:before,
+#content div.product .buyNowWrapper:before,
+div.product .buyNowWrapper:after,
+#content div.product .buyNowWrapper:after {
+  content: " ";
+  display: table;
+}
+div.product .buyNowWrapper:after,
+#content div.product .buyNowWrapper:after {
+  clear: both;
+}
+div.product .buyNowWrapper:before,
+#content div.product .buyNowWrapper:before,
+div.product .buyNowWrapper:after,
+#content div.product .buyNowWrapper:after {
+  content: " ";
+  display: table;
+}
+div.product .buyNowWrapper:after,
+#content div.product .buyNowWrapper:after {
+  clear: both;
+}
+div.product .buyNowWrapper a,
+#content div.product .buyNowWrapper a {
+  text-decoration: none;
+}
+div.product .buyNowWrapper a .buyNowButton,
+#content div.product .buyNowWrapper a .buyNowButton {
+  width: 100%;
+  max-width: 144px;
+  max-width: 10.285714287rem;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #dd0079;
+}
+div.product .buyNowWrapper a .buyNowButton:hover,
+#content div.product .buyNowWrapper a .buyNowButton:hover {
+  background-color: #fc008a;
+}
+div.product .buyNowWrapper a .buyNowButton:active,
+#content div.product .buyNowWrapper a .buyNowButton:active {
+  background-color: #c4006b;
+}
+div.product .buyNowWrapper a .buyNowButton p,
+#content div.product .buyNowWrapper a .buyNowButton p {
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: 0;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+}
 .related,
 .upsells.products {
   clear: both;

@@ -613,8 +613,46 @@ div.product, #content div.product {
 		}
 	}
 
+	.buyNowWrapper {
+		.clearfix();
+		float:right;
+		width:32%;
 
+		a {
+			text-decoration:none;
+			.buyNowButton {
+				width:100%;
+				max-width:144px;
+				max-width:@rem48 * 3;
+				padding-top:12px;
+				padding-bottom:12px;
 
+				text-align:center;
+				background-color:lighten(@ybPink,0%);
+
+				&:hover {
+					background-color:lighten(@ybPink,6%);					
+				}
+
+				&:active {
+					background-color:darken(@ybPink,5%);
+				}
+
+				p {
+					margin-left:0;
+					margin-right:0;
+					margin-top:auto;
+					margin-bottom:auto;
+					padding:0;
+					width:100%;
+					
+
+					color:#fff;
+					text-align:center;
+				}
+			}
+		}
+	}
 }
 
 
