@@ -5,6 +5,7 @@
  */
 (function ($) {
 	$.fn.loupe = function (arg) {
+		console.log("Made it");
 		var options = $.extend({
 			loupe: 'loupe',
 			width: 200,
@@ -18,7 +19,8 @@
 				time;
 
 			if ($this.data('loupe') != null) {
-				return $this.data('loupe', arg);
+				$('div').remove('.loupe-js');
+				$this.data('loupe',false);
 			}
 
 			move = function (e) {

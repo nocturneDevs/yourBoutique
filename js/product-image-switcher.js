@@ -27,4 +27,11 @@ function SetFeaturedImage(thumbnail) {
 	// Set featured image to assembled filename
 	featured.href = tsrc.substring(0,tlen).concat(".jpg");
 	featured.firstChild.src = tsrc;
+
+	
+	$('#featured-image').loupe({
+  		width: 250, // width of magnifier
+  		height: 200, // height of magnifier
+  		loupe: 'loupe-js' // css class for magnifier
+	});
 }
