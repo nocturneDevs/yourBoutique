@@ -2083,6 +2083,10 @@ body {
 #bodyWrapper:after {
   clear: both;
 }
+@font-face {
+  font-family: 'Steiner';
+  src: url(http://www.yourboutique.in/resources/fonts/Steinerlight.ttf);
+}
 div#top {
   width: 100%;
   overflow: auto;
