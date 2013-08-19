@@ -2190,6 +2190,7 @@ header#masthead #site-navigation div ul {
 }
 header#masthead #site-navigation div ul li {
   height: 100%;
+  padding: 0;
   display: inline;
   float: left;
   width: 47.91666666666667%;
@@ -2198,13 +2199,15 @@ header#masthead #site-navigation div ul li {
   margin-top: 0.21428571425rem;
 }
 header#masthead #site-navigation div ul li a {
+  margin: 0;
+  padding: 0;
   vertical-align: middle;
   line-height: 27px;
   line-height: 1.9285714282500002rem;
   text-transform: none;
   font-weight: 800;
-  font-size: 13px;
-  font-size: 0.9285714284166667rem;
+  font-size: 16px;
+  font-size: 1.1428571426666667rem;
   font-family: 'Steiner', sans-serif;
 }
 header#masthead #site-navigation div ul li a:hover {

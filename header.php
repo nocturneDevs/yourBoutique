@@ -24,6 +24,7 @@
 
 <!-- FONTS --><!-- TODO: Is this the best way to do this? --> 
 <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Gudea' rel='stylesheet' type='text/css'>
 <!-- Scalable Vector Icons from Font Awesome -->
 <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 
