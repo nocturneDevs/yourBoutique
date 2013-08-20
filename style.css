@@ -3623,6 +3623,9 @@ footer#colophon .site-info a:hover {
     margin-right: 48px;
     margin-right: 3.428571429rem;
   }
+  .site {
+    max-width: 1080px;
+  }
   #page {
     padding-top: 36px;
     padding-top: 2.571428571rem;
