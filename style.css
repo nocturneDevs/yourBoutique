@@ -2205,9 +2205,8 @@ header#masthead #site-navigation div ul li a {
   line-height: 27px;
   line-height: 1.9285714282500002rem;
   text-transform: none;
-  font-weight: 800;
-  font-size: 16px;
-  font-size: 1.1428571426666667rem;
+  font-size: 14px;
+  font-size: 0.9999999998333333rem;
   font-family: 'Steiner', sans-serif;
 }
 header#masthead #site-navigation div ul li a:hover {
