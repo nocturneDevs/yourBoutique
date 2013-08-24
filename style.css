@@ -2204,10 +2204,9 @@ header#masthead #site-navigation div ul li a {
   vertical-align: middle;
   line-height: 27px;
   line-height: 1.9285714282500002rem;
-  text-transform: none;
   font-size: 14px;
   font-size: 0.9999999998333333rem;
-  font-family: 'Steiner', sans-serif;
+  font-family: 'Oxygen', sans-serif;
 }
 header#masthead #site-navigation div ul li a:hover {
   color: #ee118a;
