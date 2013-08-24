@@ -30,23 +30,23 @@ get_header('shop'); ?>
 			<div class="carousel-inner">
 				<div class="item active">
 					<img src= "<?php echo get_template_directory_uri(); ?>/resources/images/carousel1.jpg" width="100%">
-					<div class="carousel-caption">
-					</div>
+					<!-- <div class="carousel-caption"> -->
+					<!-- </div> -->
 				</div>
 				<div class="item">
 					<img src="<?php echo get_template_directory_uri(); ?>/resources/images/carousel2.jpg" width="100%">
-					<div class="carousel-caption">
-					</div>
+					<!-- <div class="carousel-caption"> -->
+					<!-- </div> -->
 				</div>
 				<div class="item">
 					<img src="<?php echo get_template_directory_uri(); ?>/resources/images/carousel3.jpg" width="100%">
-					<div class="carousel-caption">
-					</div>
+					<!-- <div class="carousel-caption"> -->
+					<!-- </div> -->
 				</div>
 				<div class="item">
 					<img src="<?php echo get_template_directory_uri(); ?>/resources/images/carousel4.jpg" width="100%">
-					<div class="carousel-caption">
-					</div>
+					<!-- <div class="carousel-caption"> -->
+					<!-- </div> -->
 				</div>
 			</div>
 
