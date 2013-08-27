@@ -2247,7 +2247,8 @@ header#masthead div#searchformWrapper #searchsubmit {
   line-height: 100%;
 }
 h1.page-title {
-  font-size: 1.714285714rem;
+  font-family: "Steiner", sans-serif;
+  font-size: 2.1428571425rem;
   line-height: 120%;
   margin: 6px 0 0 0;
   margin: 0.4285714285rem 0 0 0;
@@ -2467,9 +2468,10 @@ div.product div.summary,
 }
 div.product div.summary .product_title,
 #content div.product div.summary .product_title {
+  font-family: "Steiner", sans-serif;
   margin-bottom: 6px;
   margin-bottom: 0.4285714285rem;
-  font-size: 1.714285714rem;
+  font-size: 2.1428571425rem;
 }
 div.product div.summary .price,
 #content div.product div.summary .price {
@@ -2554,6 +2556,7 @@ div.product .woocommerce-tabs .reviews_tab,
 }
 div.product .woocommerce-tabs .panel h2,
 #content div.product .woocommerce-tabs .panel h2 {
+  font-size: 1.2857142855rem;
   margin-top: 6px;
   margin-bottom: 6px;
   margin-top: 0.4285714285rem;
