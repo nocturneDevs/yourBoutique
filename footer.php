@@ -32,10 +32,10 @@
 				</div>
 				<div id="footerPages">
 					<div id="column3">
-						<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>about-us/">About Us</a></p>
+						<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>how-it-works/">How It Works</a></p>
 						<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>faqs/">FAQs</a></p>
+						<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>about-us/">About Us</a></p>
 						<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>careers/">Careers</a></p>
-						<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>terms-and-conditions/">Terms and Conditions</a></p>
 						<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>press/">Press</a></p>
 					</div>
 					
