@@ -2087,6 +2087,10 @@ body {
   font-family: 'Steiner';
   src: url(/wp-content/themes/yourBoutique/resources/fonts/Steinerlight.ttf);
 }
+@font-face {
+  font-family: 'Abeat';
+  src: url(/wp-content/themes/yourBoutique/resources/fonts/abeatbyKaiRegular.otf);
+}
 div#top {
   width: 100%;
   overflow: auto;
@@ -2248,8 +2252,9 @@ header#masthead div#searchformWrapper #searchsubmit {
 }
 h1.page-title,
 h1.entry-title {
-  font-family: "Steiner", sans-serif;
+  font-family: "Abeat", sans-serif;
   font-size: 2.571428571rem;
+  text-transform: lowercase;
   line-height: 120%;
   margin: 6px 0 0 0;
   margin: 0.4285714285rem 0 0 0;
