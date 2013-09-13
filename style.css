@@ -2249,7 +2249,7 @@ header#masthead div#searchformWrapper #searchsubmit {
 h1.page-title,
 h1.entry-title {
   font-family: "Steiner", sans-serif;
-  font-size: 2.1428571425rem;
+  font-size: 2.571428571rem;
   line-height: 120%;
   margin: 6px 0 0 0;
   margin: 0.4285714285rem 0 0 0;
@@ -2473,7 +2473,7 @@ div.product div.summary .product_title,
   font-family: "Steiner", sans-serif;
   margin-bottom: 6px;
   margin-bottom: 0.4285714285rem;
-  font-size: 2.1428571425rem;
+  font-size: 2.571428571rem;
 }
 div.product div.summary .price,
 #content div.product div.summary .price {
