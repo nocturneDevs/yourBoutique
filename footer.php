@@ -20,7 +20,6 @@
 						<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>cart/">Cart</a></p>
 						<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>my-account/">My Account</a></p>
 						<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>cart/logout/">Logout</a></p>
-						<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Contact Us</a></p>
 					</div>
 					<div id="column2">
 						<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>?product_tag=new">What's New</a></p>
@@ -34,13 +33,16 @@
 					<div id="column3">
 						<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>how-it-works/">How It Works</a></p>
 						<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>faqs/">FAQs</a></p>
-						<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>about-us/">About Us</a></p>
-						<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>careers/">Careers</a></p>
-						<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>press/">Press</a></p>
+						<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>privacy-policy/">Privacy Policy</a></p>
+						<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>refund-policy/">Refund Policy</a></p>
+						
 					</div>
 					
 					<div id="column4">
-						
+						<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>about-us/">About Us</a></p>
+						<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>careers/">Careers</a></p>
+						<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>press/">Press</a></p>
+						<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>contact-us/">Contact Us</a></p>
 					</div>
 				</div>
 				<div id="footerSocial">
