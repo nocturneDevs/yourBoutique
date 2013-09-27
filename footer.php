@@ -35,7 +35,7 @@
 						<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>faqs/">FAQs</a></p>
 						<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>privacy-policy/">Privacy Policy</a></p>
 						<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>refund-policy/">Refund Policy</a></p>
-						
+						<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>shipping-policy/">Shipping Policy</a></p>
 					</div>
 					
 					<div id="column4">
@@ -43,6 +43,7 @@
 						<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>careers/">Careers</a></p>
 						<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>press/">Press</a></p>
 						<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>contact-us/">Contact Us</a></p>
+						<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>/terms-and-conditions/">Terms and Conditions</a></p>
 					</div>
 				</div>
 				<div id="footerSocial">
