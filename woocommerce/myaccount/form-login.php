@@ -31,7 +31,7 @@ global $woocommerce; ?>
 			</p>
 			<p class="form-row form-row-last">
 				<label for="password"><?php _e( 'Password', 'woocommerce' ); ?> <span class="required">*</span></label>
-				<input class="input-text" type="password" name="password" id="password" placeholder="xyz" />
+				<input class="input-text" type="password" name="password" id="password" placeholder="Enter your password" />
 			</p>
 			<div class="clear"></div>
 
@@ -64,7 +64,7 @@ global $woocommerce; ?>
 
 				<p class="form-row form-row-first">
 					<label for="reg_username"><?php _e( 'Username', 'woocommerce' ); ?> <span class="required">*</span></label>
-					<input type="text" class="input-text" name="username" id="reg_username" placeholder="pikachu" value="<?php if (isset($_POST['username'])) echo esc_attr($_POST['username']); ?>" />
+					<input type="text" class="input-text" name="username" id="reg_username" placeholder="Enter a username" value="<?php if (isset($_POST['username'])) echo esc_attr($_POST['username']); ?>" />
 				</p>
 
 				<p class="form-row form-row-last">
@@ -83,11 +83,11 @@ global $woocommerce; ?>
 
 			<p class="form-row form-row-first">
 				<label for="reg_password"><?php _e( 'Password', 'woocommerce' ); ?> <span class="required">*</span></label>
-				<input type="password" class="input-text" name="password" id="reg_password" placeholder="xyz" value="<?php if (isset($_POST['password'])) echo esc_attr($_POST['password']); ?>" />
+				<input type="password" class="input-text" name="password" id="reg_password" placeholder="Enter a password" value="<?php if (isset($_POST['password'])) echo esc_attr($_POST['password']); ?>" />
 			</p>
 			<p class="form-row form-row-last">
 				<label for="reg_password2"><?php _e( 'Re-enter password', 'woocommerce' ); ?> <span class="required">*</span></label>
-				<input type="password" class="input-text" name="password2" id="reg_password2" placeholder="and again" value="<?php if (isset($_POST['password2'])) echo esc_attr($_POST['password2']); ?>" />
+				<input type="password" class="input-text" name="password2" id="reg_password2" placeholder="Confirm password" value="<?php if (isset($_POST['password2'])) echo esc_attr($_POST['password2']); ?>" />
 			</p>
 			<div class="clear"></div>
 
